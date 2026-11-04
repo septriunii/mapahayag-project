@@ -16,7 +16,7 @@ it('shows dated statistics, revised density, Sulu notice and safe official links
   expect(screen.getByText('0900000000')).toBeInTheDocument();
   expect(screen.getByText('18,291.44')).toBeInTheDocument();
   expect(screen.getByText('278')).toBeInTheDocument();
-  expect(screen.getByRole('complementary', { name: 'Administrative boundary notice' })).toHaveTextContent('does not include Sulu');
+  expect(screen.getByRole('complementary', { name: 'Administrative boundary notice' })).toHaveTextContent('now groups Sulu with Zamboanga Peninsula');
   expect(screen.getByRole('heading', { name: 'Sources and Data Notes' })).toBeInTheDocument();
   expect(screen.getAllByText('As of', { exact: false }).length).toBeGreaterThan(0);
   for (const link of screen.getAllByRole('link')) {

@@ -1,6 +1,7 @@
 import type { MapConfig } from '../config/schema';
 import { ResourceCache } from './cache';
-import { NCR, NCR_DISTRICTS, NIR, usesNirOverride } from './alignment';
+import { BARMM, REGION_IX, SULU, NCR, NCR_DISTRICTS, NIR, usesNirOverride } from './alignment';
+import { currentSuluNational } from './sulu';
 import { featureCode, normalizePsgc } from './psgc';
 import { parseGeography } from './validate';
 import type { GeographicLevel, GeographicResource, GeographicView, SourcePsgc } from './types';
@@ -20,8 +21,9 @@ export class GeographicRepository {
     return this.cache.load(url, `geography:${level}`, value => parseGeography(value, level));
   }
 
-  national() {
-    return this.load(this.config.alignment === 'nir' ? this.asset('geo-nir/country.0.001.json') : this.geography('country/lowres/country.0.001.json'), 'region');
+  async national() {
+    const source = await this.load(this.config.alignment === 'nir' ? this.asset('geo-nir/country.0.001.json') : this.geography('country/lowres/country.0.001.json'), 'region');
+    return currentSuluNational(source, this.config.alignment);
   }
   async region(regionCode: SourcePsgc): Promise<GeographicView> {
     const region = normalizePsgc(regionCode);
@@ -35,7 +37,17 @@ export class GeographicRepository {
       };
     }
     const url = usesNirOverride(region, this.config.alignment) ? this.asset(`geo-nir/provdists-region-${region}.0.001.json`) : this.geography(`regions/lowres/provdists-region-${region}.0.001.json`);
+    if (region === REGION_IX) {
+      const [data, former] = await Promise.all([
+        this.load(url, 'province'),
+        this.load(this.geography(`regions/lowres/provdists-region-${BARMM}.0.001.json`), 'province'),
+      ]);
+      const sulu = former.collection.features.find(feature => featureCode(feature, 'province') === SULU);
+      if (!sulu) throw new Error('Sulu province is missing from the pinned geographic source');
+      return { level: 'province', collection: { ...data.collection, features: [...data.collection.features, sulu] }, warnings: resourceWarnings(data) };
+    }
     const data = await this.load(url, 'province');
+    if (region === BARMM) return { level: 'province', collection: { ...data.collection, features: data.collection.features.filter(feature => featureCode(feature, 'province') !== SULU) }, warnings: resourceWarnings(data) };
     return { level: 'province', collection: data.collection, warnings: resourceWarnings(data) };
   }
   async province(provinceCode: SourcePsgc): Promise<GeographicView> {

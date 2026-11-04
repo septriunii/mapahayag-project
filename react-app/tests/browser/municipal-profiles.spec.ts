@@ -13,9 +13,10 @@ for (const code of [630200000, 990101000, 1380600000, 1381701000, 1908703000, 11
 
 for (const sample of samples) {
   test(`${sample.name} (${sample.psgc}): profile follows the real drilldown hierarchy`, async ({ page }) => {
-    const hash = sample.region_psgc === 1300000000
+    const region = sample.province_psgc === 1906600000 ? 900000000 : sample.region_psgc;
+    const hash = region === 1300000000
       ? `#/region/${sample.region_psgc}/municity/${sample.psgc}`
-      : `#/region/${sample.region_psgc}/province/${sample.province_psgc}/municity/${sample.psgc}`;
+      : `#/region/${region}/province/${sample.province_psgc}/municity/${sample.psgc}`;
     const fact = facts.records.find(row => Number(row.mapPsgc) === sample.psgc)!;
     await page.goto('/' + hash);
     await expect(page.locator('svg')).toHaveAttribute('data-view', hash);

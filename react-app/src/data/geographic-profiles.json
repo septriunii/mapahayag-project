@@ -255,7 +255,7 @@
     "notices": [
       {
         "title": "Administrative boundary notice",
-        "text": "These statistics include Sulu. The map shows the older three-province grouping and Isabela City; it does not include Sulu in Region IX. Do not interpret the figures below as totals for the displayed polygons. EO 91, dated 30 July 2025, declared Sulu part of Region IX.",
+        "text": "Region IX includes Sulu under Executive Order No. 91, dated 30 July 2025. The map now groups Sulu with Zamboanga Peninsula. These statistics use current PSA regional coverage; independent-city and source dataset groupings should still be distinguished from provincial jurisdiction.",
         "sourceIds": [
           "psa-psgc",
           "psa-region-ix",
@@ -268,7 +268,7 @@
         "title": "Geography and Location",
         "paragraphs": [
           {
-            "text": "Zamboanga Peninsula occupies western Mindanao. The current PSA administrative grouping includes Zamboanga del Norte, Zamboanga del Sur, Zamboanga Sibugay and Sulu, with Zamboanga and Isabela cities listed separately in the PSGC. This contemporary grouping extends beyond the older Region IX geography displayed here.",
+            "text": "Zamboanga Peninsula occupies western Mindanao. The current PSA administrative grouping includes Zamboanga del Norte, Zamboanga del Sur, Zamboanga Sibugay and Sulu, with Zamboanga and Isabela cities listed separately in the PSGC. The map includes Sulu in the Region IX grouping.",
             "sourceIds": [
               "psa-psgc",
               "psa-region-ix",
@@ -327,7 +327,7 @@
         ]
       },
       {
-        "text": "Area and density were verified against PSA's revised release of 6 July 2026, Table 3. Its Region IX population matches the grouping including Sulu. Area uses the 2019 LMB masterlist; it is not the area of the map's older Region IX polygons.",
+        "text": "Area and density were verified against PSA's revised release of 6 July 2026, Table 3. Its Region IX population matches the grouping including Sulu. Area uses the 2019 LMB masterlist; it is an official statistical reference rather than an area calculated from the displayed polygons.",
         "sourceIds": [
           "psa-density-revised"
         ]

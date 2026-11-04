@@ -4,7 +4,7 @@ import { featureCode } from '../geography/psgc';
 import type { GeographicRepository } from '../geography/repository';
 import type { GeographicCollection, GeographicFeature, GeographicLevel, GeographicView, Psgc } from '../geography/types';
 import { nameProperty } from '../geography/types';
-import { parentRoute, type MapRoute } from './routes';
+import { canonicalSuluRoute, parentRoute, type MapRoute } from './routes';
 
 export interface LocationDetails {
   level: GeographicLevel;
@@ -39,6 +39,7 @@ function find(collection: GeographicCollection, level: GeographicLevel, code: Ps
 /** Resolve ancestry through the displayed collections, never by slicing PSGCs.
  * NIR uses its view grouping while all source feature identifiers stay intact. */
 export async function resolveView(route: MapRoute, config: MapConfig, national: GeographicCollection, repository: GeographicRepository): Promise<MapView> {
+  route = canonicalSuluRoute(route);
   const country: MapView = { route: { level: 'national' }, level: 'region', collection: national, warnings: [], statusText: `${national.features.length} regions — click to drill in` };
   if (route.level === 'national') return country;
   const region = find(national, 'region', route.region);
@@ -48,7 +49,8 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
   const regional = await repository.region(route.region);
   const regionView: MapView = {
     ...regional, route: { level: 'region', region: route.region }, details: regionDetails, backLabel: 'Philippines',
-    statusText: `${regionDetails.name} — ${regional.collection.features.length} ${regional.level === 'municity' ? 'cities/municipalities' : 'provinces'}`,
+    statusText: route.region === '900000000' ? `${regionDetails.name} — 4 provinces and Isabela City`
+      : `${regionDetails.name} — ${regional.collection.features.length} ${regional.level === 'municity' ? 'cities/municipalities' : 'provinces'}`,
   };
   if (route.level === 'region') return regionView;
 

@@ -22,7 +22,7 @@ test('pilot profiles follow selection, history, reload and exact geographic leve
   await expect(page.locator(ix)).toContainText('5,089,934');
   await expect(page.locator(ix)).toContainText('0900000000');
   await expect(page.locator(ix).locator('[data-metric="area"]')).toContainText('18,291.44');
-  await expect(page.getByRole('complementary', { name: 'Administrative boundary notice' })).toContainText('does not include Sulu');
+  await expect(page.getByRole('complementary', { name: 'Administrative boundary notice' })).toContainText('now groups Sulu with Zamboanga Peninsula');
   await expect(page.locator(national)).toHaveCount(0);
   await page.screenshot({ path: info.outputPath('profile-region-ix.png') });
   await page.goBack(); await ready(page, '#/');

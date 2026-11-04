@@ -1,6 +1,21 @@
 import { expect, test, type Page } from '@playwright/test';
 import { selectSvgLabel } from './svgInput';
 
+test('Sulu saved links and touch Back controls use Region IX on phones and tablets', async ({ page }) => {
+  await page.goto('/#/region/1900000000/province/1906600000/municity/1906602000');
+  await expect(page.locator('[data-profile-key="municity:0906602000"]')).toBeVisible();
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/900000000/province/1906600000/municity/1906602000');
+  await page.getByRole('button', { name: 'Close details menu' }).tap();
+  await page.locator('#back-btn').tap();
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/900000000/province/1906600000');
+  await expect(page.locator('#back-btn')).toContainText('Region IX');
+  await page.locator('#back-btn').tap();
+  await expect(page.locator('path[data-psgc="1906600000"]')).toBeVisible();
+  await page.goto('/#/region/1900000000');
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/1900000000');
+  await expect(page.locator('path[data-psgc="1906600000"]')).toHaveCount(0);
+});
+
 test('municipal profile fits a 320px drawer and scrolls without moving the map', async ({ page }, info) => {
   await page.setViewportSize({ width: 320, height: 568 });
   await page.goto('/#/region/900000000/province/907200000/municity/907203000');

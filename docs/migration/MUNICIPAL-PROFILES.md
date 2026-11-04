@@ -10,7 +10,7 @@ Baseline: React branch `codex/react-migration-drilldown`, commit `8dd2123deeb24d
 - Each population retains its exact source URL. `municipal-psa-extracts.json` retains the relevant text rows from official pages; tests compare every population against that row. The unsuccessful Ilocos Norte province fetch is superseded by the official region's city and municipality tables.
 - All 149 cities have separately verified official classifications: 33 HUCs, five ICCs and 111 component cities. See [HUCs](https://psa.gov.ph/classification/psgc/hucs), [ICCs](https://psa.gov.ph/classification/psgc/iccs), and [component cities](https://psa.gov.ph/classification/psgc/ccs).
 - Regional listing and provincial statistical grouping do not imply administrative jurisdiction over independent cities. Notices make the distinction explicit.
-- 82 explicit map-to-current-code aliases cover NIR localities (including Bacolod) and Sulu. Profile aliases never alter map routes or geometric identifiers. Repeated place names are never used as runtime keys.
+- 82 explicit map-to-current-code aliases cover NIR localities (including Bacolod) and Sulu. Geometric identifiers are retained. Sulu's later regional-routing correction is documented in `SULU-ALIGNMENT.md`; repeated place names are never used as runtime keys.
 - Older map labels remain visible. Source naming notes explain differences for Don Victoriano, Sawata and Dr. Jose P. Rizal, as well as minor source label variations.
 
 ## Visible editorial gaps
@@ -40,7 +40,7 @@ Examples:
 - [Katipunan](http://127.0.0.1:5173/?review=municipalities#/region/900000000/province/907200000/municity/907203000)
 - [Pateros, NCR](http://127.0.0.1:5173/?review=municipalities#/region/1300000000/municity/1381701000)
 - [Bacolod, NIR](http://127.0.0.1:5173/?review=municipalities#/region/1800000000/province/604500000/municity/630200000)
-- [Jolo, retained BARMM map route / current Region IX profile](http://127.0.0.1:5173/?review=municipalities#/region/1900000000/province/1906600000/municity/1906602000)
+- [Jolo, old BARMM bookmark redirected to Region IX](http://127.0.0.1:5173/?review=municipalities#/region/1900000000/province/1906600000/municity/1906602000)
 
 ## Checks
 

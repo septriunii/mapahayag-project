@@ -30,7 +30,7 @@ test('production preview preserves national paths, dark UI, drawer, and selectio
   await page.screenshot({ path: 'test-results/foundation-desktop.png' });
 });
 
-test('uses the same linear D3 paths as the legacy national projection', async ({ page }) => {
+test('preserves the baseline national projection outside corrected Sulu regional grouping', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/');
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);
@@ -42,7 +42,7 @@ test('uses the same linear D3 paths as the legacy national projection', async ({
     const scale = Math.min((1440 - 60) / (126.60 - 116.93), (900 - 60) / (20.84 - 4.64));
     const offX = (1440 - (126.60 - 116.93) * scale) / 2, offY = (900 - (20.84 - 4.64) * scale) / 2;
     const path = d3.geoPath().projection(d3.geoTransform({ point(lon, lat) { this.stream.point(offX + (lon - 116.93) * scale, offY + (20.84 - lat) * scale); } }));
-    return country.features.filter((f: import('../../src/geography/types').GeographicFeature) => document.querySelector(`path[data-psgc="${f.properties.adm1_psgc}"]`)?.getAttribute('d') !== path(f)).length;
+    return country.features.filter((f: import('../../src/geography/types').GeographicFeature) => ![900000000, 1900000000].includes(Number(f.properties.adm1_psgc)) && document.querySelector(`path[data-psgc="${f.properties.adm1_psgc}"]`)?.getAttribute('d') !== path(f)).length;
   });
   expect(mismatches).toBe(0);
 });

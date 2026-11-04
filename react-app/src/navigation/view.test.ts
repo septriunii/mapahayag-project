@@ -8,7 +8,7 @@ it('resolves ordinary geographic ancestry down to an isolated city', async () =>
   const { config, repository } = geographyFixture();
   const national = (await repository.national()).collection;
   const region = await resolveView(parseRoute('#/region/900000000'), config, national, repository);
-  expect(region.collection.features).toHaveLength(4);
+  expect(region.collection.features).toHaveLength(5);
   const province = region.collection.features.find(f => featureCode(f, 'province') === '907200000')!;
   const route = selectionRoute(region, province, config)!;
   const provincial = await resolveView(route, config, national, repository);

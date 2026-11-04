@@ -48,7 +48,7 @@ export function getProfileCatalog(key: string): Result {
   if (row.mapPsgc !== row.psgc) {
     const alignmentSource = row.region === '1800000000' ? nir : sulu;
     sources.push(alignmentSource);
-    notices.push({ title: 'Administrative alignment notice', text: `The current PSA code is ${row.psgc}; the pinned map retains ${row.mapPsgc}. This profile follows ${row.regionName}, while the map keeps its existing polygons and drilldown paths.`, sourceIds: ['municipal-listing', alignmentSource.id] });
+    notices.push({ title: 'Administrative alignment notice', text: `The current PSA code is ${row.psgc}; the pinned map retains source code ${row.mapPsgc}. This locality is displayed under ${row.regionName}.${alignmentSource === sulu ? ' Older Sulu links redirect to Region IX without changing geographic boundaries.' : ''}`, sourceIds: ['municipal-listing', alignmentSource.id] });
   }
   if (row.mapName !== row.name) {
     notices.push({ title: 'Source naming note', text: `The map label is “${row.mapName}”; this PSA listing uses “${row.name}”. The profile is matched by the verified PSGC identity.`, sourceIds: ['municipal-listing'] });

@@ -20,7 +20,7 @@ test('ordinary drilldown, parent controls, browser history, deep links and cache
   await ready(page, '#/');
   await activate(page, '900000000');
   await ready(page, '#/region/900000000');
-  await expect(page.locator('path[data-psgc]')).toHaveCount(4);
+  await expect(page.locator('path[data-psgc]')).toHaveCount(5);
   await expect(page.locator('#detail-lgu-name')).toHaveText('Region IX (Zamboanga Peninsula)');
   await page.screenshot({ path: 'test-results/drilldown-region.png' });
   await activate(page, '907200000');

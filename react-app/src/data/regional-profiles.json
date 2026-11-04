@@ -2648,7 +2648,7 @@
     "notices": [
       {
         "title": "Administrative boundary notice",
-        "text": "These current BARMM figures exclude Sulu, which EO 91 assigned to Region IX in 2025. The older map still groups Sulu with BARMM and retains older Maguindanao and Special Geographic Area representations. Current totals must not be treated as totals for the displayed polygons.",
+        "text": "BARMM excludes Sulu, which Executive Order No. 91 assigned to Region IX in 2025. The map now follows this regional grouping. Its pinned Maguindanao and Special Geographic Area boundaries may still differ from current administrative and statistical coverage.",
         "sourceIds": [
           "psa-region-19",
           "eo91",
@@ -2673,7 +2673,7 @@
         "title": "History and Administration",
         "paragraphs": [
           {
-            "text": "The Bangsamoro Organic Law, Republic Act 11054 of 2018, provided for the autonomous region. Sulu's subsequent exclusion and its 2025 assignment to Region IX mean that older map coverage differs from current statistics.",
+            "text": "The Bangsamoro Organic Law, Republic Act 11054 of 2018, provided for the autonomous region. Sulu's subsequent exclusion and its 2025 assignment to Region IX are reflected in the map's regional grouping.",
             "sourceIds": [
               "background-19",
               "psa-region-19",

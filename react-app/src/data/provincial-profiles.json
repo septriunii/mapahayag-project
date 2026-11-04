@@ -7631,7 +7631,7 @@
     "notices": [
       {
         "title": "Administrative alignment notice",
-        "text": "Sulu now belongs to Region IX under Executive Order No. 91 (2025). The pinned map still reaches Sulu through its older BARMM grouping. This profile uses Sulu’s current PSGC identity without changing the map’s navigation.",
+        "text": "Sulu belongs to Region IX under Executive Order No. 91 (2025) and is displayed under Zamboanga Peninsula. Current PSGC identity 0906600000 is linked to the pinned source code 1906600000. Older BARMM links redirect to Region IX; geographic boundaries are unchanged.",
         "sourceIds": [
           "province-psgc-summary",
           "province-sulu-order"
