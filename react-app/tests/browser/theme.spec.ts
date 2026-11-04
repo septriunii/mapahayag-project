@@ -84,6 +84,9 @@ test('hover and keyboard selection highlight real polygons without changing geom
   await page.locator('path[data-psgc="800000000"]').focus();
   await page.keyboard.press('Tab');
   await expect(region).toBeFocused();
+  await expect(region).toHaveCSS('outline-style', 'dashed');
+  await expect(region).toHaveCSS('outline-width', '1px');
+  await expect(region).toHaveCSS('outline-color', 'rgba(186, 200, 189, 0.65)');
   await expect(region).toHaveCSS('fill', palette.hover);
   await page.keyboard.press('Enter');
   await expect(region).toHaveAttribute('aria-pressed', 'true');
@@ -130,6 +133,10 @@ test('administrative linework stays thin through wheel zoom, pan and every drill
     const svg = page.locator('svg');
     await expect(svg).toHaveAttribute('data-view', hash);
     await expect(svg).toHaveAttribute('aria-busy', 'false');
+    if (hash !== '#/') {
+      const sidebarFont = await page.locator('#detail').evaluate(node => getComputedStyle(node).fontFamily);
+      await expect(page.locator('#back-btn')).toHaveCSS('font-family', sidebarFont);
+    }
     // Hash navigation retains the existing drawer state; city arrival opens it.
     if (hash.includes('/municity/')) await expect(page.getByRole('button', { name: 'Close details menu' })).toBeVisible();
     if (await page.getByRole('button', { name: 'Close details menu' }).isVisible()) {

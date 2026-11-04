@@ -8,7 +8,8 @@ import { parentRoute, parseRoute } from '../navigation/routes';
 import type { GeographicCollection, GeographicFeature } from '../geography/types';
 import { featureCode } from '../geography/psgc';
 import type { MapConfig } from '../config/schema';
-import { profileCatalog, profileKeyForSelection } from '../profiles/catalog';
+import { profileKeyForSelection } from '../profiles/catalog';
+import { useGeographicProfile } from '../hooks/useGeographicProfile';
 
 export function App() {
   const [retry, setRetry] = useState(0);
@@ -60,18 +61,18 @@ function MapApplication({ config, national, configUrl }: { config: MapConfig; na
   const error = navigation.status === 'error' ? navigation.message : undefined;
   const selection = (selected?.view === view ? selected?.details : undefined) ?? view?.details;
   const profileKey = navigation.status === 'ready' && view ? profileKeyForSelection(view.route, selection) : undefined;
-  const profile = profileCatalog.status === 'ready' && profileKey ? profileCatalog.catalog.profiles.get(profileKey) : undefined;
+  const profileState = useGeographicProfile(profileKey);
   return <>
     {view && <MapCanvas view={view} config={config} onSelect={select} selected={selected} busy={navigation.status !== 'ready'} />}
     <button id="info-btn" type="button" aria-label="Open details menu" aria-controls="detail" aria-expanded={drawerOpen}
       onClick={() => setDrawerOpen(true)} className={`fixed top-4 left-4 z-10 h-11 w-11 cursor-pointer border border-control-border bg-control p-2.5 font-mono text-[24px] leading-none text-text-primary hover:bg-control-hover ${drawerOpen ? 'hidden' : ''}`}>☰</button>
     {(view?.backLabel || error) && <button id="back-btn" type="button" onClick={back}
-      className="fixed top-4 right-4 z-10 max-w-[calc(100%-92px)] cursor-pointer truncate border border-control-border bg-control px-3.5 py-1.5 font-mono text-[13px] tracking-[0.5px] text-text-primary transition-colors hover:bg-control-hover">← {error ? 'Back' : view?.backLabel}</button>}
+      className="fixed top-4 right-4 z-10 max-w-[calc(100%-92px)] cursor-pointer truncate border border-control-border bg-control px-3.5 py-1.5 font-ui text-[13px] text-text-primary transition-colors hover:bg-control-hover">← {error ? 'Back' : view?.backLabel}</button>}
     <DetailsDrawer open={drawerOpen} config={config} onClose={close} selection={selection}
       selectionKey={selection ? `${selection.level}:${selection.psgc}` : 'national'}
-      profile={profile} sources={profileCatalog.status === 'ready' ? profileCatalog.catalog.sources : undefined}
+      profile={profileState.profile} sources={profileState.sources} profileLoading={profileState.loading}
       busy={navigation.status === 'loading'} navigationError={error}
-      profileError={profileKey && profileCatalog.status === 'error' ? profileCatalog.message : undefined} />
+      profileError={profileState.error} />
     <MapStatus error={error} onRetry={navigation.retry} text={navigation.status === 'loading' ? 'Loading…' : view?.statusText ?? ''} warnings={navigation.status === 'ready' ? view?.warnings : undefined} />
   </>;
 }

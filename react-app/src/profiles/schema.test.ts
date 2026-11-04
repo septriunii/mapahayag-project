@@ -45,8 +45,8 @@ it('keys region selections independently from source padding and maximum-depth r
     expect(profileKeyForSelection({ level: 'national' }, { level: 'region', psgc: normalizePsgc(psgc) })).toBe('region:0900000000');
   }
   const route = parseRoute('#/region/900000000');
-  expect(profileKeyForSelection(route, { level: 'province', psgc: normalizePsgc('907200000') })).toBeUndefined();
-  expect(profileKeyForSelection(route, { level: 'municity', psgc: normalizePsgc('907201000') })).toBeUndefined();
+  expect(profileKeyForSelection(route, { level: 'province', psgc: normalizePsgc('907200000') })).toBe('province:0907200000');
+  expect(profileKeyForSelection(route, { level: 'municity', psgc: normalizePsgc('907201000') })).toBe('municity:0907201000');
   const catalog = parseProfileCatalog(profiles, sources);
   expect(catalog.profiles.get(profileKeyForSelection(route, { level: 'region', psgc: normalizePsgc('1300000000') })!)?.name).toContain('National Capital');
 });

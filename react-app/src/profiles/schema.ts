@@ -25,10 +25,19 @@ const metricSchema = z.object({
     ctx.addIssue({ code: 'custom', message: 'Unavailable/unverified statistics must withhold the value and explain why' });
   }
 });
-const proseSchema = z.object({ text, sourceIds: references });
+const proseSchema = z.object({
+  text, sourceIds: z.array(text), status: z.enum(['verified', 'unavailable']).optional(),
+}).superRefine((paragraph, ctx) => {
+  if (paragraph.status !== 'unavailable' && paragraph.sourceIds.length === 0) {
+    ctx.addIssue({ code: 'custom', message: 'Verified prose needs a source; editorial gaps must be explicitly unavailable' });
+  }
+  if (paragraph.status === 'unavailable' && paragraph.sourceIds.length > 0) {
+    ctx.addIssue({ code: 'custom', message: 'Do not attach a citation that appears to verify unavailable content' });
+  }
+});
 export const geographicProfileSchema = z.object({
   key: text,
-  level: z.enum(['national', 'region']), psgc: z.string().regex(/^\d{10}$/).nullable(),
+  level: z.enum(['national', 'region', 'province', 'municity']), psgc: z.string().regex(/^\d{10}$/).nullable(),
   name: text, levelLabel: text, subtitle: text, coverage: text,
   checkedDate: z.iso.date(), metrics: z.array(metricSchema).min(1),
   sections: z.array(z.object({
@@ -38,8 +47,8 @@ export const geographicProfileSchema = z.object({
   notices: z.array(z.object({ title: text, text, sourceIds: references })),
   notes: z.array(proseSchema).min(1),
 }).superRefine((profile, ctx) => {
-  const expected = profile.level === 'national' ? 'national' : `region:${profile.psgc}`;
-  if (profile.key !== expected || (profile.level === 'region' && !profile.psgc) || (profile.level === 'national' && profile.psgc !== null)) {
+  const expected = profile.level === 'national' ? 'national' : `${profile.level}:${profile.psgc}`;
+  if (profile.key !== expected || (profile.level !== 'national' && !profile.psgc) || (profile.level === 'national' && profile.psgc !== null)) {
     ctx.addIssue({ code: 'custom', message: 'Profile key must agree with its level and stable PSGC' });
   }
   if (new Set(profile.sections.map(section => section.title)).size !== 3) ctx.addIssue({ code: 'custom', message: 'Each named section is required once' });

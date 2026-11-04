@@ -1,0 +1,1868 @@
+[
+  {
+    "id": "province-psgc-summary",
+    "label": "PSA PSGC",
+    "title": "PSGC Summary — 30 September 2026",
+    "url": "https://psa.gov.ph/classification/psgc/summary",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Administrative counts are taken from the September 2026 summary; page tables may retain an older caption."
+  },
+  {
+    "id": "province-nir-law",
+    "label": "RA 12000",
+    "title": "Republic Act No. 12000 — Negros Island Region",
+    "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97490",
+    "publisher": "Supreme Court E-Library",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-sulu-order",
+    "label": "EO 91",
+    "title": "Executive Order No. 91 — Sulu regional affiliation",
+    "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/5/99470",
+    "publisher": "Supreme Court E-Library",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-maguindanao-law",
+    "label": "RA 11550",
+    "title": "Republic Act No. 11550 — Maguindanao provincial division",
+    "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/93303",
+    "publisher": "Supreme Court E-Library",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1400100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Abra — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1400100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1400100000",
+    "label": "DA profile",
+    "title": "Abra — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/abra/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1400000000",
+    "label": "PSA regional table",
+    "title": "Cordillera Administrative Region — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1400000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1408100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Apayao — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1408100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1408100000",
+    "label": "DA profile",
+    "title": "Apayao — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/apayao/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1401100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Benguet — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1401100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1401100000",
+    "label": "DA profile",
+    "title": "Benguet — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/benguet/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1402700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Ifugao — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1402700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1402700000",
+    "label": "DA profile",
+    "title": "Ifugao — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/ifugao/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1403200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Kalinga — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1403200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1403200000",
+    "label": "DA profile",
+    "title": "Kalinga — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/kalinga/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1404400000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Mountain Province — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1404400000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1404400000",
+    "label": "DA profile",
+    "title": "Mountain Province — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/mountain-province/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0102800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Ilocos Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0102800000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0102800000",
+    "label": "DA profile",
+    "title": "Ilocos Norte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/ilocos-norte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0100000000",
+    "label": "PSA regional table",
+    "title": "Ilocos Region — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0100000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0102900000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Ilocos Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0102900000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0102900000",
+    "label": "DA profile",
+    "title": "Ilocos Sur — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/ilocos-sur/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0103300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "La Union — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0103300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0103300000",
+    "label": "DA profile",
+    "title": "La Union — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/la-union/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0105500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Pangasinan — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0105500000",
+    "label": "DA profile",
+    "title": "Pangasinan — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/pangasinan/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0200900000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Batanes — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0200900000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0200900000",
+    "label": "DA profile",
+    "title": "Batanes — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/batanes/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0200000000",
+    "label": "PSA regional table",
+    "title": "Cagayan Valley — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0200000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0201500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Cagayan — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0201500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0201500000",
+    "label": "DA profile",
+    "title": "Cagayan — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/cagayan/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0203100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Isabela — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0203100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0203100000",
+    "label": "DA profile",
+    "title": "Isabela — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/isabela/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0205000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Nueva Vizcaya — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0205000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0205000000",
+    "label": "DA profile",
+    "title": "Nueva Vizcaya — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/nueva-vizcaya/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0205700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Quirino — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0205700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0205700000",
+    "label": "DA profile",
+    "title": "Quirino — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/quirino/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0307700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Aurora — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0307700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0307700000",
+    "label": "Official profile",
+    "title": "PSA Aurora — Annual Report 2024",
+    "url": "https://rsso03.psa.gov.ph/sites/default/files/2025-03/Aurora-AnnuaL-Report-2024.pdf",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0300000000",
+    "label": "PSA regional table",
+    "title": "Central Luzon — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0300000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0300800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Bataan — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0300800000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0300800000",
+    "label": "PIA",
+    "title": "Bataan — 2024 provincial economic performance",
+    "url": "https://pia.gov.ph/news/bataan-posts-9-3-economic-growth-for-2024-fastest-across-central-luzon/",
+    "publisher": "Philippine Information Agency",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-bataan-geography",
+    "label": "Bataan profile",
+    "title": "Bataan — Socio-Economic Profile 2023",
+    "url": "https://bataan.gov.ph/wp-content/uploads/2025/01/SOCIO-ECONOMIC-PROFILE-2023.pdf",
+    "publisher": "Provincial Government of Bataan",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0301400000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Bulacan — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0301400000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0301400000",
+    "label": "Official profile",
+    "title": "About Bulacan",
+    "url": "https://bulacan.gov.ph/general-info/about-bulacan/",
+    "publisher": "Provincial Government of Bulacan",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0304900000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Nueva Ecija — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0304900000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0304900000",
+    "label": "DA profile",
+    "title": "Nueva Ecija — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/nueva-ecija/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0305400000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Pampanga — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0305400000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0305400000",
+    "label": "Official profile",
+    "title": "The Kapampangan",
+    "url": "https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-communities-and-traditional-arts-sccta/northern-cultural-communities/the-kapampangan/",
+    "publisher": "National Commission for Culture and the Arts",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0306900000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Tarlac — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0306900000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0306900000",
+    "label": "DA profile",
+    "title": "Tarlac — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/tarlac/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0307100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Zambales — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0307100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0307100000",
+    "label": "PIA",
+    "title": "Zambales — mango farming and grower support",
+    "url": "https://pia.gov.ph/news/zambales-strengthens-mango-industry-with-modern-farming-capability-building/",
+    "publisher": "Philippine Information Agency",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0401000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Batangas — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0401000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0401000000",
+    "label": "DA profile",
+    "title": "Batangas — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/batangas/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0400000000",
+    "label": "PSA regional table",
+    "title": "CALABARZON — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0400000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0402100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Cavite — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0402100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0402100000",
+    "label": "DA profile",
+    "title": "Cavite — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/cavite/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0403400000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Laguna — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0403400000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0403400000",
+    "label": "DA profile",
+    "title": "Laguna — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/laguna/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0405600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Quezon — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0405600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0405600000",
+    "label": "DA profile",
+    "title": "Quezon — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/quezon/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0405800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Rizal — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0405800000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0405800000",
+    "label": "Official profile",
+    "title": "Rizal — resources and topography",
+    "url": "https://www.rizalprovince.ph/pages/generalinformation2.html",
+    "publisher": "Provincial Government of Rizal",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-rizal-geography",
+    "label": "Rizal profile",
+    "title": "Rizal — location and socio-economic briefer",
+    "url": "https://www.rizalprovince.ph/pages/generalinformation3.html",
+    "publisher": "Provincial Government of Rizal",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1704000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Marinduque — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1704000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1704000000",
+    "label": "DA profile",
+    "title": "MIMAROPA — provincial profiles",
+    "url": "https://mimaropa.da.gov.ph/about/provincial-profile",
+    "publisher": "Department of Agriculture MIMAROPA",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1700000000",
+    "label": "PSA regional table",
+    "title": "MIMAROPA — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1700000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1705100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Occidental Mindoro — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1705100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1705100000",
+    "label": "DA profile",
+    "title": "Occidental Mindoro — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/occidental-mindoro/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1705200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Oriental Mindoro — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1705200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1705200000",
+    "label": "Official profile",
+    "title": "Oriental Mindoro — economic performance",
+    "url": "https://ppdo.ormindoro.gov.ph/provincialdata/sep/",
+    "publisher": "Provincial Planning and Development Office, Oriental Mindoro",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-mimaropa-geography",
+    "label": "DA profile",
+    "title": "MIMAROPA — provincial profiles",
+    "url": "https://mimaropa.da.gov.ph/about/provincial-profile",
+    "publisher": "Department of Agriculture MIMAROPA",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1705300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Palawan — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1705300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1705300000",
+    "label": "DA profile",
+    "title": "Palawan — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/palawan/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1705900000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Romblon — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1705900000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1705900000",
+    "label": "DA profile",
+    "title": "Romblon — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/romblon/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0500500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Albay — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0500500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0500500000",
+    "label": "DA profile",
+    "title": "Albay — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/albay/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0500000000",
+    "label": "PSA regional table",
+    "title": "Bicol Region — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0500000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0501600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Camarines Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0501600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0501600000",
+    "label": "DA profile",
+    "title": "Camarines Norte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/camarines-norte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0501700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Camarines Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0501700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0501700000",
+    "label": "DA profile",
+    "title": "Camarines Sur — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/camarines-sur/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0502000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Catanduanes — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0502000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0502000000",
+    "label": "DA profile",
+    "title": "Catanduanes — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/catanduanes/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0504100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Masbate — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0504100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0504100000",
+    "label": "DA profile",
+    "title": "Masbate — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/masbate/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0506200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Sorsogon — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0506200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0506200000",
+    "label": "DA profile",
+    "title": "Sorsogon — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/sorsogon/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0600400000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Aklan — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0600400000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0600400000",
+    "label": "DA profile",
+    "title": "Aklan — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/aklan/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0600000000",
+    "label": "PSA regional table",
+    "title": "Western Visayas — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0600000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0600600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Antique — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0600600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0600600000",
+    "label": "DA profile",
+    "title": "Antique — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/antique/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0601900000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Capiz — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0601900000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0601900000",
+    "label": "PIA",
+    "title": "Capiz — 2025 provincial economic performance",
+    "url": "https://pia.gov.ph/news/visayas/wv/capiz-fastest-growing-economy-in-w-visayas-2nd-nationwide-psa/",
+    "publisher": "Philippine Information Agency",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0607900000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Guimaras — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0607900000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0607900000",
+    "label": "DA profile",
+    "title": "Guimaras — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/guimaras/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0603000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Iloilo — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0603000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0603000000",
+    "label": "DA profile",
+    "title": "Iloilo — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/iloilo/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1804500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Negros Occidental — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1804500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1804500000",
+    "label": "DA profile",
+    "title": "Negros Occidental — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/negros-occidental/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1800000000",
+    "label": "PSA regional table",
+    "title": "Negros Island Region — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1800000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1804600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Negros Oriental — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1804600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1804600000",
+    "label": "DA profile",
+    "title": "Negros Oriental — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/negros-oriental/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1806100000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Siquijor — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1806100000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1806100000",
+    "label": "DA profile",
+    "title": "Siquijor — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/siquijor/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0701200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Bohol — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0701200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0701200000",
+    "label": "DA profile",
+    "title": "Bohol — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/bohol/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0700000000",
+    "label": "PSA regional table",
+    "title": "Central Visayas — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0700000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0702200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Cebu — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0702200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0702200000",
+    "label": "DA profile",
+    "title": "Cebu — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/cebu/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0807800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Biliran — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0800000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0807800000",
+    "label": "DA profile",
+    "title": "Biliran — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/biliran/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0800000000",
+    "label": "PSA regional table",
+    "title": "Eastern Visayas — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0800000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0802600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Eastern Samar — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0802600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0802600000",
+    "label": "DA profile",
+    "title": "Eastern Samar — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/eastern-samar/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0803700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Leyte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0803700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0803700000",
+    "label": "DA profile",
+    "title": "Leyte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/leyte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0804800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Northern Samar — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0804800000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0804800000",
+    "label": "DA profile",
+    "title": "Northern Samar — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/northern-samar/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0806000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Samar — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0806000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0806000000",
+    "label": "DA profile",
+    "title": "Samar — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/samar-western-samar/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0806400000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Southern Leyte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0806400000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0806400000",
+    "label": "DA profile",
+    "title": "Southern Leyte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/southern-leyte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0906600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Sulu — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0906600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0906600000",
+    "label": "Official profile",
+    "title": "Sulu — coconut farming and copra production",
+    "url": "https://bangsamoro.gov.ph/news/feature-story/from-harvest-to-copra-the-coconut-economy-in-sulu/",
+    "publisher": "Bangsamoro Government",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-0900000000",
+    "label": "PSA regional table",
+    "title": "Zamboanga Peninsula — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0900000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-0907200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Zamboanga del Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0907200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0907200000",
+    "label": "DA profile",
+    "title": "Zamboanga Del Norte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/zamboanga-del-norte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0907300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Zamboanga del Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0907300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0907300000",
+    "label": "DA profile",
+    "title": "Zamboanga Del Sur — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/zamboanga-del-sur/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-0908300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Zamboanga Sibugay — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0908300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-0908300000",
+    "label": "DA profile",
+    "title": "Zamboanga Sibugay — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/zamboanga-sibugay/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1001300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Bukidnon — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1001300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1001300000",
+    "label": "DA profile",
+    "title": "Bukidnon — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/bukidnon/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1000000000",
+    "label": "PSA regional table",
+    "title": "Northern Mindanao — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1000000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1001800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Camiguin — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1001800000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1001800000",
+    "label": "DA profile",
+    "title": "Camiguin — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/camiguin/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1003500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Lanao del Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1003500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1003500000",
+    "label": "DA profile",
+    "title": "Lanao Del Norte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/lanao-del-norte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1004200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Misamis Occidental — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1004200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1004200000",
+    "label": "DA profile",
+    "title": "Misamis Occidental — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/misamis-occidental/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1004300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Misamis Oriental — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1004300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1004300000",
+    "label": "DA profile",
+    "title": "Misamis Oriental — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/misamis-oriental/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1108200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Davao de Oro — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1108200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1108200000",
+    "label": "Official profile",
+    "title": "Davao de Oro — brief profile",
+    "url": "https://dro11.depdev.gov.ph/davao-region/davao-de-oro/",
+    "publisher": "Department of Economy, Planning, and Development XI",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1100000000",
+    "label": "PSA regional table",
+    "title": "Davao Region — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1100000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1102300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Davao del Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1102300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1102300000",
+    "label": "DA profile",
+    "title": "Davao Del Norte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/davao-del-norte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1102400000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Davao del Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1102400000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1102400000",
+    "label": "DA profile",
+    "title": "Davao Del Sur — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/davao-del-sur/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1108600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Davao Occidental — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1108600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1108600000",
+    "label": "DA profile",
+    "title": "Davao Occidental — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/davao-occidental/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1102500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Davao Oriental — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1102500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1102500000",
+    "label": "DA profile",
+    "title": "Davao Oriental — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/davao-oriental/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1204700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Cotabato — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1204700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1204700000",
+    "label": "DA profile",
+    "title": "Cotabato — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/cotabato-north-cotabato/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1200000000",
+    "label": "PSA regional table",
+    "title": "SOCCSKSARGEN — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1200000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1206300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "South Cotabato — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1206300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1206300000",
+    "label": "DA profile",
+    "title": "South Cotabato — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/south-cotabato/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1206500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Sultan Kudarat — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1206500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1206500000",
+    "label": "DA profile",
+    "title": "Sultan Kudarat — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/sultan-kudarat/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1208000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Sarangani — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1208000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1208000000",
+    "label": "DA profile",
+    "title": "Sarangani — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/sarangani/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1600200000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Agusan del Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1600200000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1600200000",
+    "label": "DA profile",
+    "title": "Agusan Del Norte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/agusan-del-norte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1600000000",
+    "label": "PSA regional table",
+    "title": "Caraga — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1600000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1600300000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Agusan del Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1600300000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1600300000",
+    "label": "DA profile",
+    "title": "Agusan Del Sur — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/agusan-del-sur/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1608500000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Dinagat Islands — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1608500000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1608500000",
+    "label": "DA profile",
+    "title": "Dinagat Islands — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/dinagat-islands/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1606700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Surigao del Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1606700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1606700000",
+    "label": "DA profile",
+    "title": "Surigao Del Norte — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/surigao-del-norte/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1606800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Surigao del Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1606800000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1606800000",
+    "label": "DA profile",
+    "title": "Surigao Del Sur — provincial background",
+    "url": "https://saad.da.gov.ph/phase-2/surigao-del-sur/",
+    "publisher": "Department of Agriculture — Special Area for Agricultural Development",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1900700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Basilan — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1900700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1900700000",
+    "label": "Official profile",
+    "title": "BARMM Provincial Economic Trends — Basilan",
+    "url": "https://mfbm.bangsamoro.gov.ph/wp-content/uploads/2025/03/Briefer-1-2025-BARMM-Provincial-Economic-Trends.pdf",
+    "publisher": "Ministry of Finance, and Budget and Management, BARMM",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-region-1900000000",
+    "label": "PSA regional table",
+    "title": "Bangsamoro Autonomous Region in Muslim Mindanao — provincial population coverage",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1900000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-barmm-traditions",
+    "label": "BCPCH",
+    "title": "School of Living Traditions — Basilan and Tawi-Tawi",
+    "url": "https://bcpch.bangsamoro.gov.ph/school-of-living-traditions/",
+    "publisher": "Bangsamoro Commission for the Preservation of Cultural Heritage",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29"
+  },
+  {
+    "id": "province-psa-1903600000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Lanao del Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1903600000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1903600000",
+    "label": "Official profile",
+    "title": "Lanao del Sur — cultural and historical profile",
+    "url": "https://bcpch.bangsamoro.gov.ph/lanao-del-sur/",
+    "publisher": "Bangsamoro Commission for the Preservation of Cultural Heritage",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1907000000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Tawi-Tawi — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1907000000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1907000000",
+    "label": "Official profile",
+    "title": "BARMM Provincial Economic Trends — Tawi-Tawi",
+    "url": "https://mfbm.bangsamoro.gov.ph/wp-content/uploads/2025/03/Briefer-1-2025-BARMM-Provincial-Economic-Trends.pdf",
+    "publisher": "Ministry of Finance, and Budget and Management, BARMM",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1908700000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Maguindanao del Norte — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1908700000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1908700000",
+    "label": "Official profile",
+    "title": "BARMM Provincial Economic Trends — Maguindanao del Norte",
+    "url": "https://mfbm.bangsamoro.gov.ph/wp-content/uploads/2025/03/Briefer-1-2025-BARMM-Provincial-Economic-Trends.pdf",
+    "publisher": "Ministry of Finance, and Budget and Management, BARMM",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  },
+  {
+    "id": "province-psa-1908800000",
+    "label": "PSA POPCEN / PSGC",
+    "title": "Maguindanao del Sur — 2024 population and PSGC listing",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/1908800000",
+    "publisher": "Philippine Statistics Authority",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population reference: 1 July 2024. This is the PSA provincial statistical total, not a live estimate or a sum calculated from map features."
+  },
+  {
+    "id": "province-background-1908800000",
+    "label": "Official profile",
+    "title": "BARMM Provincial Economic Trends — Maguindanao del Sur",
+    "url": "https://mfbm.bangsamoro.gov.ph/wp-content/uploads/2025/03/Briefer-1-2025-BARMM-Provincial-Economic-Trends.pdf",
+    "publisher": "Ministry of Finance, and Budget and Management, BARMM",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative background only; older counts, rankings and regional memberships in background pages are not used for statistics."
+  }
+]

@@ -102,7 +102,7 @@ const GeographicLayer = memo(function GeographicLayer({ view, config, onSelect, 
       fill={fill} vectorEffect="non-scaling-stroke" role="button" tabIndex={disabled ? -1 : 0} aria-label={feature.properties[nameProperty[view.level]] ?? code}
       aria-pressed={(selected?.view === view && selected.code === code) || (view.route.level === 'municity' && view.route.municity === code)}
       onClick={event => { if (!disabled && !event.defaultPrevented) onSelect(feature); }} onKeyDown={event => { if (!disabled && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); onSelect(feature); } }}
-      className="map-feature motion-safe:animate-map-shapes cursor-pointer focus-visible:outline-none" />)}
+      className="map-feature motion-safe:animate-map-shapes cursor-pointer" />)}
     <path data-administrative-borders="" aria-hidden="true" d={boundaryPath} fill="none" vectorEffect="non-scaling-stroke"
       className={`map-boundaries ${lineworkClass} motion-safe:animate-map-shapes pointer-events-none`} />
   </>;

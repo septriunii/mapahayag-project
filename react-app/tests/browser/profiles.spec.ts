@@ -32,8 +32,10 @@ test('pilot profiles follow selection, history, reload and exact geographic leve
   await page.reload(); await ready(page, '#/region/900000000');
   await expect(page.locator(ix)).toBeVisible();
   await select(page, '907200000'); await ready(page, '#/region/900000000/province/907200000');
-  await expect(page.locator('[data-profile-key]')).toHaveCount(0);
-  await expect(page.locator('#detail-body')).toHaveText('No data for this area.');
+  await expect(page.locator('[data-profile-key="province:0907200000"]')).toContainText('1,067,067');
+  await select(page, '907201000');
+  await expect(page.locator('[data-profile-key="municity:0907201000"]')).toContainText('87,699');
+  await page.locator('#back-btn').click(); await ready(page, '#/region/900000000/province/907200000');
   await page.locator('#back-btn').click(); await ready(page, '#/region/900000000');
   await page.locator('#back-btn').click(); await ready(page, '#/');
   await select(page, '1300000000'); await ready(page, '#/region/1300000000');

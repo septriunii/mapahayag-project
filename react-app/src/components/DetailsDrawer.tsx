@@ -13,9 +13,10 @@ interface Props {
   busy?: boolean;
   navigationError?: string;
   profileError?: string;
+  profileLoading?: boolean;
   selectionKey?: string;
 }
-export function DetailsDrawer({ open, config, onClose, selection, profile, sources, busy, navigationError, profileError, selectionKey }: Props) {
+export function DetailsDrawer({ open, config, onClose, selection, profile, sources, busy, navigationError, profileError, profileLoading, selectionKey }: Props) {
   const drawer = useRef<HTMLDivElement>(null);
   const body = useRef<HTMLDivElement>(null);
   useEffect(() => { if (body.current) body.current.scrollTop = 0; }, [profile?.key, selectionKey, busy, navigationError]);
@@ -36,7 +37,7 @@ export function DetailsDrawer({ open, config, onClose, selection, profile, sourc
         <div id="detail-lgu-name" className="mb-1 text-[22px] leading-[1.2] font-semibold text-text-primary">{busy ? 'Loading…' : navigationError ? 'Location unavailable' : selection?.name ?? profile?.name ?? 'Philippines'}</div>
         <div id="detail-region" className="text-[12px] text-text-secondary">{busy || navigationError ? 'Location details' : selection?.parent ?? profile?.subtitle ?? 'Select a region to begin'}</div>
       </div>
-      <div ref={body} id="detail-body" tabIndex={0} aria-label="Location information" aria-busy={busy || undefined} className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
+      <div ref={body} id="detail-body" tabIndex={0} aria-label="Location information" aria-busy={busy || profileLoading || undefined} className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
         {busy ? <p role="status">Loading location details…</p> : navigationError ? <p>{navigationError}</p> : <>
         {profileError && <p role="status" className="mb-3 text-[12px] text-text-secondary">{profileError}</p>}
         {!selection && <div className={profile ? 'pb-4' : 'py-5'}><p id="map-description" className="mt-2 text-[12px] leading-[1.8] text-text-primary">{config.description}</p></div>}
@@ -44,7 +45,7 @@ export function DetailsDrawer({ open, config, onClose, selection, profile, sourc
             <span className="shrink-0 text-[10px] tracking-[0.8px] text-text-secondary uppercase">{field.label}</span>
             <span className="text-right text-[13px] text-text-primary">{displayValue(selection.record?.[field.key])}</span>
           </div>)}</div>}
-        {profile && sources ? <GeographicProfile profile={profile} sources={sources} /> : selection && !rows.length ? <div className="py-10 text-center text-[13px] leading-[1.8] text-text-secondary">No data for this area.</div> : null}
+        {profileLoading ? <p role="status">Loading geographic profile…</p> : profile && sources ? <GeographicProfile profile={profile} sources={sources} /> : selection && !rows.length ? <div className="py-10 text-center text-[13px] leading-[1.8] text-text-secondary">No data for this area.</div> : null}
         </>}
       </div>
     </div>

@@ -1,6 +1,24 @@
 import { expect, test, type Page } from '@playwright/test';
 import { selectSvgLabel } from './svgInput';
 
+test('municipal profile fits a 320px drawer and scrolls without moving the map', async ({ page }, info) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  await page.goto('/#/region/900000000/province/907200000/municity/907203000');
+  const article = page.locator('[data-profile-key="municity:0907203000"]');
+  await expect(article).toBeVisible();
+  await expect(page.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+  await expect(article).toContainText('43,427');
+  const body = page.locator('#detail-body');
+  expect(await body.evaluate(node => node.scrollWidth <= node.clientWidth)).toBe(true);
+  const header = await page.locator('#detail-header').boundingBox();
+  const transform = await page.locator('svg > g').getAttribute('transform');
+  await body.evaluate(node => { node.scrollTop = node.scrollHeight; });
+  await expect.poll(() => body.evaluate(node => node.scrollTop)).toBeGreaterThan(0);
+  expect(await page.locator('#detail-header').boundingBox()).toEqual(header);
+  await expect(page.locator('svg > g')).toHaveAttribute('transform', transform!);
+  await page.screenshot({ path: info.outputPath('municipal-profile-narrow.png') });
+});
+
 test('pilot profile scrolls independently at 320px while header and parent navigation remain usable', async ({ page }, info) => {
   await page.setViewportSize({ width: 320, height: 568 });
   await page.goto('/#/region/900000000'); await ready(page, '#/region/900000000');

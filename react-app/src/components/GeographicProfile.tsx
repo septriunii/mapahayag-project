@@ -47,7 +47,10 @@ export function GeographicProfile({ profile, sources }: Props) {
     </section>
     {profile.sections.map(section => <section key={section.title} aria-label={section.title} className="border-t border-divider pt-3">
       <h2 className="mb-2 text-[14px] font-semibold">{section.title}</h2>
-      {section.paragraphs.map((paragraph, index) => <div key={index} className="mb-2 last:mb-0"><p>{paragraph.text}</p><Citations ids={paragraph.sourceIds} sources={sources} /></div>)}
+      {section.paragraphs.map((paragraph, index) => <div key={index} data-content-status={paragraph.status ?? 'verified'} className="mb-2 last:mb-0">
+        {paragraph.status === 'unavailable' && <p className="text-[11px] font-medium text-text-secondary">Not yet verified</p>}
+        <p>{paragraph.text}</p>{paragraph.sourceIds.length > 0 && <Citations ids={paragraph.sourceIds} sources={sources} />}
+      </div>)}
     </section>)}
     <section aria-label="Sources and Data Notes" className="border-t border-divider pt-3">
       <h2 className="mb-2 text-[14px] font-semibold">Sources and Data Notes</h2>

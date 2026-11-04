@@ -33,6 +33,7 @@
   --color-land-hover: #55685f;
   --color-land-selected: #5c7064;
   --color-interaction-border: #bac8bd;
+  --color-map-focus: rgb(186 200 189 / 65%);
   --color-control: var(--color-panel);
   --color-control-hover: var(--color-divider);
   --color-control-border: var(--color-text-secondary);
@@ -64,6 +65,11 @@ html, body, #root { margin: 0; width: 100%; height: 100%; overflow: hidden; back
   stroke-width: var(--map-active-stroke);
 }
 .map-feature:focus-visible { stroke-width: var(--map-focus-stroke); }
+/* Replace the browser's solid SVG focus box without fading the geography. */
+.map-feature:focus {
+  outline: 1px dashed var(--color-map-focus);
+  outline-offset: 2px;
+}
 /* Data-driven choropleth fills retain their meaning in every interaction state. */
 .map-feature:not([data-choropleth]):is(:hover, :focus-visible) { fill: var(--color-land-hover); }
 .map-feature:not([data-choropleth])[aria-pressed='true'] { fill: var(--color-land-selected); }
