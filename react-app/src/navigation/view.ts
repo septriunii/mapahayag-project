@@ -1,10 +1,10 @@
 import type { MapConfig, DataRecord } from '../config/schema';
-import { NCR, NCR_DISTRICTS } from '../geography/alignment';
+import { BARMM, NCR, NCR_DISTRICTS } from '../geography/alignment';
 import { featureCode } from '../geography/psgc';
 import type { GeographicRepository } from '../geography/repository';
 import type { GeographicCollection, GeographicFeature, GeographicLevel, GeographicView, Psgc } from '../geography/types';
 import { nameProperty } from '../geography/types';
-import { canonicalSuluRoute, parentRoute, type MapRoute } from './routes';
+import { canonicalAlignmentRoute, parentRoute, type MapRoute } from './routes';
 
 export interface LocationDetails {
   level: GeographicLevel;
@@ -25,7 +25,9 @@ export function locationDetails(feature: GeographicFeature, level: GeographicLev
   return {
     level, psgc: featureCode(feature, level),
     name: feature.properties[nameProperty[level]] ?? featureCode(feature, level), parent,
-    typeLabel: { region: 'Region', province: 'Province / District', municity: 'City / Municipality' }[level],
+    typeLabel: level === 'province' && featureCode(feature, level) === '990100000' ? 'City · map navigation grouping'
+      : level === 'province' && featureCode(feature, level) === '1909900000' ? 'Special Geographic Area'
+      : { region: 'Region', province: 'Province / District', municity: 'City / Municipality' }[level],
     record: config.data[level].find(record => record.psgc === featureCode(feature, level)),
   };
 }
@@ -39,7 +41,7 @@ function find(collection: GeographicCollection, level: GeographicLevel, code: Ps
 /** Resolve ancestry through the displayed collections, never by slicing PSGCs.
  * NIR uses its view grouping while all source feature identifiers stay intact. */
 export async function resolveView(route: MapRoute, config: MapConfig, national: GeographicCollection, repository: GeographicRepository): Promise<MapView> {
-  route = canonicalSuluRoute(route);
+  route = canonicalAlignmentRoute(route, config.alignment);
   const country: MapView = { route: { level: 'national' }, level: 'region', collection: national, warnings: [], statusText: `${national.features.length} regions — click to drill in` };
   if (route.level === 'national') return country;
   const region = find(national, 'region', route.region);
@@ -50,6 +52,7 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
   const regionView: MapView = {
     ...regional, route: { level: 'region', region: route.region }, details: regionDetails, backLabel: 'Philippines',
     statusText: route.region === '900000000' ? `${regionDetails.name} — 4 provinces and Isabela City`
+      : route.region === BARMM ? `${regionDetails.name} — 5 provinces and Special Geographic Area`
       : `${regionDetails.name} — ${regional.collection.features.length} ${regional.level === 'municity' ? 'cities/municipalities' : 'provinces'}`,
   };
   if (route.level === 'region') return regionView;

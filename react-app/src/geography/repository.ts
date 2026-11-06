@@ -2,6 +2,7 @@ import type { MapConfig } from '../config/schema';
 import { ResourceCache } from './cache';
 import { BARMM, REGION_IX, SULU, NCR, NCR_DISTRICTS, NIR, usesNirOverride } from './alignment';
 import { currentSuluNational } from './sulu';
+import { withCurrentNames } from './currentNames';
 import { featureCode, normalizePsgc } from './psgc';
 import { parseGeography } from './validate';
 import type { GeographicLevel, GeographicResource, GeographicView, SourcePsgc } from './types';
@@ -18,7 +19,7 @@ export class GeographicRepository {
   private geography(relative: string) { return new URL(`2023/geojson/${relative}`, this.geographicBase).href; }
   private asset(relative: string) { return new URL(relative, this.assets).href; }
   private load(url: string, level: GeographicLevel): Promise<GeographicResource> {
-    return this.cache.load(url, `geography:${level}`, value => parseGeography(value, level));
+    return this.cache.load(url, `geography:${level}`, value => withCurrentNames(parseGeography(value, level), level));
   }
 
   async national() {

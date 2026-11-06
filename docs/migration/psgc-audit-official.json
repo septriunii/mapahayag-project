@@ -1,0 +1,7074 @@
+{
+  "checkedDate": "2026-11-05",
+  "sources": [
+    "https://psa.gov.ph/classification/psgc/municipalities",
+    "https://psa.gov.ph/classification/psgc/provinces",
+    "https://psa.gov.ph/classification/psgc/cities"
+  ],
+  "municipalities": [
+    {
+      "psgc": "1381701000",
+      "name": "Pateros"
+    },
+    {
+      "psgc": "1400101000",
+      "name": "Bangued"
+    },
+    {
+      "psgc": "1400102000",
+      "name": "Boliney"
+    },
+    {
+      "psgc": "1400103000",
+      "name": "Bucay"
+    },
+    {
+      "psgc": "1400104000",
+      "name": "Bucloc"
+    },
+    {
+      "psgc": "1400105000",
+      "name": "Daguioman"
+    },
+    {
+      "psgc": "1400106000",
+      "name": "Danglas"
+    },
+    {
+      "psgc": "1400107000",
+      "name": "Dolores"
+    },
+    {
+      "psgc": "1400108000",
+      "name": "La Paz"
+    },
+    {
+      "psgc": "1400109000",
+      "name": "Lacub"
+    },
+    {
+      "psgc": "1400110000",
+      "name": "Lagangilang"
+    },
+    {
+      "psgc": "1400111000",
+      "name": "Lagayan"
+    },
+    {
+      "psgc": "1400112000",
+      "name": "Langiden"
+    },
+    {
+      "psgc": "1400113000",
+      "name": "Licuan-Baay"
+    },
+    {
+      "psgc": "1400114000",
+      "name": "Luba"
+    },
+    {
+      "psgc": "1400115000",
+      "name": "Malibcong"
+    },
+    {
+      "psgc": "1400116000",
+      "name": "Manabo"
+    },
+    {
+      "psgc": "1400117000",
+      "name": "Peñarrubia"
+    },
+    {
+      "psgc": "1400118000",
+      "name": "Pidigan"
+    },
+    {
+      "psgc": "1400119000",
+      "name": "Pilar"
+    },
+    {
+      "psgc": "1400120000",
+      "name": "Sallapadan"
+    },
+    {
+      "psgc": "1400121000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "1400122000",
+      "name": "San Juan"
+    },
+    {
+      "psgc": "1400123000",
+      "name": "San Quintin"
+    },
+    {
+      "psgc": "1400124000",
+      "name": "Tayum"
+    },
+    {
+      "psgc": "1400125000",
+      "name": "Tineg"
+    },
+    {
+      "psgc": "1400126000",
+      "name": "Tubo"
+    },
+    {
+      "psgc": "1400127000",
+      "name": "Villaviciosa"
+    },
+    {
+      "psgc": "1401101000",
+      "name": "Atok"
+    },
+    {
+      "psgc": "1401103000",
+      "name": "Bakun"
+    },
+    {
+      "psgc": "1401104000",
+      "name": "Bokod"
+    },
+    {
+      "psgc": "1401105000",
+      "name": "Buguias"
+    },
+    {
+      "psgc": "1401106000",
+      "name": "Itogon"
+    },
+    {
+      "psgc": "1401107000",
+      "name": "Kabayan"
+    },
+    {
+      "psgc": "1401108000",
+      "name": "Kapangan"
+    },
+    {
+      "psgc": "1401109000",
+      "name": "Kibungan"
+    },
+    {
+      "psgc": "1401110000",
+      "name": "La Trinidad"
+    },
+    {
+      "psgc": "1401111000",
+      "name": "Mankayan"
+    },
+    {
+      "psgc": "1401112000",
+      "name": "Sablan"
+    },
+    {
+      "psgc": "1401113000",
+      "name": "Tuba"
+    },
+    {
+      "psgc": "1401114000",
+      "name": "Tublay"
+    },
+    {
+      "psgc": "1402701000",
+      "name": "Banaue"
+    },
+    {
+      "psgc": "1402702000",
+      "name": "Hungduan"
+    },
+    {
+      "psgc": "1402703000",
+      "name": "Kiangan"
+    },
+    {
+      "psgc": "1402704000",
+      "name": "Lagawe"
+    },
+    {
+      "psgc": "1402705000",
+      "name": "Lamut"
+    },
+    {
+      "psgc": "1402706000",
+      "name": "Mayoyao"
+    },
+    {
+      "psgc": "1402707000",
+      "name": "Alfonso Lista"
+    },
+    {
+      "psgc": "1402708000",
+      "name": "Aguinaldo"
+    },
+    {
+      "psgc": "1402709000",
+      "name": "Hingyon"
+    },
+    {
+      "psgc": "1402710000",
+      "name": "Tinoc"
+    },
+    {
+      "psgc": "1402711000",
+      "name": "Asipulo"
+    },
+    {
+      "psgc": "1403201000",
+      "name": "Balbalan"
+    },
+    {
+      "psgc": "1403206000",
+      "name": "Lubuagan"
+    },
+    {
+      "psgc": "1403208000",
+      "name": "Pasil"
+    },
+    {
+      "psgc": "1403209000",
+      "name": "Pinukpuk"
+    },
+    {
+      "psgc": "1403211000",
+      "name": "Rizal"
+    },
+    {
+      "psgc": "1403214000",
+      "name": "Tanudan"
+    },
+    {
+      "psgc": "1403215000",
+      "name": "Tinglayan"
+    },
+    {
+      "psgc": "1404401000",
+      "name": "Barlig"
+    },
+    {
+      "psgc": "1404402000",
+      "name": "Bauko"
+    },
+    {
+      "psgc": "1404403000",
+      "name": "Besao"
+    },
+    {
+      "psgc": "1404404000",
+      "name": "Bontoc"
+    },
+    {
+      "psgc": "1404405000",
+      "name": "Natonin"
+    },
+    {
+      "psgc": "1404406000",
+      "name": "Paracelis"
+    },
+    {
+      "psgc": "1404407000",
+      "name": "Sabangan"
+    },
+    {
+      "psgc": "1404408000",
+      "name": "Sadanga"
+    },
+    {
+      "psgc": "1404409000",
+      "name": "Sagada"
+    },
+    {
+      "psgc": "1404410000",
+      "name": "Tadian"
+    },
+    {
+      "psgc": "1408101000",
+      "name": "Calanasan"
+    },
+    {
+      "psgc": "1408102000",
+      "name": "Conner"
+    },
+    {
+      "psgc": "1408103000",
+      "name": "Flora"
+    },
+    {
+      "psgc": "1408104000",
+      "name": "Kabugao"
+    },
+    {
+      "psgc": "1408105000",
+      "name": "Luna"
+    },
+    {
+      "psgc": "1408106000",
+      "name": "Pudtol"
+    },
+    {
+      "psgc": "1408107000",
+      "name": "Santa Marcela"
+    },
+    {
+      "psgc": "0102801000",
+      "name": "Adams"
+    },
+    {
+      "psgc": "0102802000",
+      "name": "Bacarra"
+    },
+    {
+      "psgc": "0102803000",
+      "name": "Badoc"
+    },
+    {
+      "psgc": "0102804000",
+      "name": "Bangui"
+    },
+    {
+      "psgc": "0102806000",
+      "name": "Burgos"
+    },
+    {
+      "psgc": "0102807000",
+      "name": "Carasi"
+    },
+    {
+      "psgc": "0102808000",
+      "name": "Currimao"
+    },
+    {
+      "psgc": "0102809000",
+      "name": "Dingras"
+    },
+    {
+      "psgc": "0102810000",
+      "name": "Dumalneg"
+    },
+    {
+      "psgc": "0102811000",
+      "name": "Banna"
+    },
+    {
+      "psgc": "0102813000",
+      "name": "Marcos"
+    },
+    {
+      "psgc": "0102814000",
+      "name": "Nueva Era"
+    },
+    {
+      "psgc": "0102815000",
+      "name": "Pagudpud"
+    },
+    {
+      "psgc": "0102816000",
+      "name": "Paoay"
+    },
+    {
+      "psgc": "0102817000",
+      "name": "Pasuquin"
+    },
+    {
+      "psgc": "0102818000",
+      "name": "Piddig"
+    },
+    {
+      "psgc": "0102819000",
+      "name": "Pinili"
+    },
+    {
+      "psgc": "0102820000",
+      "name": "San Nicolas"
+    },
+    {
+      "psgc": "0102821000",
+      "name": "Sarrat"
+    },
+    {
+      "psgc": "0102822000",
+      "name": "Solsona"
+    },
+    {
+      "psgc": "0102823000",
+      "name": "Vintar"
+    },
+    {
+      "psgc": "0102901000",
+      "name": "Alilem"
+    },
+    {
+      "psgc": "0102902000",
+      "name": "Banayoyo"
+    },
+    {
+      "psgc": "0102903000",
+      "name": "Bantay"
+    },
+    {
+      "psgc": "0102904000",
+      "name": "Burgos"
+    },
+    {
+      "psgc": "0102905000",
+      "name": "Cabugao"
+    },
+    {
+      "psgc": "0102907000",
+      "name": "Caoayan"
+    },
+    {
+      "psgc": "0102908000",
+      "name": "Cervantes"
+    },
+    {
+      "psgc": "0102909000",
+      "name": "Galimuyod"
+    },
+    {
+      "psgc": "0102910000",
+      "name": "Gregorio del Pilar"
+    },
+    {
+      "psgc": "0102911000",
+      "name": "Lidlidda"
+    },
+    {
+      "psgc": "0102912000",
+      "name": "Magsingal"
+    },
+    {
+      "psgc": "0102913000",
+      "name": "Nagbukel"
+    },
+    {
+      "psgc": "0102914000",
+      "name": "Narvacan"
+    },
+    {
+      "psgc": "0102915000",
+      "name": "Quirino"
+    },
+    {
+      "psgc": "0102916000",
+      "name": "Salcedo"
+    },
+    {
+      "psgc": "0102917000",
+      "name": "San Emilio"
+    },
+    {
+      "psgc": "0102918000",
+      "name": "San Esteban"
+    },
+    {
+      "psgc": "0102919000",
+      "name": "San Ildefonso"
+    },
+    {
+      "psgc": "0102920000",
+      "name": "San Juan"
+    },
+    {
+      "psgc": "0102921000",
+      "name": "San Vicente"
+    },
+    {
+      "psgc": "0102922000",
+      "name": "Santa"
+    },
+    {
+      "psgc": "0102923000",
+      "name": "Santa Catalina"
+    },
+    {
+      "psgc": "0102924000",
+      "name": "Santa Cruz"
+    },
+    {
+      "psgc": "0102925000",
+      "name": "Santa Lucia"
+    },
+    {
+      "psgc": "0102926000",
+      "name": "Santa Maria"
+    },
+    {
+      "psgc": "0102927000",
+      "name": "Santiago"
+    },
+    {
+      "psgc": "0102928000",
+      "name": "Santo Domingo"
+    },
+    {
+      "psgc": "0102929000",
+      "name": "Sigay"
+    },
+    {
+      "psgc": "0102930000",
+      "name": "Sinait"
+    },
+    {
+      "psgc": "0102931000",
+      "name": "Sugpon"
+    },
+    {
+      "psgc": "0102932000",
+      "name": "Suyo"
+    },
+    {
+      "psgc": "0102933000",
+      "name": "Tagudin"
+    },
+    {
+      "psgc": "0103301000",
+      "name": "Agoo"
+    },
+    {
+      "psgc": "0103302000",
+      "name": "Aringay"
+    },
+    {
+      "psgc": "0103303000",
+      "name": "Bacnotan"
+    },
+    {
+      "psgc": "0103304000",
+      "name": "Bagulin"
+    },
+    {
+      "psgc": "0103305000",
+      "name": "Balaoan"
+    },
+    {
+      "psgc": "0103306000",
+      "name": "Bangar"
+    },
+    {
+      "psgc": "0103307000",
+      "name": "Bauang"
+    },
+    {
+      "psgc": "0103308000",
+      "name": "Burgos"
+    },
+    {
+      "psgc": "0103309000",
+      "name": "Caba"
+    },
+    {
+      "psgc": "0103310000",
+      "name": "Luna"
+    },
+    {
+      "psgc": "0103311000",
+      "name": "Naguilian"
+    },
+    {
+      "psgc": "0103312000",
+      "name": "Pugo"
+    },
+    {
+      "psgc": "0103313000",
+      "name": "Rosario"
+    },
+    {
+      "psgc": "0103315000",
+      "name": "San Gabriel"
+    },
+    {
+      "psgc": "0103316000",
+      "name": "San Juan"
+    },
+    {
+      "psgc": "0103317000",
+      "name": "Santo Tomas"
+    },
+    {
+      "psgc": "0103318000",
+      "name": "Santol"
+    },
+    {
+      "psgc": "0103319000",
+      "name": "Sudipen"
+    },
+    {
+      "psgc": "0103320000",
+      "name": "Tubao"
+    },
+    {
+      "psgc": "0105501000",
+      "name": "Agno"
+    },
+    {
+      "psgc": "0105502000",
+      "name": "Aguilar"
+    },
+    {
+      "psgc": "0105504000",
+      "name": "Alcala"
+    },
+    {
+      "psgc": "0105505000",
+      "name": "Anda"
+    },
+    {
+      "psgc": "0105506000",
+      "name": "Asingan"
+    },
+    {
+      "psgc": "0105507000",
+      "name": "Balungao"
+    },
+    {
+      "psgc": "0105508000",
+      "name": "Bani"
+    },
+    {
+      "psgc": "0105509000",
+      "name": "Basista"
+    },
+    {
+      "psgc": "0105510000",
+      "name": "Bautista"
+    },
+    {
+      "psgc": "0105511000",
+      "name": "Bayambang"
+    },
+    {
+      "psgc": "0105512000",
+      "name": "Binalonan"
+    },
+    {
+      "psgc": "0105513000",
+      "name": "Binmaley"
+    },
+    {
+      "psgc": "0105514000",
+      "name": "Bolinao"
+    },
+    {
+      "psgc": "0105515000",
+      "name": "Bugallon"
+    },
+    {
+      "psgc": "0105516000",
+      "name": "Burgos"
+    },
+    {
+      "psgc": "0105517000",
+      "name": "Calasiao"
+    },
+    {
+      "psgc": "0105519000",
+      "name": "Dasol"
+    },
+    {
+      "psgc": "0105520000",
+      "name": "Infanta"
+    },
+    {
+      "psgc": "0105521000",
+      "name": "Labrador"
+    },
+    {
+      "psgc": "0105522000",
+      "name": "Lingayen"
+    },
+    {
+      "psgc": "0105523000",
+      "name": "Mabini"
+    },
+    {
+      "psgc": "0105524000",
+      "name": "Malasiqui"
+    },
+    {
+      "psgc": "0105525000",
+      "name": "Manaoag"
+    },
+    {
+      "psgc": "0105526000",
+      "name": "Mangaldan"
+    },
+    {
+      "psgc": "0105527000",
+      "name": "Mangatarem"
+    },
+    {
+      "psgc": "0105528000",
+      "name": "Mapandan"
+    },
+    {
+      "psgc": "0105529000",
+      "name": "Natividad"
+    },
+    {
+      "psgc": "0105530000",
+      "name": "Pozorrubio"
+    },
+    {
+      "psgc": "0105531000",
+      "name": "Rosales"
+    },
+    {
+      "psgc": "0105533000",
+      "name": "San Fabian"
+    },
+    {
+      "psgc": "0105534000",
+      "name": "San Jacinto"
+    },
+    {
+      "psgc": "0105535000",
+      "name": "San Manuel"
+    },
+    {
+      "psgc": "0105536000",
+      "name": "San Nicolas"
+    },
+    {
+      "psgc": "0105537000",
+      "name": "San Quintin"
+    },
+    {
+      "psgc": "0105538000",
+      "name": "Santa Barbara"
+    },
+    {
+      "psgc": "0105539000",
+      "name": "Santa Maria"
+    },
+    {
+      "psgc": "0105540000",
+      "name": "Santo Tomas"
+    },
+    {
+      "psgc": "0203121000",
+      "name": "Palanan"
+    },
+    {
+      "psgc": "0203122000",
+      "name": "Quezon"
+    },
+    {
+      "psgc": "0203123000",
+      "name": "Quirino"
+    },
+    {
+      "psgc": "0203124000",
+      "name": "Ramon"
+    },
+    {
+      "psgc": "0203125000",
+      "name": "Reina Mercedes"
+    },
+    {
+      "psgc": "0203126000",
+      "name": "Roxas"
+    },
+    {
+      "psgc": "0203127000",
+      "name": "San Agustin"
+    },
+    {
+      "psgc": "0203128000",
+      "name": "San Guillermo"
+    },
+    {
+      "psgc": "0203129000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "0203130000",
+      "name": "San Manuel"
+    },
+    {
+      "psgc": "0203131000",
+      "name": "San Mariano"
+    },
+    {
+      "psgc": "0203132000",
+      "name": "San Mateo"
+    },
+    {
+      "psgc": "0203133000",
+      "name": "San Pablo"
+    },
+    {
+      "psgc": "0203134000",
+      "name": "Santa Maria"
+    },
+    {
+      "psgc": "0203136000",
+      "name": "Santo Tomas"
+    },
+    {
+      "psgc": "0203137000",
+      "name": "Tumauini"
+    },
+    {
+      "psgc": "0205001000",
+      "name": "Ambaguio"
+    },
+    {
+      "psgc": "0205002000",
+      "name": "Aritao"
+    },
+    {
+      "psgc": "0205003000",
+      "name": "Bagabag"
+    },
+    {
+      "psgc": "0205004000",
+      "name": "Bambang"
+    },
+    {
+      "psgc": "0205005000",
+      "name": "Bayombong"
+    },
+    {
+      "psgc": "0205006000",
+      "name": "Diadi"
+    },
+    {
+      "psgc": "0205007000",
+      "name": "Dupax del Norte"
+    },
+    {
+      "psgc": "0205008000",
+      "name": "Dupax del Sur"
+    },
+    {
+      "psgc": "0205009000",
+      "name": "Kasibu"
+    },
+    {
+      "psgc": "0205010000",
+      "name": "Kayapa"
+    },
+    {
+      "psgc": "0205011000",
+      "name": "Quezon"
+    },
+    {
+      "psgc": "0205012000",
+      "name": "Santa Fe"
+    },
+    {
+      "psgc": "0205013000",
+      "name": "Solano"
+    },
+    {
+      "psgc": "0205014000",
+      "name": "Villaverde"
+    },
+    {
+      "psgc": "0205015000",
+      "name": "Alfonso Castaneda"
+    },
+    {
+      "psgc": "0205701000",
+      "name": "Aglipay"
+    },
+    {
+      "psgc": "0205702000",
+      "name": "Cabarroguis"
+    },
+    {
+      "psgc": "0205703000",
+      "name": "Diffun"
+    },
+    {
+      "psgc": "0205704000",
+      "name": "Maddela"
+    },
+    {
+      "psgc": "0205705000",
+      "name": "Saguday"
+    },
+    {
+      "psgc": "0205706000",
+      "name": "Nagtipunan"
+    },
+    {
+      "psgc": "0300801000",
+      "name": "Abucay"
+    },
+    {
+      "psgc": "0300802000",
+      "name": "Bagac"
+    },
+    {
+      "psgc": "0300804000",
+      "name": "Dinalupihan"
+    },
+    {
+      "psgc": "0300805000",
+      "name": "Hermosa"
+    },
+    {
+      "psgc": "0300806000",
+      "name": "Limay"
+    },
+    {
+      "psgc": "0300807000",
+      "name": "Mariveles"
+    },
+    {
+      "psgc": "0300808000",
+      "name": "Morong"
+    },
+    {
+      "psgc": "0300809000",
+      "name": "Orani"
+    },
+    {
+      "psgc": "0300810000",
+      "name": "Orion"
+    },
+    {
+      "psgc": "0300811000",
+      "name": "Pilar"
+    },
+    {
+      "psgc": "0300812000",
+      "name": "Samal"
+    },
+    {
+      "psgc": "0301401000",
+      "name": "Angat"
+    },
+    {
+      "psgc": "0301402000",
+      "name": "Balagtas"
+    },
+    {
+      "psgc": "0301404000",
+      "name": "Bocaue"
+    },
+    {
+      "psgc": "0301405000",
+      "name": "Bulacan"
+    },
+    {
+      "psgc": "0301406000",
+      "name": "Bustos"
+    },
+    {
+      "psgc": "0301407000",
+      "name": "Calumpit"
+    },
+    {
+      "psgc": "0301408000",
+      "name": "Guiguinto"
+    },
+    {
+      "psgc": "0301409000",
+      "name": "Hagonoy"
+    },
+    {
+      "psgc": "0301411000",
+      "name": "Marilao"
+    },
+    {
+      "psgc": "0301413000",
+      "name": "Norzagaray"
+    },
+    {
+      "psgc": "0301414000",
+      "name": "Obando"
+    },
+    {
+      "psgc": "0301415000",
+      "name": "Pandi"
+    },
+    {
+      "psgc": "0301416000",
+      "name": "Paombong"
+    },
+    {
+      "psgc": "0301417000",
+      "name": "Plaridel"
+    },
+    {
+      "psgc": "0301418000",
+      "name": "Pulilan"
+    },
+    {
+      "psgc": "0301419000",
+      "name": "San Ildefonso"
+    },
+    {
+      "psgc": "0301421000",
+      "name": "San Miguel"
+    },
+    {
+      "psgc": "0301422000",
+      "name": "San Rafael"
+    },
+    {
+      "psgc": "0301423000",
+      "name": "Santa Maria"
+    },
+    {
+      "psgc": "0301424000",
+      "name": "Doña Remedios Trinidad"
+    },
+    {
+      "psgc": "0304901000",
+      "name": "Aliaga"
+    },
+    {
+      "psgc": "0304902000",
+      "name": "Bongabon"
+    },
+    {
+      "psgc": "0304904000",
+      "name": "Cabiao"
+    },
+    {
+      "psgc": "0304905000",
+      "name": "Carranglan"
+    },
+    {
+      "psgc": "0304906000",
+      "name": "Cuyapo"
+    },
+    {
+      "psgc": "0304907000",
+      "name": "Gabaldon"
+    },
+    {
+      "psgc": "0304909000",
+      "name": "General Mamerto Natividad"
+    },
+    {
+      "psgc": "0304910000",
+      "name": "General Tinio"
+    },
+    {
+      "psgc": "0304911000",
+      "name": "Guimba"
+    },
+    {
+      "psgc": "0304912000",
+      "name": "Jaen"
+    },
+    {
+      "psgc": "0304913000",
+      "name": "Laur"
+    },
+    {
+      "psgc": "0304914000",
+      "name": "Licab"
+    },
+    {
+      "psgc": "0304915000",
+      "name": "Llanera"
+    },
+    {
+      "psgc": "0304916000",
+      "name": "Lupao"
+    },
+    {
+      "psgc": "0304918000",
+      "name": "Nampicuan"
+    },
+    {
+      "psgc": "0304920000",
+      "name": "Pantabangan"
+    },
+    {
+      "psgc": "0304921000",
+      "name": "Peñaranda"
+    },
+    {
+      "psgc": "0304922000",
+      "name": "Quezon"
+    },
+    {
+      "psgc": "0304923000",
+      "name": "Rizal"
+    },
+    {
+      "psgc": "0304924000",
+      "name": "San Antonio"
+    },
+    {
+      "psgc": "0304925000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "0304927000",
+      "name": "San Leonardo"
+    },
+    {
+      "psgc": "0304928000",
+      "name": "Santa Rosa"
+    },
+    {
+      "psgc": "0304929000",
+      "name": "Santo Domingo"
+    },
+    {
+      "psgc": "0304930000",
+      "name": "Talavera"
+    },
+    {
+      "psgc": "0304931000",
+      "name": "Talugtug"
+    },
+    {
+      "psgc": "0304932000",
+      "name": "Zaragoza"
+    },
+    {
+      "psgc": "0305402000",
+      "name": "Apalit"
+    },
+    {
+      "psgc": "0305403000",
+      "name": "Arayat"
+    },
+    {
+      "psgc": "0305404000",
+      "name": "Bacolor"
+    },
+    {
+      "psgc": "0305405000",
+      "name": "Candaba"
+    },
+    {
+      "psgc": "0305406000",
+      "name": "Floridablanca"
+    },
+    {
+      "psgc": "0305407000",
+      "name": "Guagua"
+    },
+    {
+      "psgc": "0305408000",
+      "name": "Lubao"
+    },
+    {
+      "psgc": "0305410000",
+      "name": "Macabebe"
+    },
+    {
+      "psgc": "0305411000",
+      "name": "Magalang"
+    },
+    {
+      "psgc": "0305412000",
+      "name": "Masantol"
+    },
+    {
+      "psgc": "0305413000",
+      "name": "Mexico"
+    },
+    {
+      "psgc": "0305414000",
+      "name": "Minalin"
+    },
+    {
+      "psgc": "0305415000",
+      "name": "Porac"
+    },
+    {
+      "psgc": "0305417000",
+      "name": "San Luis"
+    },
+    {
+      "psgc": "0305418000",
+      "name": "San Simon"
+    },
+    {
+      "psgc": "0305419000",
+      "name": "Santa Ana"
+    },
+    {
+      "psgc": "0305420000",
+      "name": "Santa Rita"
+    },
+    {
+      "psgc": "0305421000",
+      "name": "Sto. Tomas"
+    },
+    {
+      "psgc": "0305422000",
+      "name": "Sasmuan"
+    },
+    {
+      "psgc": "0306901000",
+      "name": "Anao"
+    },
+    {
+      "psgc": "0306902000",
+      "name": "Bamban"
+    },
+    {
+      "psgc": "0306903000",
+      "name": "Camiling"
+    },
+    {
+      "psgc": "0306904000",
+      "name": "Capas"
+    },
+    {
+      "psgc": "0306905000",
+      "name": "Concepcion"
+    },
+    {
+      "psgc": "0306906000",
+      "name": "Gerona"
+    },
+    {
+      "psgc": "0306907000",
+      "name": "La Paz"
+    },
+    {
+      "psgc": "0306908000",
+      "name": "Mayantoc"
+    },
+    {
+      "psgc": "0306909000",
+      "name": "Moncada"
+    },
+    {
+      "psgc": "0306910000",
+      "name": "Paniqui"
+    },
+    {
+      "psgc": "0306911000",
+      "name": "Pura"
+    },
+    {
+      "psgc": "0306912000",
+      "name": "Ramos"
+    },
+    {
+      "psgc": "0306913000",
+      "name": "San Clemente"
+    },
+    {
+      "psgc": "0306914000",
+      "name": "San Manuel"
+    },
+    {
+      "psgc": "0306915000",
+      "name": "Santa Ignacia"
+    },
+    {
+      "psgc": "0306917000",
+      "name": "Victoria"
+    },
+    {
+      "psgc": "0306918000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "0307101000",
+      "name": "Botolan"
+    },
+    {
+      "psgc": "0307102000",
+      "name": "Cabangan"
+    },
+    {
+      "psgc": "0307103000",
+      "name": "Candelaria"
+    },
+    {
+      "psgc": "0307104000",
+      "name": "Castillejos"
+    },
+    {
+      "psgc": "0307105000",
+      "name": "Iba"
+    },
+    {
+      "psgc": "0307106000",
+      "name": "Masinloc"
+    },
+    {
+      "psgc": "0307108000",
+      "name": "Palauig"
+    },
+    {
+      "psgc": "0307109000",
+      "name": "San Antonio"
+    },
+    {
+      "psgc": "0307110000",
+      "name": "San Felipe"
+    },
+    {
+      "psgc": "0307111000",
+      "name": "San Marcelino"
+    },
+    {
+      "psgc": "0307112000",
+      "name": "San Narciso"
+    },
+    {
+      "psgc": "0307113000",
+      "name": "Santa Cruz"
+    },
+    {
+      "psgc": "0307114000",
+      "name": "Subic"
+    },
+    {
+      "psgc": "0307701000",
+      "name": "Baler"
+    },
+    {
+      "psgc": "0307702000",
+      "name": "Casiguran"
+    },
+    {
+      "psgc": "0307703000",
+      "name": "Dilasag"
+    },
+    {
+      "psgc": "0307704000",
+      "name": "Dinalungan"
+    },
+    {
+      "psgc": "0307705000",
+      "name": "Dingalan"
+    },
+    {
+      "psgc": "0307706000",
+      "name": "Dipaculao"
+    },
+    {
+      "psgc": "0307707000",
+      "name": "Maria Aurora"
+    },
+    {
+      "psgc": "0307708000",
+      "name": "San Luis"
+    },
+    {
+      "psgc": "0401001000",
+      "name": "Agoncillo"
+    },
+    {
+      "psgc": "0401002000",
+      "name": "Alitagtag"
+    },
+    {
+      "psgc": "0401003000",
+      "name": "Balayan"
+    },
+    {
+      "psgc": "0401004000",
+      "name": "Balete"
+    },
+    {
+      "psgc": "0401006000",
+      "name": "Bauan"
+    },
+    {
+      "psgc": "0401008000",
+      "name": "Calatagan"
+    },
+    {
+      "psgc": "0401009000",
+      "name": "Cuenca"
+    },
+    {
+      "psgc": "0401010000",
+      "name": "Ibaan"
+    },
+    {
+      "psgc": "0401011000",
+      "name": "Laurel"
+    },
+    {
+      "psgc": "0401012000",
+      "name": "Lemery"
+    },
+    {
+      "psgc": "0401013000",
+      "name": "Lian"
+    },
+    {
+      "psgc": "0401015000",
+      "name": "Lobo"
+    },
+    {
+      "psgc": "0401016000",
+      "name": "Mabini"
+    },
+    {
+      "psgc": "0401017000",
+      "name": "Malvar"
+    },
+    {
+      "psgc": "0401018000",
+      "name": "Mataasnakahoy"
+    },
+    {
+      "psgc": "0401019000",
+      "name": "Nasugbu"
+    },
+    {
+      "psgc": "0401020000",
+      "name": "Padre Garcia"
+    },
+    {
+      "psgc": "0401021000",
+      "name": "Rosario"
+    },
+    {
+      "psgc": "0401022000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "0401023000",
+      "name": "San Juan"
+    },
+    {
+      "psgc": "0401024000",
+      "name": "San Luis"
+    },
+    {
+      "psgc": "0401025000",
+      "name": "San Nicolas"
+    },
+    {
+      "psgc": "0401026000",
+      "name": "San Pascual"
+    },
+    {
+      "psgc": "0401027000",
+      "name": "Santa Teresita"
+    },
+    {
+      "psgc": "0401029000",
+      "name": "Taal"
+    },
+    {
+      "psgc": "0401030000",
+      "name": "Talisay"
+    },
+    {
+      "psgc": "0401032000",
+      "name": "Taysan"
+    },
+    {
+      "psgc": "0401033000",
+      "name": "Tingloy"
+    },
+    {
+      "psgc": "0401034000",
+      "name": "Tuy"
+    },
+    {
+      "psgc": "0402101000",
+      "name": "Alfonso"
+    },
+    {
+      "psgc": "0402102000",
+      "name": "Amadeo"
+    },
+    {
+      "psgc": "0402107000",
+      "name": "General Emilio Aguinaldo"
+    },
+    {
+      "psgc": "0402110000",
+      "name": "Indang"
+    },
+    {
+      "psgc": "0402111000",
+      "name": "Kawit"
+    },
+    {
+      "psgc": "0402112000",
+      "name": "Magallanes"
+    },
+    {
+      "psgc": "0402113000",
+      "name": "Maragondon"
+    },
+    {
+      "psgc": "0402114000",
+      "name": "Mendez"
+    },
+    {
+      "psgc": "0402115000",
+      "name": "Naic"
+    },
+    {
+      "psgc": "0402116000",
+      "name": "Noveleta"
+    },
+    {
+      "psgc": "0402117000",
+      "name": "Rosario"
+    },
+    {
+      "psgc": "0402118000",
+      "name": "Silang"
+    },
+    {
+      "psgc": "0402120000",
+      "name": "Tanza"
+    },
+    {
+      "psgc": "0402121000",
+      "name": "Ternate"
+    },
+    {
+      "psgc": "0402123000",
+      "name": "Gen. Mariano Alvarez"
+    },
+    {
+      "psgc": "0403401000",
+      "name": "Alaminos"
+    },
+    {
+      "psgc": "0403402000",
+      "name": "Bay"
+    },
+    {
+      "psgc": "0403406000",
+      "name": "Calauan"
+    },
+    {
+      "psgc": "0403407000",
+      "name": "Cavinti"
+    },
+    {
+      "psgc": "0403408000",
+      "name": "Famy"
+    },
+    {
+      "psgc": "0403409000",
+      "name": "Kalayaan"
+    },
+    {
+      "psgc": "0403410000",
+      "name": "Liliw"
+    },
+    {
+      "psgc": "0403411000",
+      "name": "Los Baños"
+    },
+    {
+      "psgc": "0403412000",
+      "name": "Luisiana"
+    },
+    {
+      "psgc": "0403413000",
+      "name": "Lumban"
+    },
+    {
+      "psgc": "0403414000",
+      "name": "Mabitac"
+    },
+    {
+      "psgc": "0403415000",
+      "name": "Magdalena"
+    },
+    {
+      "psgc": "0403416000",
+      "name": "Majayjay"
+    },
+    {
+      "psgc": "0403417000",
+      "name": "Nagcarlan"
+    },
+    {
+      "psgc": "0403418000",
+      "name": "Paete"
+    },
+    {
+      "psgc": "0403419000",
+      "name": "Pagsanjan"
+    },
+    {
+      "psgc": "0403420000",
+      "name": "Pakil"
+    },
+    {
+      "psgc": "0403421000",
+      "name": "Pangil"
+    },
+    {
+      "psgc": "0403422000",
+      "name": "Pila"
+    },
+    {
+      "psgc": "0403423000",
+      "name": "Rizal"
+    },
+    {
+      "psgc": "0403426000",
+      "name": "Santa Cruz"
+    },
+    {
+      "psgc": "0403427000",
+      "name": "Santa Maria"
+    },
+    {
+      "psgc": "0403429000",
+      "name": "Siniloan"
+    },
+    {
+      "psgc": "0403430000",
+      "name": "Victoria"
+    },
+    {
+      "psgc": "0405601000",
+      "name": "Agdangan"
+    },
+    {
+      "psgc": "0405602000",
+      "name": "Alabat"
+    },
+    {
+      "psgc": "0405603000",
+      "name": "Atimonan"
+    },
+    {
+      "psgc": "0405605000",
+      "name": "Buenavista"
+    },
+    {
+      "psgc": "0405606000",
+      "name": "Burdeos"
+    },
+    {
+      "psgc": "0405607000",
+      "name": "Calauag"
+    },
+    {
+      "psgc": "0405608000",
+      "name": "Candelaria"
+    },
+    {
+      "psgc": "0405610000",
+      "name": "Catanauan"
+    },
+    {
+      "psgc": "0405615000",
+      "name": "Dolores"
+    },
+    {
+      "psgc": "0405616000",
+      "name": "General Luna"
+    },
+    {
+      "psgc": "0405617000",
+      "name": "General Nakar"
+    },
+    {
+      "psgc": "0405618000",
+      "name": "Guinayangan"
+    },
+    {
+      "psgc": "0405619000",
+      "name": "Gumaca"
+    },
+    {
+      "psgc": "0405620000",
+      "name": "Infanta"
+    },
+    {
+      "psgc": "0405621000",
+      "name": "Jomalig"
+    },
+    {
+      "psgc": "0405622000",
+      "name": "Lopez"
+    },
+    {
+      "psgc": "0405623000",
+      "name": "Lucban"
+    },
+    {
+      "psgc": "0405625000",
+      "name": "Macalelon"
+    },
+    {
+      "psgc": "0405627000",
+      "name": "Mauban"
+    },
+    {
+      "psgc": "0405628000",
+      "name": "Mulanay"
+    },
+    {
+      "psgc": "0500507000",
+      "name": "Libon"
+    },
+    {
+      "psgc": "0500509000",
+      "name": "Malilipot"
+    },
+    {
+      "psgc": "0500510000",
+      "name": "Malinao"
+    },
+    {
+      "psgc": "0500511000",
+      "name": "Manito"
+    },
+    {
+      "psgc": "0500512000",
+      "name": "Oas"
+    },
+    {
+      "psgc": "0500513000",
+      "name": "Pio Duran"
+    },
+    {
+      "psgc": "0500514000",
+      "name": "Polangui"
+    },
+    {
+      "psgc": "0500515000",
+      "name": "Rapu-Rapu"
+    },
+    {
+      "psgc": "0500516000",
+      "name": "Santo Domingo"
+    },
+    {
+      "psgc": "0500518000",
+      "name": "Tiwi"
+    },
+    {
+      "psgc": "0501601000",
+      "name": "Basud"
+    },
+    {
+      "psgc": "0501602000",
+      "name": "Capalonga"
+    },
+    {
+      "psgc": "0501603000",
+      "name": "Daet"
+    },
+    {
+      "psgc": "0501604000",
+      "name": "San Lorenzo Ruiz"
+    },
+    {
+      "psgc": "0501605000",
+      "name": "Jose Panganiban"
+    },
+    {
+      "psgc": "0501606000",
+      "name": "Labo"
+    },
+    {
+      "psgc": "0501607000",
+      "name": "Mercedes"
+    },
+    {
+      "psgc": "0501608000",
+      "name": "Paracale"
+    },
+    {
+      "psgc": "0501609000",
+      "name": "San Vicente"
+    },
+    {
+      "psgc": "0501610000",
+      "name": "Santa Elena"
+    },
+    {
+      "psgc": "0501611000",
+      "name": "Talisay"
+    },
+    {
+      "psgc": "0501612000",
+      "name": "Vinzons"
+    },
+    {
+      "psgc": "0501701000",
+      "name": "Baao"
+    },
+    {
+      "psgc": "0501702000",
+      "name": "Balatan"
+    },
+    {
+      "psgc": "0501703000",
+      "name": "Bato"
+    },
+    {
+      "psgc": "0501704000",
+      "name": "Bombon"
+    },
+    {
+      "psgc": "0501705000",
+      "name": "Buhi"
+    },
+    {
+      "psgc": "0501706000",
+      "name": "Bula"
+    },
+    {
+      "psgc": "0501707000",
+      "name": "Cabusao"
+    },
+    {
+      "psgc": "0501708000",
+      "name": "Calabanga"
+    },
+    {
+      "psgc": "0501709000",
+      "name": "Camaligan"
+    },
+    {
+      "psgc": "0501710000",
+      "name": "Canaman"
+    },
+    {
+      "psgc": "0501711000",
+      "name": "Caramoan"
+    },
+    {
+      "psgc": "0501712000",
+      "name": "Del Gallego"
+    },
+    {
+      "psgc": "0501713000",
+      "name": "Gainza"
+    },
+    {
+      "psgc": "0501714000",
+      "name": "Garchitorena"
+    },
+    {
+      "psgc": "0501715000",
+      "name": "Goa"
+    },
+    {
+      "psgc": "0501717000",
+      "name": "Lagonoy"
+    },
+    {
+      "psgc": "0501718000",
+      "name": "Libmanan"
+    },
+    {
+      "psgc": "0501719000",
+      "name": "Lupi"
+    },
+    {
+      "psgc": "0501720000",
+      "name": "Magarao"
+    },
+    {
+      "psgc": "0501721000",
+      "name": "Milaor"
+    },
+    {
+      "psgc": "0501722000",
+      "name": "Minalabac"
+    },
+    {
+      "psgc": "0501723000",
+      "name": "Nabua"
+    },
+    {
+      "psgc": "0501725000",
+      "name": "Ocampo"
+    },
+    {
+      "psgc": "0501726000",
+      "name": "Pamplona"
+    },
+    {
+      "psgc": "0501727000",
+      "name": "Pasacao"
+    },
+    {
+      "psgc": "0501728000",
+      "name": "Pili"
+    },
+    {
+      "psgc": "0501729000",
+      "name": "Presentacion"
+    },
+    {
+      "psgc": "0501730000",
+      "name": "Ragay"
+    },
+    {
+      "psgc": "0501731000",
+      "name": "Sagñay"
+    },
+    {
+      "psgc": "0501732000",
+      "name": "San Fernando"
+    },
+    {
+      "psgc": "0501733000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "0501734000",
+      "name": "Sipocot"
+    },
+    {
+      "psgc": "0501735000",
+      "name": "Siruma"
+    },
+    {
+      "psgc": "0501736000",
+      "name": "Tigaon"
+    },
+    {
+      "psgc": "0501737000",
+      "name": "Tinambac"
+    },
+    {
+      "psgc": "0502001000",
+      "name": "Bagamanoc"
+    },
+    {
+      "psgc": "0502002000",
+      "name": "Baras"
+    },
+    {
+      "psgc": "0502003000",
+      "name": "Bato"
+    },
+    {
+      "psgc": "0502004000",
+      "name": "Caramoran"
+    },
+    {
+      "psgc": "0502005000",
+      "name": "Gigmoto"
+    },
+    {
+      "psgc": "0502006000",
+      "name": "Pandan"
+    },
+    {
+      "psgc": "0502007000",
+      "name": "Panganiban"
+    },
+    {
+      "psgc": "0502008000",
+      "name": "San Andres"
+    },
+    {
+      "psgc": "0502009000",
+      "name": "San Miguel"
+    },
+    {
+      "psgc": "0502010000",
+      "name": "Viga"
+    },
+    {
+      "psgc": "0502011000",
+      "name": "Virac"
+    },
+    {
+      "psgc": "0504101000",
+      "name": "Aroroy"
+    },
+    {
+      "psgc": "0504102000",
+      "name": "Baleno"
+    },
+    {
+      "psgc": "0504103000",
+      "name": "Balud"
+    },
+    {
+      "psgc": "0504104000",
+      "name": "Batuan"
+    },
+    {
+      "psgc": "0504105000",
+      "name": "Cataingan"
+    },
+    {
+      "psgc": "0504106000",
+      "name": "Cawayan"
+    },
+    {
+      "psgc": "0504107000",
+      "name": "Claveria"
+    },
+    {
+      "psgc": "0504108000",
+      "name": "Dimasalang"
+    },
+    {
+      "psgc": "0504109000",
+      "name": "Esperanza"
+    },
+    {
+      "psgc": "0504110000",
+      "name": "Mandaon"
+    },
+    {
+      "psgc": "0504112000",
+      "name": "Milagros"
+    },
+    {
+      "psgc": "0504113000",
+      "name": "Mobo"
+    },
+    {
+      "psgc": "0504114000",
+      "name": "Monreal"
+    },
+    {
+      "psgc": "0504115000",
+      "name": "Palanas"
+    },
+    {
+      "psgc": "0504116000",
+      "name": "Pio V. Corpus"
+    },
+    {
+      "psgc": "0504117000",
+      "name": "Placer"
+    },
+    {
+      "psgc": "0504118000",
+      "name": "San Fernando"
+    },
+    {
+      "psgc": "0504119000",
+      "name": "San Jacinto"
+    },
+    {
+      "psgc": "0504120000",
+      "name": "San Pascual"
+    },
+    {
+      "psgc": "0504121000",
+      "name": "Uson"
+    },
+    {
+      "psgc": "0506202000",
+      "name": "Barcelona"
+    },
+    {
+      "psgc": "0506203000",
+      "name": "Bulan"
+    },
+    {
+      "psgc": "0506204000",
+      "name": "Bulusan"
+    },
+    {
+      "psgc": "0506205000",
+      "name": "Casiguran"
+    },
+    {
+      "psgc": "0506206000",
+      "name": "Castilla"
+    },
+    {
+      "psgc": "0506207000",
+      "name": "Donsol"
+    },
+    {
+      "psgc": "0506208000",
+      "name": "Gubat"
+    },
+    {
+      "psgc": "0506209000",
+      "name": "Irosin"
+    },
+    {
+      "psgc": "0506210000",
+      "name": "Juban"
+    },
+    {
+      "psgc": "0506211000",
+      "name": "Magallanes"
+    },
+    {
+      "psgc": "0506212000",
+      "name": "Matnog"
+    },
+    {
+      "psgc": "0506213000",
+      "name": "Pilar"
+    },
+    {
+      "psgc": "0506214000",
+      "name": "Prieto Diaz"
+    },
+    {
+      "psgc": "0506215000",
+      "name": "Santa Magdalena"
+    },
+    {
+      "psgc": "0600401000",
+      "name": "Altavas"
+    },
+    {
+      "psgc": "0600402000",
+      "name": "Balete"
+    },
+    {
+      "psgc": "0600403000",
+      "name": "Banga"
+    },
+    {
+      "psgc": "0600404000",
+      "name": "Batan"
+    },
+    {
+      "psgc": "0600405000",
+      "name": "Buruanga"
+    },
+    {
+      "psgc": "0600406000",
+      "name": "Ibajay"
+    },
+    {
+      "psgc": "0600407000",
+      "name": "Kalibo"
+    },
+    {
+      "psgc": "0600408000",
+      "name": "Lezo"
+    },
+    {
+      "psgc": "0600409000",
+      "name": "Libacao"
+    },
+    {
+      "psgc": "0600410000",
+      "name": "Madalag"
+    },
+    {
+      "psgc": "0600411000",
+      "name": "Makato"
+    },
+    {
+      "psgc": "0600412000",
+      "name": "Malay"
+    },
+    {
+      "psgc": "0600413000",
+      "name": "Malinao"
+    },
+    {
+      "psgc": "0600414000",
+      "name": "Nabas"
+    },
+    {
+      "psgc": "0600415000",
+      "name": "New Washington"
+    },
+    {
+      "psgc": "0600416000",
+      "name": "Numancia"
+    },
+    {
+      "psgc": "0600417000",
+      "name": "Tangalan"
+    },
+    {
+      "psgc": "0600601000",
+      "name": "Anini-Y"
+    },
+    {
+      "psgc": "0600602000",
+      "name": "Barbaza"
+    },
+    {
+      "psgc": "0600603000",
+      "name": "Belison"
+    },
+    {
+      "psgc": "0600604000",
+      "name": "Bugasong"
+    },
+    {
+      "psgc": "0600605000",
+      "name": "Caluya"
+    },
+    {
+      "psgc": "0600606000",
+      "name": "Culasi"
+    },
+    {
+      "psgc": "0600607000",
+      "name": "Tobias Fornier"
+    },
+    {
+      "psgc": "0600608000",
+      "name": "Hamtic"
+    },
+    {
+      "psgc": "0600609000",
+      "name": "Laua-An"
+    },
+    {
+      "psgc": "0600610000",
+      "name": "Libertad"
+    },
+    {
+      "psgc": "0600611000",
+      "name": "Pandan"
+    },
+    {
+      "psgc": "0600612000",
+      "name": "Patnongon"
+    },
+    {
+      "psgc": "0600613000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "0600614000",
+      "name": "San Remigio"
+    },
+    {
+      "psgc": "0600615000",
+      "name": "Sebaste"
+    },
+    {
+      "psgc": "0600616000",
+      "name": "Sibalom"
+    },
+    {
+      "psgc": "0600617000",
+      "name": "Tibiao"
+    },
+    {
+      "psgc": "0600618000",
+      "name": "Valderrama"
+    },
+    {
+      "psgc": "0601901000",
+      "name": "Cuartero"
+    },
+    {
+      "psgc": "0601902000",
+      "name": "Dao"
+    },
+    {
+      "psgc": "0601903000",
+      "name": "Dumalag"
+    },
+    {
+      "psgc": "0601904000",
+      "name": "Dumarao"
+    },
+    {
+      "psgc": "0601905000",
+      "name": "Ivisan"
+    },
+    {
+      "psgc": "0601906000",
+      "name": "Jamindan"
+    },
+    {
+      "psgc": "0601907000",
+      "name": "Ma-Ayon"
+    },
+    {
+      "psgc": "0601908000",
+      "name": "Mambusao"
+    },
+    {
+      "psgc": "0601909000",
+      "name": "Panay"
+    },
+    {
+      "psgc": "0601910000",
+      "name": "Panitan"
+    },
+    {
+      "psgc": "0601911000",
+      "name": "Pilar"
+    },
+    {
+      "psgc": "0601912000",
+      "name": "Pontevedra"
+    },
+    {
+      "psgc": "0601913000",
+      "name": "President Roxas"
+    },
+    {
+      "psgc": "0601915000",
+      "name": "Sapi-An"
+    },
+    {
+      "psgc": "0601916000",
+      "name": "Sigma"
+    },
+    {
+      "psgc": "0601917000",
+      "name": "Tapaz"
+    },
+    {
+      "psgc": "0603001000",
+      "name": "Ajuy"
+    },
+    {
+      "psgc": "0603002000",
+      "name": "Alimodian"
+    },
+    {
+      "psgc": "0603003000",
+      "name": "Anilao"
+    },
+    {
+      "psgc": "0603004000",
+      "name": "Badiangan"
+    },
+    {
+      "psgc": "0603005000",
+      "name": "Balasan"
+    },
+    {
+      "psgc": "0603006000",
+      "name": "Banate"
+    },
+    {
+      "psgc": "0603007000",
+      "name": "Barotac Nuevo"
+    },
+    {
+      "psgc": "0603008000",
+      "name": "Barotac Viejo"
+    },
+    {
+      "psgc": "0603009000",
+      "name": "Batad"
+    },
+    {
+      "psgc": "0603010000",
+      "name": "Bingawan"
+    },
+    {
+      "psgc": "0603012000",
+      "name": "Cabatuan"
+    },
+    {
+      "psgc": "0603013000",
+      "name": "Calinog"
+    },
+    {
+      "psgc": "0603014000",
+      "name": "Carles"
+    },
+    {
+      "psgc": "0603015000",
+      "name": "Concepcion"
+    },
+    {
+      "psgc": "0603016000",
+      "name": "Dingle"
+    },
+    {
+      "psgc": "0603017000",
+      "name": "Dueñas"
+    },
+    {
+      "psgc": "0603018000",
+      "name": "Dumangas"
+    },
+    {
+      "psgc": "0603019000",
+      "name": "Estancia"
+    },
+    {
+      "psgc": "0603020000",
+      "name": "Guimbal"
+    },
+    {
+      "psgc": "0603021000",
+      "name": "Igbaras"
+    },
+    {
+      "psgc": "0603023000",
+      "name": "Janiuay"
+    },
+    {
+      "psgc": "0603025000",
+      "name": "Lambunao"
+    },
+    {
+      "psgc": "0603026000",
+      "name": "Leganes"
+    },
+    {
+      "psgc": "0603027000",
+      "name": "Lemery"
+    },
+    {
+      "psgc": "0603028000",
+      "name": "Leon"
+    },
+    {
+      "psgc": "0603029000",
+      "name": "Maasin"
+    },
+    {
+      "psgc": "0603030000",
+      "name": "Miagao"
+    },
+    {
+      "psgc": "0603031000",
+      "name": "Mina"
+    },
+    {
+      "psgc": "0603032000",
+      "name": "New Lucena"
+    },
+    {
+      "psgc": "0603034000",
+      "name": "Oton"
+    },
+    {
+      "psgc": "0603036000",
+      "name": "Pavia"
+    },
+    {
+      "psgc": "0603037000",
+      "name": "Pototan"
+    },
+    {
+      "psgc": "0603038000",
+      "name": "San Dionisio"
+    },
+    {
+      "psgc": "0603039000",
+      "name": "San Enrique"
+    },
+    {
+      "psgc": "0603040000",
+      "name": "San Joaquin"
+    },
+    {
+      "psgc": "0603041000",
+      "name": "San Miguel"
+    },
+    {
+      "psgc": "0603042000",
+      "name": "San Rafael"
+    },
+    {
+      "psgc": "0603043000",
+      "name": "Santa Barbara"
+    },
+    {
+      "psgc": "0603044000",
+      "name": "Sara"
+    },
+    {
+      "psgc": "0603045000",
+      "name": "Tigbauan"
+    },
+    {
+      "psgc": "0603046000",
+      "name": "Tubungan"
+    },
+    {
+      "psgc": "0603047000",
+      "name": "Zarraga"
+    },
+    {
+      "psgc": "0607901000",
+      "name": "Buenavista"
+    },
+    {
+      "psgc": "0607902000",
+      "name": "Jordan"
+    },
+    {
+      "psgc": "0607903000",
+      "name": "Nueva Valencia"
+    },
+    {
+      "psgc": "0607904000",
+      "name": "San Lorenzo"
+    },
+    {
+      "psgc": "0607905000",
+      "name": "Sibunag"
+    },
+    {
+      "psgc": "1804503000",
+      "name": "Binalbagan"
+    },
+    {
+      "psgc": "1804505000",
+      "name": "Calatrava"
+    },
+    {
+      "psgc": "1804506000",
+      "name": "Candoni"
+    },
+    {
+      "psgc": "1804507000",
+      "name": "Cauayan"
+    },
+    {
+      "psgc": "1804508000",
+      "name": "Enrique B. Magalona"
+    },
+    {
+      "psgc": "1804511000",
+      "name": "Hinigaran"
+    },
+    {
+      "psgc": "1804512000",
+      "name": "Hinoba-an"
+    },
+    {
+      "psgc": "1804513000",
+      "name": "Ilog"
+    },
+    {
+      "psgc": "1804514000",
+      "name": "Isabela"
+    },
+    {
+      "psgc": "1804517000",
+      "name": "La Castellana"
+    },
+    {
+      "psgc": "1804518000",
+      "name": "Manapla"
+    },
+    {
+      "psgc": "1804519000",
+      "name": "Moises Padilla"
+    },
+    {
+      "psgc": "1804520000",
+      "name": "Murcia"
+    },
+    {
+      "psgc": "1804521000",
+      "name": "Pontevedra"
+    },
+    {
+      "psgc": "1804522000",
+      "name": "Pulupandan"
+    },
+    {
+      "psgc": "1804525000",
+      "name": "San Enrique"
+    },
+    {
+      "psgc": "1804529000",
+      "name": "Toboso"
+    },
+    {
+      "psgc": "1804530000",
+      "name": "Valladolid"
+    },
+    {
+      "psgc": "1804532000",
+      "name": "Salvador Benedicto"
+    },
+    {
+      "psgc": "1804601000",
+      "name": "Amlan"
+    },
+    {
+      "psgc": "1804602000",
+      "name": "Ayungon"
+    },
+    {
+      "psgc": "1804603000",
+      "name": "Bacong"
+    },
+    {
+      "psgc": "1804605000",
+      "name": "Basay"
+    },
+    {
+      "psgc": "1804607000",
+      "name": "Bindoy"
+    },
+    {
+      "psgc": "1804609000",
+      "name": "Dauin"
+    },
+    {
+      "psgc": "1804612000",
+      "name": "Jimalalud"
+    },
+    {
+      "psgc": "1804613000",
+      "name": "La Libertad"
+    },
+    {
+      "psgc": "1804614000",
+      "name": "Mabinay"
+    },
+    {
+      "psgc": "1804615000",
+      "name": "Manjuyod"
+    },
+    {
+      "psgc": "1804616000",
+      "name": "Pamplona"
+    },
+    {
+      "psgc": "1804617000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "1804618000",
+      "name": "Santa Catalina"
+    },
+    {
+      "psgc": "1804619000",
+      "name": "Siaton"
+    },
+    {
+      "psgc": "1804620000",
+      "name": "Sibulan"
+    },
+    {
+      "psgc": "0802616000",
+      "name": "Mercedes"
+    },
+    {
+      "psgc": "0802617000",
+      "name": "Oras"
+    },
+    {
+      "psgc": "0802618000",
+      "name": "Quinapondan"
+    },
+    {
+      "psgc": "0802619000",
+      "name": "Salcedo"
+    },
+    {
+      "psgc": "0802620000",
+      "name": "San Julian"
+    },
+    {
+      "psgc": "0802621000",
+      "name": "San Policarpo"
+    },
+    {
+      "psgc": "0802622000",
+      "name": "Sulat"
+    },
+    {
+      "psgc": "0802623000",
+      "name": "Taft"
+    },
+    {
+      "psgc": "0803701000",
+      "name": "Abuyog"
+    },
+    {
+      "psgc": "0803702000",
+      "name": "Alangalang"
+    },
+    {
+      "psgc": "0803703000",
+      "name": "Albuera"
+    },
+    {
+      "psgc": "0803705000",
+      "name": "Babatngon"
+    },
+    {
+      "psgc": "0803706000",
+      "name": "Barugo"
+    },
+    {
+      "psgc": "0803707000",
+      "name": "Bato"
+    },
+    {
+      "psgc": "0803710000",
+      "name": "Burauen"
+    },
+    {
+      "psgc": "0803713000",
+      "name": "Calubian"
+    },
+    {
+      "psgc": "0803714000",
+      "name": "Capoocan"
+    },
+    {
+      "psgc": "0803715000",
+      "name": "Carigara"
+    },
+    {
+      "psgc": "0803717000",
+      "name": "Dagami"
+    },
+    {
+      "psgc": "0803718000",
+      "name": "Dulag"
+    },
+    {
+      "psgc": "0803719000",
+      "name": "Hilongos"
+    },
+    {
+      "psgc": "0803720000",
+      "name": "Hindang"
+    },
+    {
+      "psgc": "0803721000",
+      "name": "Inopacan"
+    },
+    {
+      "psgc": "0803722000",
+      "name": "Isabel"
+    },
+    {
+      "psgc": "0803723000",
+      "name": "Jaro"
+    },
+    {
+      "psgc": "0803724000",
+      "name": "Javier"
+    },
+    {
+      "psgc": "0803725000",
+      "name": "Julita"
+    },
+    {
+      "psgc": "0803726000",
+      "name": "Kananga"
+    },
+    {
+      "psgc": "0803728000",
+      "name": "La Paz"
+    },
+    {
+      "psgc": "0803729000",
+      "name": "Leyte"
+    },
+    {
+      "psgc": "0803730000",
+      "name": "Macarthur"
+    },
+    {
+      "psgc": "0803731000",
+      "name": "Mahaplag"
+    },
+    {
+      "psgc": "0803733000",
+      "name": "Matag-Ob"
+    },
+    {
+      "psgc": "0803734000",
+      "name": "Matalom"
+    },
+    {
+      "psgc": "0803735000",
+      "name": "Mayorga"
+    },
+    {
+      "psgc": "0803736000",
+      "name": "Merida"
+    },
+    {
+      "psgc": "0803739000",
+      "name": "Palo"
+    },
+    {
+      "psgc": "0803740000",
+      "name": "Palompon"
+    },
+    {
+      "psgc": "0803741000",
+      "name": "Pastrana"
+    },
+    {
+      "psgc": "0803742000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "0803743000",
+      "name": "San Miguel"
+    },
+    {
+      "psgc": "0803744000",
+      "name": "Santa Fe"
+    },
+    {
+      "psgc": "0803745000",
+      "name": "Tabango"
+    },
+    {
+      "psgc": "0803746000",
+      "name": "Tabontabon"
+    },
+    {
+      "psgc": "0803748000",
+      "name": "Tanauan"
+    },
+    {
+      "psgc": "0803749000",
+      "name": "Tolosa"
+    },
+    {
+      "psgc": "0803750000",
+      "name": "Tunga"
+    },
+    {
+      "psgc": "0803751000",
+      "name": "Villaba"
+    },
+    {
+      "psgc": "0804801000",
+      "name": "Allen"
+    },
+    {
+      "psgc": "0804802000",
+      "name": "Biri"
+    },
+    {
+      "psgc": "0804803000",
+      "name": "Bobon"
+    },
+    {
+      "psgc": "0804804000",
+      "name": "Capul"
+    },
+    {
+      "psgc": "0804805000",
+      "name": "Catarman"
+    },
+    {
+      "psgc": "0804806000",
+      "name": "Catubig"
+    },
+    {
+      "psgc": "0804807000",
+      "name": "Gamay"
+    },
+    {
+      "psgc": "0804808000",
+      "name": "Laoang"
+    },
+    {
+      "psgc": "0804809000",
+      "name": "Lapinig"
+    },
+    {
+      "psgc": "0804810000",
+      "name": "Las Navas"
+    },
+    {
+      "psgc": "0804811000",
+      "name": "Lavezares"
+    },
+    {
+      "psgc": "0804812000",
+      "name": "Mapanas"
+    },
+    {
+      "psgc": "0804813000",
+      "name": "Mondragon"
+    },
+    {
+      "psgc": "0804814000",
+      "name": "Palapag"
+    },
+    {
+      "psgc": "0804815000",
+      "name": "Pambujan"
+    },
+    {
+      "psgc": "0804816000",
+      "name": "Rosario"
+    },
+    {
+      "psgc": "0804817000",
+      "name": "San Antonio"
+    },
+    {
+      "psgc": "0804818000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "0804819000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "0804820000",
+      "name": "San Roque"
+    },
+    {
+      "psgc": "0804821000",
+      "name": "San Vicente"
+    },
+    {
+      "psgc": "0804822000",
+      "name": "Silvino Lobos"
+    },
+    {
+      "psgc": "0804823000",
+      "name": "Victoria"
+    },
+    {
+      "psgc": "0804824000",
+      "name": "Lope De Vega"
+    },
+    {
+      "psgc": "0806001000",
+      "name": "Almagro"
+    },
+    {
+      "psgc": "0806002000",
+      "name": "Basey"
+    },
+    {
+      "psgc": "0806004000",
+      "name": "Calbiga"
+    },
+    {
+      "psgc": "0806006000",
+      "name": "Daram"
+    },
+    {
+      "psgc": "0806007000",
+      "name": "Gandara"
+    },
+    {
+      "psgc": "0806008000",
+      "name": "Hinabangan"
+    },
+    {
+      "psgc": "0806009000",
+      "name": "Jiabong"
+    },
+    {
+      "psgc": "0806010000",
+      "name": "Marabut"
+    },
+    {
+      "psgc": "0806011000",
+      "name": "Matuguinao"
+    },
+    {
+      "psgc": "0806012000",
+      "name": "Motiong"
+    },
+    {
+      "psgc": "0806013000",
+      "name": "Pinabacdao"
+    },
+    {
+      "psgc": "0806014000",
+      "name": "San Jose De Buan"
+    },
+    {
+      "psgc": "0806015000",
+      "name": "San Sebastian"
+    },
+    {
+      "psgc": "0806016000",
+      "name": "Santa Margarita"
+    },
+    {
+      "psgc": "0806017000",
+      "name": "Santa Rita"
+    },
+    {
+      "psgc": "0806018000",
+      "name": "Santo Niño"
+    },
+    {
+      "psgc": "0806019000",
+      "name": "Talalora"
+    },
+    {
+      "psgc": "0806020000",
+      "name": "Tarangnan"
+    },
+    {
+      "psgc": "0806021000",
+      "name": "Villareal"
+    },
+    {
+      "psgc": "0806022000",
+      "name": "Paranas"
+    },
+    {
+      "psgc": "0806023000",
+      "name": "Zumarraga"
+    },
+    {
+      "psgc": "0806024000",
+      "name": "Tagapul-An"
+    },
+    {
+      "psgc": "0806025000",
+      "name": "San Jorge"
+    },
+    {
+      "psgc": "0806026000",
+      "name": "Pagsanghan"
+    },
+    {
+      "psgc": "0806401000",
+      "name": "Anahawan"
+    },
+    {
+      "psgc": "0806402000",
+      "name": "Bontoc"
+    },
+    {
+      "psgc": "0806403000",
+      "name": "Hinunangan"
+    },
+    {
+      "psgc": "0806404000",
+      "name": "Hinundayan"
+    },
+    {
+      "psgc": "0806405000",
+      "name": "Libagon"
+    },
+    {
+      "psgc": "0806406000",
+      "name": "Liloan"
+    },
+    {
+      "psgc": "0806408000",
+      "name": "Macrohon"
+    },
+    {
+      "psgc": "0806409000",
+      "name": "Malitbog"
+    },
+    {
+      "psgc": "0806410000",
+      "name": "Padre Burgos"
+    },
+    {
+      "psgc": "0806411000",
+      "name": "Pintuyan"
+    },
+    {
+      "psgc": "0806412000",
+      "name": "Saint Bernard"
+    },
+    {
+      "psgc": "0806413000",
+      "name": "San Francisco"
+    },
+    {
+      "psgc": "0806414000",
+      "name": "San Juan"
+    },
+    {
+      "psgc": "0806415000",
+      "name": "San Ricardo"
+    },
+    {
+      "psgc": "0806416000",
+      "name": "Silago"
+    },
+    {
+      "psgc": "0806417000",
+      "name": "Sogod"
+    },
+    {
+      "psgc": "0806418000",
+      "name": "Tomas Oppus"
+    },
+    {
+      "psgc": "0806419000",
+      "name": "Limasawa"
+    },
+    {
+      "psgc": "0807801000",
+      "name": "Almeria"
+    },
+    {
+      "psgc": "0807802000",
+      "name": "Biliran"
+    },
+    {
+      "psgc": "0807803000",
+      "name": "Cabucgayan"
+    },
+    {
+      "psgc": "0807804000",
+      "name": "Caibiran"
+    },
+    {
+      "psgc": "0807805000",
+      "name": "Culaba"
+    },
+    {
+      "psgc": "0807806000",
+      "name": "Kawayan"
+    },
+    {
+      "psgc": "0807807000",
+      "name": "Maripipi"
+    },
+    {
+      "psgc": "0807808000",
+      "name": "Naval"
+    },
+    {
+      "psgc": "0906601000",
+      "name": "Indanan"
+    },
+    {
+      "psgc": "0906602000",
+      "name": "Jolo"
+    },
+    {
+      "psgc": "0906603000",
+      "name": "Kalingalan Caluang"
+    },
+    {
+      "psgc": "0906604000",
+      "name": "Luuk"
+    },
+    {
+      "psgc": "0906605000",
+      "name": "Maimbung"
+    },
+    {
+      "psgc": "0906606000",
+      "name": "Hadji Panglima Tahil"
+    },
+    {
+      "psgc": "0906607000",
+      "name": "Old Panamao"
+    },
+    {
+      "psgc": "0906608000",
+      "name": "Pangutaran"
+    },
+    {
+      "psgc": "0906609000",
+      "name": "Parang"
+    },
+    {
+      "psgc": "0906610000",
+      "name": "Pata"
+    },
+    {
+      "psgc": "0906611000",
+      "name": "Patikul"
+    },
+    {
+      "psgc": "0906612000",
+      "name": "Siasi"
+    },
+    {
+      "psgc": "0906613000",
+      "name": "Talipao"
+    },
+    {
+      "psgc": "0906614000",
+      "name": "Tapul"
+    },
+    {
+      "psgc": "0906615000",
+      "name": "Tongkil"
+    },
+    {
+      "psgc": "0906616000",
+      "name": "Panglima Estino"
+    },
+    {
+      "psgc": "0906617000",
+      "name": "Lugus"
+    },
+    {
+      "psgc": "0906618000",
+      "name": "Pandami"
+    },
+    {
+      "psgc": "0906619000",
+      "name": "Omar"
+    },
+    {
+      "psgc": "0907203000",
+      "name": "Katipunan"
+    },
+    {
+      "psgc": "0907204000",
+      "name": "La Libertad"
+    },
+    {
+      "psgc": "0907205000",
+      "name": "Labason"
+    },
+    {
+      "psgc": "0907206000",
+      "name": "Liloy"
+    },
+    {
+      "psgc": "0907207000",
+      "name": "Manukan"
+    },
+    {
+      "psgc": "0907208000",
+      "name": "Mutia"
+    },
+    {
+      "psgc": "0907209000",
+      "name": "Piñan"
+    },
+    {
+      "psgc": "0907210000",
+      "name": "Polanco"
+    },
+    {
+      "psgc": "0907211000",
+      "name": "Pres. Manuel A. Roxas"
+    },
+    {
+      "psgc": "0907212000",
+      "name": "Rizal"
+    },
+    {
+      "psgc": "0907213000",
+      "name": "Salug"
+    },
+    {
+      "psgc": "0907214000",
+      "name": "Sergio Osmeña Sr."
+    },
+    {
+      "psgc": "0907215000",
+      "name": "Siayan"
+    },
+    {
+      "psgc": "0907216000",
+      "name": "Sibuco"
+    },
+    {
+      "psgc": "0907217000",
+      "name": "Sibutad"
+    },
+    {
+      "psgc": "0907218000",
+      "name": "Sindangan"
+    },
+    {
+      "psgc": "0907219000",
+      "name": "Siocon"
+    },
+    {
+      "psgc": "0907220000",
+      "name": "Sirawai"
+    },
+    {
+      "psgc": "0907221000",
+      "name": "Tampilisan"
+    },
+    {
+      "psgc": "0907222000",
+      "name": "Jose Dalman"
+    },
+    {
+      "psgc": "0907223000",
+      "name": "Gutalac"
+    },
+    {
+      "psgc": "0907224000",
+      "name": "Baliguian"
+    },
+    {
+      "psgc": "0907225000",
+      "name": "Godod"
+    },
+    {
+      "psgc": "0907226000",
+      "name": "Leon T. Postigo"
+    },
+    {
+      "psgc": "0907227000",
+      "name": "Kalawit"
+    },
+    {
+      "psgc": "0907302000",
+      "name": "Aurora"
+    },
+    {
+      "psgc": "0907303000",
+      "name": "Bayog"
+    },
+    {
+      "psgc": "0907305000",
+      "name": "Dimataling"
+    },
+    {
+      "psgc": "0907306000",
+      "name": "Dinas"
+    },
+    {
+      "psgc": "0907307000",
+      "name": "Dumalinao"
+    },
+    {
+      "psgc": "0907308000",
+      "name": "Dumingag"
+    },
+    {
+      "psgc": "0907311000",
+      "name": "Kumalarang"
+    },
+    {
+      "psgc": "0907312000",
+      "name": "Labangan"
+    },
+    {
+      "psgc": "0907313000",
+      "name": "Lapuyan"
+    },
+    {
+      "psgc": "0907315000",
+      "name": "Mahayag"
+    },
+    {
+      "psgc": "0907317000",
+      "name": "Margosatubig"
+    },
+    {
+      "psgc": "0907318000",
+      "name": "Midsalip"
+    },
+    {
+      "psgc": "0907319000",
+      "name": "Molave"
+    },
+    {
+      "psgc": "0907323000",
+      "name": "Ramon Magsaysay"
+    },
+    {
+      "psgc": "0907324000",
+      "name": "San Miguel"
+    },
+    {
+      "psgc": "0907325000",
+      "name": "San Pablo"
+    },
+    {
+      "psgc": "0907327000",
+      "name": "Tabina"
+    },
+    {
+      "psgc": "0907328000",
+      "name": "Tambulig"
+    },
+    {
+      "psgc": "0907330000",
+      "name": "Tukuran"
+    },
+    {
+      "psgc": "0907333000",
+      "name": "Lakewood"
+    },
+    {
+      "psgc": "0907337000",
+      "name": "Josefina"
+    },
+    {
+      "psgc": "0907338000",
+      "name": "Pitogo"
+    },
+    {
+      "psgc": "0907340000",
+      "name": "Sominot"
+    },
+    {
+      "psgc": "0907341000",
+      "name": "Vincenzo A. Sagun"
+    },
+    {
+      "psgc": "0907343000",
+      "name": "Guipos"
+    },
+    {
+      "psgc": "0907344000",
+      "name": "Tigbao"
+    },
+    {
+      "psgc": "0908301000",
+      "name": "Alicia"
+    },
+    {
+      "psgc": "0908302000",
+      "name": "Buug"
+    },
+    {
+      "psgc": "0908303000",
+      "name": "Diplahan"
+    },
+    {
+      "psgc": "0908304000",
+      "name": "Imelda"
+    },
+    {
+      "psgc": "0908305000",
+      "name": "Ipil"
+    },
+    {
+      "psgc": "0908306000",
+      "name": "Kabasalan"
+    },
+    {
+      "psgc": "0908307000",
+      "name": "Mabuhay"
+    },
+    {
+      "psgc": "0908308000",
+      "name": "Malangas"
+    },
+    {
+      "psgc": "0908309000",
+      "name": "Naga"
+    },
+    {
+      "psgc": "0908310000",
+      "name": "Olutanga"
+    },
+    {
+      "psgc": "0908311000",
+      "name": "Payao"
+    },
+    {
+      "psgc": "0908312000",
+      "name": "Roseller Lim"
+    },
+    {
+      "psgc": "0908313000",
+      "name": "Siay"
+    },
+    {
+      "psgc": "0908314000",
+      "name": "Talusan"
+    },
+    {
+      "psgc": "0908315000",
+      "name": "Titay"
+    },
+    {
+      "psgc": "0908316000",
+      "name": "Tungawan"
+    },
+    {
+      "psgc": "1001301000",
+      "name": "Baungon"
+    },
+    {
+      "psgc": "1001302000",
+      "name": "Damulog"
+    },
+    {
+      "psgc": "1001303000",
+      "name": "Dangcagan"
+    },
+    {
+      "psgc": "1001304000",
+      "name": "Don Carlos"
+    },
+    {
+      "psgc": "1001305000",
+      "name": "Impasug-ong"
+    },
+    {
+      "psgc": "1001306000",
+      "name": "Kadingilan"
+    },
+    {
+      "psgc": "1001307000",
+      "name": "Kalilangan"
+    },
+    {
+      "psgc": "1001308000",
+      "name": "Kibawe"
+    },
+    {
+      "psgc": "1001309000",
+      "name": "Kitaotao"
+    },
+    {
+      "psgc": "1001310000",
+      "name": "Lantapan"
+    },
+    {
+      "psgc": "1001311000",
+      "name": "Libona"
+    },
+    {
+      "psgc": "1001313000",
+      "name": "Malitbog"
+    },
+    {
+      "psgc": "1001314000",
+      "name": "Manolo Fortich"
+    },
+    {
+      "psgc": "1001315000",
+      "name": "Maramag"
+    },
+    {
+      "psgc": "1001316000",
+      "name": "Pangantucan"
+    },
+    {
+      "psgc": "1001317000",
+      "name": "Quezon"
+    },
+    {
+      "psgc": "1001318000",
+      "name": "San Fernando"
+    },
+    {
+      "psgc": "1001319000",
+      "name": "Sumilao"
+    },
+    {
+      "psgc": "1204712000",
+      "name": "Pikit"
+    },
+    {
+      "psgc": "1204713000",
+      "name": "President Roxas"
+    },
+    {
+      "psgc": "1204714000",
+      "name": "Tulunan"
+    },
+    {
+      "psgc": "1204715000",
+      "name": "Antipas"
+    },
+    {
+      "psgc": "1206311000",
+      "name": "Norala"
+    },
+    {
+      "psgc": "1206312000",
+      "name": "Polomolok"
+    },
+    {
+      "psgc": "1206313000",
+      "name": "Surallah"
+    },
+    {
+      "psgc": "1206314000",
+      "name": "Tampakan"
+    },
+    {
+      "psgc": "1206315000",
+      "name": "Tantangan"
+    },
+    {
+      "psgc": "1206316000",
+      "name": "T'Boli"
+    },
+    {
+      "psgc": "1206317000",
+      "name": "Tupi"
+    },
+    {
+      "psgc": "1206318000",
+      "name": "Santo Niño"
+    },
+    {
+      "psgc": "1206319000",
+      "name": "Lake Sebu"
+    },
+    {
+      "psgc": "1206501000",
+      "name": "Bagumbayan"
+    },
+    {
+      "psgc": "1206502000",
+      "name": "Columbio"
+    },
+    {
+      "psgc": "1206503000",
+      "name": "Esperanza"
+    },
+    {
+      "psgc": "1206504000",
+      "name": "Isulan"
+    },
+    {
+      "psgc": "1206505000",
+      "name": "Kalamansig"
+    },
+    {
+      "psgc": "1206506000",
+      "name": "Lebak"
+    },
+    {
+      "psgc": "1206507000",
+      "name": "Lutayan"
+    },
+    {
+      "psgc": "1206508000",
+      "name": "Lambayong"
+    },
+    {
+      "psgc": "1206509000",
+      "name": "Palimbang"
+    },
+    {
+      "psgc": "1206510000",
+      "name": "President Quirino"
+    },
+    {
+      "psgc": "1206512000",
+      "name": "Sen. Ninoy Aquino"
+    },
+    {
+      "psgc": "1208001000",
+      "name": "Alabel"
+    },
+    {
+      "psgc": "1208002000",
+      "name": "Glan"
+    },
+    {
+      "psgc": "1208003000",
+      "name": "Kiamba"
+    },
+    {
+      "psgc": "1208004000",
+      "name": "Maasim"
+    },
+    {
+      "psgc": "1208005000",
+      "name": "Maitum"
+    },
+    {
+      "psgc": "1208006000",
+      "name": "Malapatan"
+    },
+    {
+      "psgc": "1208007000",
+      "name": "Malungon"
+    },
+    {
+      "psgc": "1600201000",
+      "name": "Buenavista"
+    },
+    {
+      "psgc": "1600204000",
+      "name": "Carmen"
+    },
+    {
+      "psgc": "1600205000",
+      "name": "Jabonga"
+    },
+    {
+      "psgc": "1600206000",
+      "name": "Kitcharao"
+    },
+    {
+      "psgc": "1600207000",
+      "name": "Las Nieves"
+    },
+    {
+      "psgc": "1600208000",
+      "name": "Magallanes"
+    },
+    {
+      "psgc": "1600209000",
+      "name": "Nasipit"
+    },
+    {
+      "psgc": "1600210000",
+      "name": "Santiago"
+    },
+    {
+      "psgc": "1600211000",
+      "name": "Tubay"
+    },
+    {
+      "psgc": "1600212000",
+      "name": "Remedios T. Romualdez"
+    },
+    {
+      "psgc": "1600302000",
+      "name": "Bunawan"
+    },
+    {
+      "psgc": "1600303000",
+      "name": "Esperanza"
+    },
+    {
+      "psgc": "1600304000",
+      "name": "La Paz"
+    },
+    {
+      "psgc": "1600305000",
+      "name": "Loreto"
+    },
+    {
+      "psgc": "1600306000",
+      "name": "Prosperidad"
+    },
+    {
+      "psgc": "1600307000",
+      "name": "Rosario"
+    },
+    {
+      "psgc": "1600308000",
+      "name": "San Francisco"
+    },
+    {
+      "psgc": "1600309000",
+      "name": "San Luis"
+    },
+    {
+      "psgc": "1600310000",
+      "name": "Santa Josefa"
+    },
+    {
+      "psgc": "1600311000",
+      "name": "Talacogon"
+    },
+    {
+      "psgc": "1600312000",
+      "name": "Trento"
+    },
+    {
+      "psgc": "1600313000",
+      "name": "Veruela"
+    },
+    {
+      "psgc": "1600314000",
+      "name": "Sibagat"
+    },
+    {
+      "psgc": "1606701000",
+      "name": "Alegria"
+    },
+    {
+      "psgc": "1606702000",
+      "name": "Bacuag"
+    },
+    {
+      "psgc": "1606704000",
+      "name": "Burgos"
+    },
+    {
+      "psgc": "1606706000",
+      "name": "Claver"
+    },
+    {
+      "psgc": "1606707000",
+      "name": "Dapa"
+    },
+    {
+      "psgc": "1606708000",
+      "name": "Del Carmen"
+    },
+    {
+      "psgc": "1606710000",
+      "name": "General Luna"
+    },
+    {
+      "psgc": "1606711000",
+      "name": "Gigaquit"
+    },
+    {
+      "psgc": "1606714000",
+      "name": "Mainit"
+    },
+    {
+      "psgc": "1606715000",
+      "name": "Malimono"
+    },
+    {
+      "psgc": "1606716000",
+      "name": "Pilar"
+    },
+    {
+      "psgc": "1606717000",
+      "name": "Placer"
+    },
+    {
+      "psgc": "1606718000",
+      "name": "San Benito"
+    },
+    {
+      "psgc": "1606719000",
+      "name": "San Francisco"
+    },
+    {
+      "psgc": "1606720000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "1606721000",
+      "name": "Santa Monica"
+    },
+    {
+      "psgc": "1606722000",
+      "name": "Sison"
+    },
+    {
+      "psgc": "1606723000",
+      "name": "Socorro"
+    },
+    {
+      "psgc": "1606725000",
+      "name": "Tagana-An"
+    },
+    {
+      "psgc": "1606727000",
+      "name": "Tubod"
+    },
+    {
+      "psgc": "1606801000",
+      "name": "Barobo"
+    },
+    {
+      "psgc": "1606802000",
+      "name": "Bayabas"
+    },
+    {
+      "psgc": "1606804000",
+      "name": "Cagwait"
+    },
+    {
+      "psgc": "1606805000",
+      "name": "Cantilan"
+    },
+    {
+      "psgc": "1606806000",
+      "name": "Carmen"
+    },
+    {
+      "psgc": "1606807000",
+      "name": "Carrascal"
+    },
+    {
+      "psgc": "1606808000",
+      "name": "Cortes"
+    },
+    {
+      "psgc": "1606809000",
+      "name": "Hinatuan"
+    },
+    {
+      "psgc": "1606810000",
+      "name": "Lanuza"
+    },
+    {
+      "psgc": "1606811000",
+      "name": "Lianga"
+    },
+    {
+      "psgc": "1606812000",
+      "name": "Lingig"
+    },
+    {
+      "psgc": "1606813000",
+      "name": "Madrid"
+    },
+    {
+      "psgc": "1606814000",
+      "name": "Marihatag"
+    },
+    {
+      "psgc": "1606815000",
+      "name": "San Agustin"
+    },
+    {
+      "psgc": "1606816000",
+      "name": "San Miguel"
+    },
+    {
+      "psgc": "1606817000",
+      "name": "Tagbina"
+    },
+    {
+      "psgc": "1606818000",
+      "name": "Tago"
+    },
+    {
+      "psgc": "1608501000",
+      "name": "Basilisa"
+    },
+    {
+      "psgc": "1608502000",
+      "name": "Cagdianao"
+    },
+    {
+      "psgc": "1608503000",
+      "name": "Dinagat"
+    },
+    {
+      "psgc": "1608504000",
+      "name": "Libjo"
+    },
+    {
+      "psgc": "1608505000",
+      "name": "Loreto"
+    },
+    {
+      "psgc": "1608506000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "1608507000",
+      "name": "Tubajon"
+    },
+    {
+      "psgc": "1900703000",
+      "name": "Lantawan"
+    },
+    {
+      "psgc": "1900704000",
+      "name": "Maluso"
+    },
+    {
+      "psgc": "1900705000",
+      "name": "Sumisip"
+    },
+    {
+      "psgc": "1900706000",
+      "name": "Tipo-Tipo"
+    },
+    {
+      "psgc": "1900707000",
+      "name": "Tuburan"
+    },
+    {
+      "psgc": "1900708000",
+      "name": "Akbar"
+    },
+    {
+      "psgc": "1900709000",
+      "name": "Al-Barka"
+    },
+    {
+      "psgc": "1900710000",
+      "name": "Hadji Mohammad Ajul"
+    },
+    {
+      "psgc": "1900711000",
+      "name": "Ungkaya Pukan"
+    },
+    {
+      "psgc": "1900712000",
+      "name": "Hadji Muhtamad"
+    },
+    {
+      "psgc": "1900713000",
+      "name": "Tabuan-Lasa"
+    },
+    {
+      "psgc": "1903601000",
+      "name": "Bacolod-Kalawi"
+    },
+    {
+      "psgc": "1903602000",
+      "name": "Balabagan"
+    },
+    {
+      "psgc": "1903603000",
+      "name": "Balindong"
+    },
+    {
+      "psgc": "1903604000",
+      "name": "Bayang"
+    },
+    {
+      "psgc": "1903605000",
+      "name": "Binidayan"
+    },
+    {
+      "psgc": "1903606000",
+      "name": "Bubong"
+    },
+    {
+      "psgc": "1903607000",
+      "name": "Butig"
+    },
+    {
+      "psgc": "1903609000",
+      "name": "Ganassi"
+    },
+    {
+      "psgc": "1903610000",
+      "name": "Kapai"
+    },
+    {
+      "psgc": "1903611000",
+      "name": "Lumba-Bayabao"
+    },
+    {
+      "psgc": "1903612000",
+      "name": "Lumbatan"
+    },
+    {
+      "psgc": "1903613000",
+      "name": "Madalum"
+    },
+    {
+      "psgc": "1903614000",
+      "name": "Madamba"
+    },
+    {
+      "psgc": "1903615000",
+      "name": "Malabang"
+    },
+    {
+      "psgc": "1903616000",
+      "name": "Marantao"
+    },
+    {
+      "psgc": "1903618000",
+      "name": "Masiu"
+    },
+    {
+      "psgc": "1903619000",
+      "name": "Mulondo"
+    },
+    {
+      "psgc": "1903620000",
+      "name": "Pagayawan"
+    },
+    {
+      "psgc": "1903621000",
+      "name": "Piagapo"
+    },
+    {
+      "psgc": "1903622000",
+      "name": "Poona Bayabao"
+    },
+    {
+      "psgc": "1903623000",
+      "name": "Pualas"
+    },
+    {
+      "psgc": "1903624000",
+      "name": "Ditsaan-Ramain"
+    },
+    {
+      "psgc": "1903625000",
+      "name": "Saguiaran"
+    },
+    {
+      "psgc": "1903626000",
+      "name": "Tamparan"
+    },
+    {
+      "psgc": "1903627000",
+      "name": "Taraka"
+    },
+    {
+      "psgc": "1903628000",
+      "name": "Tubaran"
+    },
+    {
+      "psgc": "1903629000",
+      "name": "Tugaya"
+    },
+    {
+      "psgc": "1903630000",
+      "name": "Wao"
+    },
+    {
+      "psgc": "1903631000",
+      "name": "Marogong"
+    },
+    {
+      "psgc": "1903632000",
+      "name": "Calanogas"
+    },
+    {
+      "psgc": "1903633000",
+      "name": "Buadiposo-Buntong"
+    },
+    {
+      "psgc": "1903634000",
+      "name": "Maguing"
+    },
+    {
+      "psgc": "1903635000",
+      "name": "Picong"
+    },
+    {
+      "psgc": "1903636000",
+      "name": "Lumbayanague"
+    },
+    {
+      "psgc": "1903637000",
+      "name": "Amai Manabilang"
+    },
+    {
+      "psgc": "1903638000",
+      "name": "Tagoloan II"
+    },
+    {
+      "psgc": "1903639000",
+      "name": "Kapatagan"
+    },
+    {
+      "psgc": "1903640000",
+      "name": "Sultan Dumalondong"
+    },
+    {
+      "psgc": "1903641000",
+      "name": "Lumbaca-Unayan"
+    },
+    {
+      "psgc": "1907001000",
+      "name": "Panglima Sugala"
+    },
+    {
+      "psgc": "1907002000",
+      "name": "Bongao"
+    },
+    {
+      "psgc": "1907003000",
+      "name": "Mapun"
+    },
+    {
+      "psgc": "1907004000",
+      "name": "Simunul"
+    },
+    {
+      "psgc": "1907005000",
+      "name": "Sitangkai"
+    },
+    {
+      "psgc": "1907006000",
+      "name": "South Ubian"
+    },
+    {
+      "psgc": "1907007000",
+      "name": "Tandubas"
+    },
+    {
+      "psgc": "1907008000",
+      "name": "Turtle Islands"
+    },
+    {
+      "psgc": "1907009000",
+      "name": "Languyan"
+    },
+    {
+      "psgc": "1907010000",
+      "name": "Sapa-Sapa"
+    },
+    {
+      "psgc": "1907011000",
+      "name": "Sibutu"
+    },
+    {
+      "psgc": "1908701000",
+      "name": "Barira"
+    },
+    {
+      "psgc": "1908702000",
+      "name": "Buldon"
+    },
+    {
+      "psgc": "1908704000",
+      "name": "Datu Blah T. Sinsuat"
+    },
+    {
+      "psgc": "1908705000",
+      "name": "Datu Odin Sinsuat"
+    },
+    {
+      "psgc": "1908706000",
+      "name": "Kabuntalan"
+    },
+    {
+      "psgc": "1908707000",
+      "name": "Matanog"
+    },
+    {
+      "psgc": "1908708000",
+      "name": "Northern Kabuntalan"
+    },
+    {
+      "psgc": "1908709000",
+      "name": "Parang"
+    },
+    {
+      "psgc": "1908710000",
+      "name": "Sultan Kudarat"
+    },
+    {
+      "psgc": "1908711000",
+      "name": "Sultan Mastura"
+    },
+    {
+      "psgc": "1908712000",
+      "name": "Talitay"
+    },
+    {
+      "psgc": "1908713000",
+      "name": "Upi"
+    },
+    {
+      "psgc": "1908801000",
+      "name": "Ampatuan"
+    },
+    {
+      "psgc": "1908802000",
+      "name": "Buluan"
+    },
+    {
+      "psgc": "1908803000",
+      "name": "Datu Abdullah Sangki"
+    },
+    {
+      "psgc": "1908804000",
+      "name": "Datu Anggal Midtimbang"
+    },
+    {
+      "psgc": "1908805000",
+      "name": "Datu Hoffer Ampatuan"
+    },
+    {
+      "psgc": "1908806000",
+      "name": "Datu Paglas"
+    },
+    {
+      "psgc": "1908807000",
+      "name": "Datu Piang"
+    },
+    {
+      "psgc": "1908808000",
+      "name": "Datu Salibo"
+    },
+    {
+      "psgc": "1908809000",
+      "name": "Datu Saudi Ampatuan"
+    },
+    {
+      "psgc": "1908810000",
+      "name": "Datu Unsay"
+    },
+    {
+      "psgc": "1908811000",
+      "name": "Gen. S.K. Pendatun"
+    },
+    {
+      "psgc": "1908812000",
+      "name": "Guindulungan"
+    },
+    {
+      "psgc": "1908813000",
+      "name": "Mamasapano"
+    },
+    {
+      "psgc": "1908814000",
+      "name": "Mangudadatu"
+    },
+    {
+      "psgc": "1908815000",
+      "name": "Pagagawan"
+    },
+    {
+      "psgc": "1908816000",
+      "name": "Pagalungan"
+    },
+    {
+      "psgc": "1908817000",
+      "name": "Paglat"
+    },
+    {
+      "psgc": "1908818000",
+      "name": "Pandag"
+    },
+    {
+      "psgc": "1908819000",
+      "name": "Rajah Buayan"
+    },
+    {
+      "psgc": "1908820000",
+      "name": "Shariff Aguak"
+    },
+    {
+      "psgc": "1908821000",
+      "name": "Shariff Saydona Mustapha"
+    },
+    {
+      "psgc": "1908822000",
+      "name": "South Upi"
+    },
+    {
+      "psgc": "1908823000",
+      "name": "Sultan Sa Barongis"
+    },
+    {
+      "psgc": "1908824000",
+      "name": "Talayan"
+    },
+    {
+      "psgc": "1999901000",
+      "name": "Kapalawan"
+    },
+    {
+      "psgc": "1999902000",
+      "name": "Old Kaabakan"
+    },
+    {
+      "psgc": "1999903000",
+      "name": "Kadayangan"
+    },
+    {
+      "psgc": "1999904000",
+      "name": "Nabalawag"
+    },
+    {
+      "psgc": "1999905000",
+      "name": "Pahamuddin"
+    },
+    {
+      "psgc": "1999906000",
+      "name": "Malidegao"
+    },
+    {
+      "psgc": "1999907000",
+      "name": "Ligawasan"
+    },
+    {
+      "psgc": "1999908000",
+      "name": "Tugunan"
+    },
+    {
+      "psgc": "0105541000",
+      "name": "Sison"
+    },
+    {
+      "psgc": "0105542000",
+      "name": "Sual"
+    },
+    {
+      "psgc": "0105543000",
+      "name": "Tayug"
+    },
+    {
+      "psgc": "0105544000",
+      "name": "Umingan"
+    },
+    {
+      "psgc": "0105545000",
+      "name": "Urbiztondo"
+    },
+    {
+      "psgc": "0105547000",
+      "name": "Villasis"
+    },
+    {
+      "psgc": "0105548000",
+      "name": "Laoac"
+    },
+    {
+      "psgc": "0200901000",
+      "name": "Basco"
+    },
+    {
+      "psgc": "0200902000",
+      "name": "Itbayat"
+    },
+    {
+      "psgc": "0200903000",
+      "name": "Ivana"
+    },
+    {
+      "psgc": "0200904000",
+      "name": "Mahatao"
+    },
+    {
+      "psgc": "0200905000",
+      "name": "Sabtang"
+    },
+    {
+      "psgc": "0200906000",
+      "name": "Uyugan"
+    },
+    {
+      "psgc": "0201501000",
+      "name": "Abulug"
+    },
+    {
+      "psgc": "0201502000",
+      "name": "Alcala"
+    },
+    {
+      "psgc": "0201503000",
+      "name": "Allacapan"
+    },
+    {
+      "psgc": "0201504000",
+      "name": "Amulung"
+    },
+    {
+      "psgc": "0201505000",
+      "name": "Aparri"
+    },
+    {
+      "psgc": "0201506000",
+      "name": "Baggao"
+    },
+    {
+      "psgc": "0201507000",
+      "name": "Ballesteros"
+    },
+    {
+      "psgc": "0201508000",
+      "name": "Buguey"
+    },
+    {
+      "psgc": "0201509000",
+      "name": "Calayan"
+    },
+    {
+      "psgc": "0201510000",
+      "name": "Camalaniugan"
+    },
+    {
+      "psgc": "0201511000",
+      "name": "Claveria"
+    },
+    {
+      "psgc": "0201512000",
+      "name": "Enrile"
+    },
+    {
+      "psgc": "0201513000",
+      "name": "Gattaran"
+    },
+    {
+      "psgc": "0201514000",
+      "name": "Gonzaga"
+    },
+    {
+      "psgc": "0201515000",
+      "name": "Iguig"
+    },
+    {
+      "psgc": "0201516000",
+      "name": "Lal-Lo"
+    },
+    {
+      "psgc": "0201517000",
+      "name": "Lasam"
+    },
+    {
+      "psgc": "0201518000",
+      "name": "Pamplona"
+    },
+    {
+      "psgc": "0201519000",
+      "name": "Peñablanca"
+    },
+    {
+      "psgc": "0201520000",
+      "name": "Piat"
+    },
+    {
+      "psgc": "0201521000",
+      "name": "Rizal"
+    },
+    {
+      "psgc": "0201522000",
+      "name": "Sanchez Mira"
+    },
+    {
+      "psgc": "0201523000",
+      "name": "Santa Ana"
+    },
+    {
+      "psgc": "0201524000",
+      "name": "Santa Praxedes"
+    },
+    {
+      "psgc": "0201525000",
+      "name": "Santa Teresita"
+    },
+    {
+      "psgc": "0201526000",
+      "name": "Santo Niño"
+    },
+    {
+      "psgc": "0201527000",
+      "name": "Solana"
+    },
+    {
+      "psgc": "0201528000",
+      "name": "Tuao"
+    },
+    {
+      "psgc": "0203101000",
+      "name": "Alicia"
+    },
+    {
+      "psgc": "0203102000",
+      "name": "Angadanan"
+    },
+    {
+      "psgc": "0203103000",
+      "name": "Aurora"
+    },
+    {
+      "psgc": "0203104000",
+      "name": "Benito Soliven"
+    },
+    {
+      "psgc": "0203105000",
+      "name": "Burgos"
+    },
+    {
+      "psgc": "0203106000",
+      "name": "Cabagan"
+    },
+    {
+      "psgc": "0203107000",
+      "name": "Cabatuan"
+    },
+    {
+      "psgc": "0203109000",
+      "name": "Cordon"
+    },
+    {
+      "psgc": "0203110000",
+      "name": "Dinapigue"
+    },
+    {
+      "psgc": "0203111000",
+      "name": "Divilacan"
+    },
+    {
+      "psgc": "0203112000",
+      "name": "Echague"
+    },
+    {
+      "psgc": "0203113000",
+      "name": "Gamu"
+    },
+    {
+      "psgc": "0203115000",
+      "name": "Jones"
+    },
+    {
+      "psgc": "0203116000",
+      "name": "Luna"
+    },
+    {
+      "psgc": "0203117000",
+      "name": "Maconacon"
+    },
+    {
+      "psgc": "0203118000",
+      "name": "Delfin Albano"
+    },
+    {
+      "psgc": "0203119000",
+      "name": "Mallig"
+    },
+    {
+      "psgc": "0203120000",
+      "name": "Naguilian"
+    },
+    {
+      "psgc": "0405629000",
+      "name": "Padre Burgos"
+    },
+    {
+      "psgc": "0405630000",
+      "name": "Pagbilao"
+    },
+    {
+      "psgc": "0405631000",
+      "name": "Panukulan"
+    },
+    {
+      "psgc": "0405632000",
+      "name": "Patnanungan"
+    },
+    {
+      "psgc": "0405633000",
+      "name": "Perez"
+    },
+    {
+      "psgc": "0405634000",
+      "name": "Pitogo"
+    },
+    {
+      "psgc": "0405635000",
+      "name": "Plaridel"
+    },
+    {
+      "psgc": "0405636000",
+      "name": "Polillo"
+    },
+    {
+      "psgc": "0405637000",
+      "name": "Quezon"
+    },
+    {
+      "psgc": "0405638000",
+      "name": "Real"
+    },
+    {
+      "psgc": "0405639000",
+      "name": "Sampaloc"
+    },
+    {
+      "psgc": "0405640000",
+      "name": "San Andres"
+    },
+    {
+      "psgc": "0405641000",
+      "name": "San Antonio"
+    },
+    {
+      "psgc": "0405642000",
+      "name": "San Francisco"
+    },
+    {
+      "psgc": "0405644000",
+      "name": "San Narciso"
+    },
+    {
+      "psgc": "0405645000",
+      "name": "Sariaya"
+    },
+    {
+      "psgc": "0405646000",
+      "name": "Tagkawayan"
+    },
+    {
+      "psgc": "0405648000",
+      "name": "Tiaong"
+    },
+    {
+      "psgc": "0405649000",
+      "name": "Unisan"
+    },
+    {
+      "psgc": "0405801000",
+      "name": "Angono"
+    },
+    {
+      "psgc": "0405803000",
+      "name": "Baras"
+    },
+    {
+      "psgc": "0405804000",
+      "name": "Binangonan"
+    },
+    {
+      "psgc": "0405805000",
+      "name": "Cainta"
+    },
+    {
+      "psgc": "0405806000",
+      "name": "Cardona"
+    },
+    {
+      "psgc": "0405807000",
+      "name": "Jala-Jala"
+    },
+    {
+      "psgc": "0405808000",
+      "name": "Rodriguez"
+    },
+    {
+      "psgc": "0405809000",
+      "name": "Morong"
+    },
+    {
+      "psgc": "0405810000",
+      "name": "Pililla"
+    },
+    {
+      "psgc": "0405811000",
+      "name": "San Mateo"
+    },
+    {
+      "psgc": "0405812000",
+      "name": "Tanay"
+    },
+    {
+      "psgc": "0405813000",
+      "name": "Taytay"
+    },
+    {
+      "psgc": "0405814000",
+      "name": "Teresa"
+    },
+    {
+      "psgc": "1704001000",
+      "name": "Boac"
+    },
+    {
+      "psgc": "1704002000",
+      "name": "Buenavista"
+    },
+    {
+      "psgc": "1704003000",
+      "name": "Gasan"
+    },
+    {
+      "psgc": "1704004000",
+      "name": "Mogpog"
+    },
+    {
+      "psgc": "1704005000",
+      "name": "Santa Cruz"
+    },
+    {
+      "psgc": "1704006000",
+      "name": "Torrijos"
+    },
+    {
+      "psgc": "1705101000",
+      "name": "Abra De Ilog"
+    },
+    {
+      "psgc": "1705102000",
+      "name": "Calintaan"
+    },
+    {
+      "psgc": "1705103000",
+      "name": "Looc"
+    },
+    {
+      "psgc": "1705104000",
+      "name": "Lubang"
+    },
+    {
+      "psgc": "1705105000",
+      "name": "Magsaysay"
+    },
+    {
+      "psgc": "1705106000",
+      "name": "Mamburao"
+    },
+    {
+      "psgc": "1705107000",
+      "name": "Paluan"
+    },
+    {
+      "psgc": "1705108000",
+      "name": "Rizal"
+    },
+    {
+      "psgc": "1705109000",
+      "name": "Sablayan"
+    },
+    {
+      "psgc": "1705110000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "1705111000",
+      "name": "Santa Cruz"
+    },
+    {
+      "psgc": "1705201000",
+      "name": "Baco"
+    },
+    {
+      "psgc": "1705202000",
+      "name": "Bansud"
+    },
+    {
+      "psgc": "1705203000",
+      "name": "Bongabong"
+    },
+    {
+      "psgc": "1705204000",
+      "name": "Bulalacao"
+    },
+    {
+      "psgc": "1705206000",
+      "name": "Gloria"
+    },
+    {
+      "psgc": "1705207000",
+      "name": "Mansalay"
+    },
+    {
+      "psgc": "1705208000",
+      "name": "Naujan"
+    },
+    {
+      "psgc": "1705209000",
+      "name": "Pinamalayan"
+    },
+    {
+      "psgc": "1705210000",
+      "name": "Pola"
+    },
+    {
+      "psgc": "1705211000",
+      "name": "Puerto Galera"
+    },
+    {
+      "psgc": "1705212000",
+      "name": "Roxas"
+    },
+    {
+      "psgc": "1705213000",
+      "name": "San Teodoro"
+    },
+    {
+      "psgc": "1705214000",
+      "name": "Socorro"
+    },
+    {
+      "psgc": "1705215000",
+      "name": "Victoria"
+    },
+    {
+      "psgc": "1705301000",
+      "name": "Aborlan"
+    },
+    {
+      "psgc": "1705302000",
+      "name": "Agutaya"
+    },
+    {
+      "psgc": "1705303000",
+      "name": "Araceli"
+    },
+    {
+      "psgc": "1705304000",
+      "name": "Balabac"
+    },
+    {
+      "psgc": "1705305000",
+      "name": "Bataraza"
+    },
+    {
+      "psgc": "1705306000",
+      "name": "Brooke's Point"
+    },
+    {
+      "psgc": "1705307000",
+      "name": "Busuanga"
+    },
+    {
+      "psgc": "1705308000",
+      "name": "Cagayancillo"
+    },
+    {
+      "psgc": "1705309000",
+      "name": "Coron"
+    },
+    {
+      "psgc": "1705310000",
+      "name": "Cuyo"
+    },
+    {
+      "psgc": "1705311000",
+      "name": "Dumaran"
+    },
+    {
+      "psgc": "1705312000",
+      "name": "El Nido"
+    },
+    {
+      "psgc": "1705313000",
+      "name": "Linapacan"
+    },
+    {
+      "psgc": "1705314000",
+      "name": "Magsaysay"
+    },
+    {
+      "psgc": "1705315000",
+      "name": "Narra"
+    },
+    {
+      "psgc": "1705317000",
+      "name": "Quezon"
+    },
+    {
+      "psgc": "1705318000",
+      "name": "Roxas"
+    },
+    {
+      "psgc": "1705319000",
+      "name": "San Vicente"
+    },
+    {
+      "psgc": "1705320000",
+      "name": "Taytay"
+    },
+    {
+      "psgc": "1705321000",
+      "name": "Kalayaan"
+    },
+    {
+      "psgc": "1705322000",
+      "name": "Culion"
+    },
+    {
+      "psgc": "1705323000",
+      "name": "Dr. Jose P. Rizal"
+    },
+    {
+      "psgc": "1705324000",
+      "name": "Sofronio Española"
+    },
+    {
+      "psgc": "1705901000",
+      "name": "Alcantara"
+    },
+    {
+      "psgc": "1705902000",
+      "name": "Banton"
+    },
+    {
+      "psgc": "1705903000",
+      "name": "Cajidiocan"
+    },
+    {
+      "psgc": "1705904000",
+      "name": "Calatrava"
+    },
+    {
+      "psgc": "1705905000",
+      "name": "Concepcion"
+    },
+    {
+      "psgc": "1705906000",
+      "name": "Corcuera"
+    },
+    {
+      "psgc": "1705907000",
+      "name": "Looc"
+    },
+    {
+      "psgc": "1705908000",
+      "name": "Magdiwang"
+    },
+    {
+      "psgc": "1705909000",
+      "name": "Odiongan"
+    },
+    {
+      "psgc": "1705910000",
+      "name": "Romblon"
+    },
+    {
+      "psgc": "1705911000",
+      "name": "San Agustin"
+    },
+    {
+      "psgc": "1705912000",
+      "name": "San Andres"
+    },
+    {
+      "psgc": "1705913000",
+      "name": "San Fernando"
+    },
+    {
+      "psgc": "1705914000",
+      "name": "San Jose"
+    },
+    {
+      "psgc": "1705915000",
+      "name": "Santa Fe"
+    },
+    {
+      "psgc": "1705916000",
+      "name": "Ferrol"
+    },
+    {
+      "psgc": "1705917000",
+      "name": "Santa Maria"
+    },
+    {
+      "psgc": "0500501000",
+      "name": "Bacacay"
+    },
+    {
+      "psgc": "0500502000",
+      "name": "Camalig"
+    },
+    {
+      "psgc": "0500503000",
+      "name": "Daraga"
+    },
+    {
+      "psgc": "0500504000",
+      "name": "Guinobatan"
+    },
+    {
+      "psgc": "0500505000",
+      "name": "Jovellar"
+    },
+    {
+      "psgc": "1804622000",
+      "name": "Tayasan"
+    },
+    {
+      "psgc": "1804623000",
+      "name": "Valencia"
+    },
+    {
+      "psgc": "1804624000",
+      "name": "Vallehermoso"
+    },
+    {
+      "psgc": "1804625000",
+      "name": "Zamboanguita"
+    },
+    {
+      "psgc": "1806101000",
+      "name": "Enrique Villanueva"
+    },
+    {
+      "psgc": "1806102000",
+      "name": "Larena"
+    },
+    {
+      "psgc": "1806103000",
+      "name": "Lazi"
+    },
+    {
+      "psgc": "1806104000",
+      "name": "Maria"
+    },
+    {
+      "psgc": "1806105000",
+      "name": "San Juan"
+    },
+    {
+      "psgc": "1806106000",
+      "name": "Siquijor"
+    },
+    {
+      "psgc": "0701201000",
+      "name": "Alburquerque"
+    },
+    {
+      "psgc": "0701202000",
+      "name": "Alicia"
+    },
+    {
+      "psgc": "0701203000",
+      "name": "Anda"
+    },
+    {
+      "psgc": "0701204000",
+      "name": "Antequera"
+    },
+    {
+      "psgc": "0701205000",
+      "name": "Baclayon"
+    },
+    {
+      "psgc": "0701206000",
+      "name": "Balilihan"
+    },
+    {
+      "psgc": "0701207000",
+      "name": "Batuan"
+    },
+    {
+      "psgc": "0701208000",
+      "name": "Bilar"
+    },
+    {
+      "psgc": "0701209000",
+      "name": "Buenavista"
+    },
+    {
+      "psgc": "0701210000",
+      "name": "Calape"
+    },
+    {
+      "psgc": "0701211000",
+      "name": "Candijay"
+    },
+    {
+      "psgc": "0701212000",
+      "name": "Carmen"
+    },
+    {
+      "psgc": "0701213000",
+      "name": "Catigbian"
+    },
+    {
+      "psgc": "0701214000",
+      "name": "Clarin"
+    },
+    {
+      "psgc": "0701215000",
+      "name": "Corella"
+    },
+    {
+      "psgc": "0701216000",
+      "name": "Cortes"
+    },
+    {
+      "psgc": "0701217000",
+      "name": "Dagohoy"
+    },
+    {
+      "psgc": "0701218000",
+      "name": "Danao"
+    },
+    {
+      "psgc": "0701219000",
+      "name": "Dauis"
+    },
+    {
+      "psgc": "0701220000",
+      "name": "Dimiao"
+    },
+    {
+      "psgc": "0701221000",
+      "name": "Duero"
+    },
+    {
+      "psgc": "0701222000",
+      "name": "Garcia Hernandez"
+    },
+    {
+      "psgc": "0701223000",
+      "name": "Guindulman"
+    },
+    {
+      "psgc": "0701224000",
+      "name": "Inabanga"
+    },
+    {
+      "psgc": "0701225000",
+      "name": "Jagna"
+    },
+    {
+      "psgc": "0701226000",
+      "name": "Getafe"
+    },
+    {
+      "psgc": "0701227000",
+      "name": "Lila"
+    },
+    {
+      "psgc": "0701228000",
+      "name": "Loay"
+    },
+    {
+      "psgc": "0701229000",
+      "name": "Loboc"
+    },
+    {
+      "psgc": "0701230000",
+      "name": "Loon"
+    },
+    {
+      "psgc": "0701231000",
+      "name": "Mabini"
+    },
+    {
+      "psgc": "0701232000",
+      "name": "Maribojoc"
+    },
+    {
+      "psgc": "0701233000",
+      "name": "Panglao"
+    },
+    {
+      "psgc": "0701234000",
+      "name": "Pilar"
+    },
+    {
+      "psgc": "0701235000",
+      "name": "President Carlos P. Garcia"
+    },
+    {
+      "psgc": "0701236000",
+      "name": "Sagbayan"
+    },
+    {
+      "psgc": "0701237000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "0701238000",
+      "name": "San Miguel"
+    },
+    {
+      "psgc": "0701239000",
+      "name": "Sevilla"
+    },
+    {
+      "psgc": "0701240000",
+      "name": "Sierra Bullones"
+    },
+    {
+      "psgc": "0701241000",
+      "name": "Sikatuna"
+    },
+    {
+      "psgc": "0701243000",
+      "name": "Talibon"
+    },
+    {
+      "psgc": "0701244000",
+      "name": "Trinidad"
+    },
+    {
+      "psgc": "0701245000",
+      "name": "Tubigon"
+    },
+    {
+      "psgc": "0701246000",
+      "name": "Ubay"
+    },
+    {
+      "psgc": "0701247000",
+      "name": "Valencia"
+    },
+    {
+      "psgc": "0701248000",
+      "name": "Bien Unido"
+    },
+    {
+      "psgc": "0702201000",
+      "name": "Alcantara"
+    },
+    {
+      "psgc": "0702202000",
+      "name": "Alcoy"
+    },
+    {
+      "psgc": "0702203000",
+      "name": "Alegria"
+    },
+    {
+      "psgc": "0702204000",
+      "name": "Aloguinsan"
+    },
+    {
+      "psgc": "0702205000",
+      "name": "Argao"
+    },
+    {
+      "psgc": "0702206000",
+      "name": "Asturias"
+    },
+    {
+      "psgc": "0702207000",
+      "name": "Badian"
+    },
+    {
+      "psgc": "0702208000",
+      "name": "Balamban"
+    },
+    {
+      "psgc": "0702209000",
+      "name": "Bantayan"
+    },
+    {
+      "psgc": "0702210000",
+      "name": "Barili"
+    },
+    {
+      "psgc": "0702212000",
+      "name": "Boljoon"
+    },
+    {
+      "psgc": "0702213000",
+      "name": "Borbon"
+    },
+    {
+      "psgc": "0702215000",
+      "name": "Carmen"
+    },
+    {
+      "psgc": "0702216000",
+      "name": "Catmon"
+    },
+    {
+      "psgc": "0702218000",
+      "name": "Compostela"
+    },
+    {
+      "psgc": "0702219000",
+      "name": "Consolacion"
+    },
+    {
+      "psgc": "0702220000",
+      "name": "Cordova"
+    },
+    {
+      "psgc": "0702221000",
+      "name": "Daanbantayan"
+    },
+    {
+      "psgc": "0702222000",
+      "name": "Dalaguete"
+    },
+    {
+      "psgc": "0702224000",
+      "name": "Dumanjug"
+    },
+    {
+      "psgc": "0702225000",
+      "name": "Ginatilan"
+    },
+    {
+      "psgc": "0702227000",
+      "name": "Liloan"
+    },
+    {
+      "psgc": "0702228000",
+      "name": "Madridejos"
+    },
+    {
+      "psgc": "0702229000",
+      "name": "Malabuyoc"
+    },
+    {
+      "psgc": "0702231000",
+      "name": "Medellin"
+    },
+    {
+      "psgc": "0702232000",
+      "name": "Minglanilla"
+    },
+    {
+      "psgc": "0702233000",
+      "name": "Moalboal"
+    },
+    {
+      "psgc": "0702235000",
+      "name": "Oslob"
+    },
+    {
+      "psgc": "0702236000",
+      "name": "Pilar"
+    },
+    {
+      "psgc": "0702237000",
+      "name": "Pinamungajan"
+    },
+    {
+      "psgc": "0702238000",
+      "name": "Poro"
+    },
+    {
+      "psgc": "0702239000",
+      "name": "Ronda"
+    },
+    {
+      "psgc": "0702240000",
+      "name": "Samboan"
+    },
+    {
+      "psgc": "0702241000",
+      "name": "San Fernando"
+    },
+    {
+      "psgc": "0702242000",
+      "name": "San Francisco"
+    },
+    {
+      "psgc": "0702243000",
+      "name": "San Remigio"
+    },
+    {
+      "psgc": "0702244000",
+      "name": "Santa Fe"
+    },
+    {
+      "psgc": "0702245000",
+      "name": "Santander"
+    },
+    {
+      "psgc": "0702246000",
+      "name": "Sibonga"
+    },
+    {
+      "psgc": "0702247000",
+      "name": "Sogod"
+    },
+    {
+      "psgc": "0702248000",
+      "name": "Tabogon"
+    },
+    {
+      "psgc": "0702249000",
+      "name": "Tabuelan"
+    },
+    {
+      "psgc": "0702252000",
+      "name": "Tuburan"
+    },
+    {
+      "psgc": "0702253000",
+      "name": "Tudela"
+    },
+    {
+      "psgc": "0802601000",
+      "name": "Arteche"
+    },
+    {
+      "psgc": "0802602000",
+      "name": "Balangiga"
+    },
+    {
+      "psgc": "0802603000",
+      "name": "Balangkayan"
+    },
+    {
+      "psgc": "0802605000",
+      "name": "Can-Avid"
+    },
+    {
+      "psgc": "0802606000",
+      "name": "Dolores"
+    },
+    {
+      "psgc": "0802607000",
+      "name": "General Macarthur"
+    },
+    {
+      "psgc": "0802608000",
+      "name": "Giporlos"
+    },
+    {
+      "psgc": "0802609000",
+      "name": "Guiuan"
+    },
+    {
+      "psgc": "0802610000",
+      "name": "Hernani"
+    },
+    {
+      "psgc": "0802611000",
+      "name": "Jipapad"
+    },
+    {
+      "psgc": "0802612000",
+      "name": "Lawaan"
+    },
+    {
+      "psgc": "0802613000",
+      "name": "Llorente"
+    },
+    {
+      "psgc": "0802614000",
+      "name": "Maslog"
+    },
+    {
+      "psgc": "0802615000",
+      "name": "Maydolong"
+    },
+    {
+      "psgc": "1001320000",
+      "name": "Talakag"
+    },
+    {
+      "psgc": "1001322000",
+      "name": "Cabanglasan"
+    },
+    {
+      "psgc": "1001801000",
+      "name": "Catarman"
+    },
+    {
+      "psgc": "1001802000",
+      "name": "Guinsiliban"
+    },
+    {
+      "psgc": "1001803000",
+      "name": "Mahinog"
+    },
+    {
+      "psgc": "1001804000",
+      "name": "Mambajao"
+    },
+    {
+      "psgc": "1001805000",
+      "name": "Sagay"
+    },
+    {
+      "psgc": "1003501000",
+      "name": "Bacolod"
+    },
+    {
+      "psgc": "1003502000",
+      "name": "Baloi"
+    },
+    {
+      "psgc": "1003503000",
+      "name": "Baroy"
+    },
+    {
+      "psgc": "1003505000",
+      "name": "Kapatagan"
+    },
+    {
+      "psgc": "1003506000",
+      "name": "Sultan Naga Dimaporo"
+    },
+    {
+      "psgc": "1003507000",
+      "name": "Kauswagan"
+    },
+    {
+      "psgc": "1003508000",
+      "name": "Kolambugan"
+    },
+    {
+      "psgc": "1003509000",
+      "name": "Lala"
+    },
+    {
+      "psgc": "1003510000",
+      "name": "Linamon"
+    },
+    {
+      "psgc": "1003511000",
+      "name": "Magsaysay"
+    },
+    {
+      "psgc": "1003512000",
+      "name": "Maigo"
+    },
+    {
+      "psgc": "1003513000",
+      "name": "Matungao"
+    },
+    {
+      "psgc": "1003514000",
+      "name": "Munai"
+    },
+    {
+      "psgc": "1003515000",
+      "name": "Nunungan"
+    },
+    {
+      "psgc": "1003516000",
+      "name": "Pantao Ragat"
+    },
+    {
+      "psgc": "1003517000",
+      "name": "Poona Piagapo"
+    },
+    {
+      "psgc": "1003518000",
+      "name": "Salvador"
+    },
+    {
+      "psgc": "1003519000",
+      "name": "Sapad"
+    },
+    {
+      "psgc": "1003520000",
+      "name": "Tagoloan"
+    },
+    {
+      "psgc": "1003521000",
+      "name": "Tangcal"
+    },
+    {
+      "psgc": "1003522000",
+      "name": "Tubod"
+    },
+    {
+      "psgc": "1003523000",
+      "name": "Pantar"
+    },
+    {
+      "psgc": "1004201000",
+      "name": "Aloran"
+    },
+    {
+      "psgc": "1004202000",
+      "name": "Baliangao"
+    },
+    {
+      "psgc": "1004203000",
+      "name": "Bonifacio"
+    },
+    {
+      "psgc": "1004204000",
+      "name": "Calamba"
+    },
+    {
+      "psgc": "1004205000",
+      "name": "Clarin"
+    },
+    {
+      "psgc": "1004206000",
+      "name": "Concepcion"
+    },
+    {
+      "psgc": "1004207000",
+      "name": "Jimenez"
+    },
+    {
+      "psgc": "1004208000",
+      "name": "Lopez Jaena"
+    },
+    {
+      "psgc": "1004211000",
+      "name": "Panaon"
+    },
+    {
+      "psgc": "1004212000",
+      "name": "Plaridel"
+    },
+    {
+      "psgc": "1004213000",
+      "name": "Sapang Dalaga"
+    },
+    {
+      "psgc": "1004214000",
+      "name": "Sinacaban"
+    },
+    {
+      "psgc": "1004216000",
+      "name": "Tudela"
+    },
+    {
+      "psgc": "1004217000",
+      "name": "Don Victoriano"
+    },
+    {
+      "psgc": "1004301000",
+      "name": "Alubijid"
+    },
+    {
+      "psgc": "1004302000",
+      "name": "Balingasag"
+    },
+    {
+      "psgc": "1004303000",
+      "name": "Balingoan"
+    },
+    {
+      "psgc": "1004304000",
+      "name": "Binuangan"
+    },
+    {
+      "psgc": "1004306000",
+      "name": "Claveria"
+    },
+    {
+      "psgc": "1004309000",
+      "name": "Gitagum"
+    },
+    {
+      "psgc": "1004310000",
+      "name": "Initao"
+    },
+    {
+      "psgc": "1004311000",
+      "name": "Jasaan"
+    },
+    {
+      "psgc": "1004312000",
+      "name": "Kinoguitan"
+    },
+    {
+      "psgc": "1004313000",
+      "name": "Lagonglong"
+    },
+    {
+      "psgc": "1004314000",
+      "name": "Laguindingan"
+    },
+    {
+      "psgc": "1004315000",
+      "name": "Libertad"
+    },
+    {
+      "psgc": "1004316000",
+      "name": "Lugait"
+    },
+    {
+      "psgc": "1004317000",
+      "name": "Magsaysay"
+    },
+    {
+      "psgc": "1004318000",
+      "name": "Manticao"
+    },
+    {
+      "psgc": "1004319000",
+      "name": "Medina"
+    },
+    {
+      "psgc": "1004320000",
+      "name": "Naawan"
+    },
+    {
+      "psgc": "1004321000",
+      "name": "Opol"
+    },
+    {
+      "psgc": "1004322000",
+      "name": "Salay"
+    },
+    {
+      "psgc": "1004323000",
+      "name": "Sugbongcogon"
+    },
+    {
+      "psgc": "1004324000",
+      "name": "Tagoloan"
+    },
+    {
+      "psgc": "1004325000",
+      "name": "Talisayan"
+    },
+    {
+      "psgc": "1004326000",
+      "name": "Villanueva"
+    },
+    {
+      "psgc": "1102301000",
+      "name": "Asuncion"
+    },
+    {
+      "psgc": "1102303000",
+      "name": "Carmen"
+    },
+    {
+      "psgc": "1102305000",
+      "name": "Kapalong"
+    },
+    {
+      "psgc": "1102314000",
+      "name": "New Corella"
+    },
+    {
+      "psgc": "1102318000",
+      "name": "Santo Tomas"
+    },
+    {
+      "psgc": "1102322000",
+      "name": "Talaingod"
+    },
+    {
+      "psgc": "1102323000",
+      "name": "Braulio E. Dujali"
+    },
+    {
+      "psgc": "1102324000",
+      "name": "Sawata"
+    },
+    {
+      "psgc": "1102401000",
+      "name": "Bansalan"
+    },
+    {
+      "psgc": "1102404000",
+      "name": "Hagonoy"
+    },
+    {
+      "psgc": "1102406000",
+      "name": "Kiblawan"
+    },
+    {
+      "psgc": "1102407000",
+      "name": "Magsaysay"
+    },
+    {
+      "psgc": "1102408000",
+      "name": "Malalag"
+    },
+    {
+      "psgc": "1102410000",
+      "name": "Matanao"
+    },
+    {
+      "psgc": "1102411000",
+      "name": "Padada"
+    },
+    {
+      "psgc": "1102412000",
+      "name": "Santa Cruz"
+    },
+    {
+      "psgc": "1102414000",
+      "name": "Sulop"
+    },
+    {
+      "psgc": "1102501000",
+      "name": "Baganga"
+    },
+    {
+      "psgc": "1102502000",
+      "name": "Banaybanay"
+    },
+    {
+      "psgc": "1102503000",
+      "name": "Boston"
+    },
+    {
+      "psgc": "1102504000",
+      "name": "Caraga"
+    },
+    {
+      "psgc": "1102505000",
+      "name": "Cateel"
+    },
+    {
+      "psgc": "1102506000",
+      "name": "Governor Generoso"
+    },
+    {
+      "psgc": "1102507000",
+      "name": "Lupon"
+    },
+    {
+      "psgc": "1102508000",
+      "name": "Manay"
+    },
+    {
+      "psgc": "1102510000",
+      "name": "San Isidro"
+    },
+    {
+      "psgc": "1102511000",
+      "name": "Tarragona"
+    },
+    {
+      "psgc": "1108201000",
+      "name": "Compostela"
+    },
+    {
+      "psgc": "1108202000",
+      "name": "Laak"
+    },
+    {
+      "psgc": "1108203000",
+      "name": "Mabini"
+    },
+    {
+      "psgc": "1108204000",
+      "name": "Maco"
+    },
+    {
+      "psgc": "1108205000",
+      "name": "Maragusan"
+    },
+    {
+      "psgc": "1108206000",
+      "name": "Mawab"
+    },
+    {
+      "psgc": "1108207000",
+      "name": "Monkayo"
+    },
+    {
+      "psgc": "1108208000",
+      "name": "Montevista"
+    },
+    {
+      "psgc": "1108209000",
+      "name": "Nabunturan"
+    },
+    {
+      "psgc": "1108210000",
+      "name": "New Bataan"
+    },
+    {
+      "psgc": "1108211000",
+      "name": "Pantukan"
+    },
+    {
+      "psgc": "1108601000",
+      "name": "Don Marcelino"
+    },
+    {
+      "psgc": "1108602000",
+      "name": "Jose Abad Santos"
+    },
+    {
+      "psgc": "1108603000",
+      "name": "Malita"
+    },
+    {
+      "psgc": "1108604000",
+      "name": "Santa Maria"
+    },
+    {
+      "psgc": "1108605000",
+      "name": "Sarangani"
+    },
+    {
+      "psgc": "1204701000",
+      "name": "Alamada"
+    },
+    {
+      "psgc": "1204702000",
+      "name": "Carmen"
+    },
+    {
+      "psgc": "1204703000",
+      "name": "Kabacan"
+    },
+    {
+      "psgc": "1204705000",
+      "name": "Libungan"
+    },
+    {
+      "psgc": "1204706000",
+      "name": "Magpet"
+    },
+    {
+      "psgc": "1204707000",
+      "name": "Makilala"
+    },
+    {
+      "psgc": "1204708000",
+      "name": "Matalam"
+    },
+    {
+      "psgc": "1204709000",
+      "name": "Midsayap"
+    },
+    {
+      "psgc": "1204710000",
+      "name": "M'Lang"
+    },
+    {
+      "psgc": "1204711000",
+      "name": "Pigkawayan"
+    },
+    {
+      "psgc": "1204716000",
+      "name": "Banisilan"
+    },
+    {
+      "psgc": "1204717000",
+      "name": "Aleosan"
+    },
+    {
+      "psgc": "1204718000",
+      "name": "Arakan"
+    },
+    {
+      "psgc": "1206302000",
+      "name": "Banga"
+    }
+  ],
+  "provinces": [
+    {
+      "name": "Abra",
+      "psgc": "1400100000",
+      "regionName": "Cordillera Administrative Region (CAR)",
+      "region": "1400000000"
+    },
+    {
+      "name": "Benguet",
+      "psgc": "1401100000",
+      "regionName": "Cordillera Administrative Region (CAR)",
+      "region": "1400000000"
+    },
+    {
+      "name": "Ifugao",
+      "psgc": "1402700000",
+      "regionName": "Cordillera Administrative Region (CAR)",
+      "region": "1400000000"
+    },
+    {
+      "name": "Kalinga",
+      "psgc": "1403200000",
+      "regionName": "Cordillera Administrative Region (CAR)",
+      "region": "1400000000"
+    },
+    {
+      "name": "Mountain Province",
+      "psgc": "1404400000",
+      "regionName": "Cordillera Administrative Region (CAR)",
+      "region": "1400000000"
+    },
+    {
+      "name": "Apayao",
+      "psgc": "1408100000",
+      "regionName": "Cordillera Administrative Region (CAR)",
+      "region": "1400000000"
+    },
+    {
+      "name": "Ilocos Norte",
+      "psgc": "0102800000",
+      "regionName": "Region I (Ilocos Region)",
+      "region": "0100000000"
+    },
+    {
+      "name": "Ilocos Sur",
+      "psgc": "0102900000",
+      "regionName": "Region I (Ilocos Region)",
+      "region": "0100000000"
+    },
+    {
+      "name": "La Union",
+      "psgc": "0103300000",
+      "regionName": "Region I (Ilocos Region)",
+      "region": "0100000000"
+    },
+    {
+      "name": "Pangasinan",
+      "psgc": "0105500000",
+      "regionName": "Region I (Ilocos Region)",
+      "region": "0100000000"
+    },
+    {
+      "name": "Batanes",
+      "psgc": "0200900000",
+      "regionName": "Region II (Cagayan Valley)",
+      "region": "0200000000"
+    },
+    {
+      "name": "Cagayan",
+      "psgc": "0201500000",
+      "regionName": "Region II (Cagayan Valley)",
+      "region": "0200000000"
+    },
+    {
+      "name": "Isabela",
+      "psgc": "0203100000",
+      "regionName": "Region II (Cagayan Valley)",
+      "region": "0200000000"
+    },
+    {
+      "name": "Nueva Vizcaya",
+      "psgc": "0205000000",
+      "regionName": "Region II (Cagayan Valley)",
+      "region": "0200000000"
+    },
+    {
+      "name": "Quirino",
+      "psgc": "0205700000",
+      "regionName": "Region II (Cagayan Valley)",
+      "region": "0200000000"
+    },
+    {
+      "name": "Bataan",
+      "psgc": "0300800000",
+      "regionName": "Region III (Central Luzon)",
+      "region": "0300000000"
+    },
+    {
+      "name": "Bulacan",
+      "psgc": "0301400000",
+      "regionName": "Region III (Central Luzon)",
+      "region": "0300000000"
+    },
+    {
+      "name": "Nueva Ecija",
+      "psgc": "0304900000",
+      "regionName": "Region III (Central Luzon)",
+      "region": "0300000000"
+    },
+    {
+      "name": "Pampanga",
+      "psgc": "0305400000",
+      "regionName": "Region III (Central Luzon)",
+      "region": "0300000000"
+    },
+    {
+      "name": "Tarlac",
+      "psgc": "0306900000",
+      "regionName": "Region III (Central Luzon)",
+      "region": "0300000000"
+    },
+    {
+      "name": "Zambales",
+      "psgc": "0307100000",
+      "regionName": "Region III (Central Luzon)",
+      "region": "0300000000"
+    },
+    {
+      "name": "Aurora",
+      "psgc": "0307700000",
+      "regionName": "Region III (Central Luzon)",
+      "region": "0300000000"
+    },
+    {
+      "name": "Batangas",
+      "psgc": "0401000000",
+      "regionName": "Region IV-A (CALABARZON)",
+      "region": "0400000000"
+    },
+    {
+      "name": "Cavite",
+      "psgc": "0402100000",
+      "regionName": "Region IV-A (CALABARZON)",
+      "region": "0400000000"
+    },
+    {
+      "name": "Laguna",
+      "psgc": "0403400000",
+      "regionName": "Region IV-A (CALABARZON)",
+      "region": "0400000000"
+    },
+    {
+      "name": "Quezon",
+      "psgc": "0405600000",
+      "regionName": "Region IV-A (CALABARZON)",
+      "region": "0400000000"
+    },
+    {
+      "name": "Rizal",
+      "psgc": "0405800000",
+      "regionName": "Region IV-A (CALABARZON)",
+      "region": "0400000000"
+    },
+    {
+      "name": "Marinduque",
+      "psgc": "1704000000",
+      "regionName": "MIMAROPA Region",
+      "region": "1700000000"
+    },
+    {
+      "name": "Occidental Mindoro",
+      "psgc": "1705100000",
+      "regionName": "MIMAROPA Region",
+      "region": "1700000000"
+    },
+    {
+      "name": "Oriental Mindoro",
+      "psgc": "1705200000",
+      "regionName": "MIMAROPA Region",
+      "region": "1700000000"
+    },
+    {
+      "name": "Palawan",
+      "psgc": "1705300000",
+      "regionName": "MIMAROPA Region",
+      "region": "1700000000"
+    },
+    {
+      "name": "Romblon",
+      "psgc": "1705900000",
+      "regionName": "MIMAROPA Region",
+      "region": "1700000000"
+    },
+    {
+      "name": "Albay",
+      "psgc": "0500500000",
+      "regionName": "Region V (Bicol Region)",
+      "region": "0500000000"
+    },
+    {
+      "name": "Camarines Norte",
+      "psgc": "0501600000",
+      "regionName": "Region V (Bicol Region)",
+      "region": "0500000000"
+    },
+    {
+      "name": "Camarines Sur",
+      "psgc": "0501700000",
+      "regionName": "Region V (Bicol Region)",
+      "region": "0500000000"
+    },
+    {
+      "name": "Catanduanes",
+      "psgc": "0502000000",
+      "regionName": "Region V (Bicol Region)",
+      "region": "0500000000"
+    },
+    {
+      "name": "Masbate",
+      "psgc": "0504100000",
+      "regionName": "Region V (Bicol Region)",
+      "region": "0500000000"
+    },
+    {
+      "name": "Sorsogon",
+      "psgc": "0506200000",
+      "regionName": "Region V (Bicol Region)",
+      "region": "0500000000"
+    },
+    {
+      "name": "Aklan",
+      "psgc": "0600400000",
+      "regionName": "Region VI (Western Visayas)",
+      "region": "0600000000"
+    },
+    {
+      "name": "Antique",
+      "psgc": "0600600000",
+      "regionName": "Region VI (Western Visayas)",
+      "region": "0600000000"
+    },
+    {
+      "name": "Capiz",
+      "psgc": "0601900000",
+      "regionName": "Region VI (Western Visayas)",
+      "region": "0600000000"
+    },
+    {
+      "name": "Iloilo",
+      "psgc": "0603000000",
+      "regionName": "Region VI (Western Visayas)",
+      "region": "0600000000"
+    },
+    {
+      "name": "Guimaras",
+      "psgc": "0607900000",
+      "regionName": "Region VI (Western Visayas)",
+      "region": "0600000000"
+    },
+    {
+      "name": "Negros Occidental",
+      "psgc": "1804500000",
+      "regionName": "Negros Island Region (NIR)",
+      "region": "1800000000"
+    },
+    {
+      "name": "Negros Oriental",
+      "psgc": "1804600000",
+      "regionName": "Negros Island Region (NIR)",
+      "region": "1800000000"
+    },
+    {
+      "name": "Siquijor",
+      "psgc": "1806100000",
+      "regionName": "Negros Island Region (NIR)",
+      "region": "1800000000"
+    },
+    {
+      "name": "Bohol",
+      "psgc": "0701200000",
+      "regionName": "Region VII (Central Visayas)",
+      "region": "0700000000"
+    },
+    {
+      "name": "Cebu",
+      "psgc": "0702200000",
+      "regionName": "Region VII (Central Visayas)",
+      "region": "0700000000"
+    },
+    {
+      "name": "Eastern Samar",
+      "psgc": "0802600000",
+      "regionName": "Region VIII (Eastern Visayas)",
+      "region": "0800000000"
+    },
+    {
+      "name": "Leyte",
+      "psgc": "0803700000",
+      "regionName": "Region VIII (Eastern Visayas)",
+      "region": "0800000000"
+    },
+    {
+      "name": "Northern Samar",
+      "psgc": "0804800000",
+      "regionName": "Region VIII (Eastern Visayas)",
+      "region": "0800000000"
+    },
+    {
+      "name": "Samar",
+      "psgc": "0806000000",
+      "regionName": "Region VIII (Eastern Visayas)",
+      "region": "0800000000"
+    },
+    {
+      "name": "Southern Leyte",
+      "psgc": "0806400000",
+      "regionName": "Region VIII (Eastern Visayas)",
+      "region": "0800000000"
+    },
+    {
+      "name": "Biliran",
+      "psgc": "0807800000",
+      "regionName": "Region VIII (Eastern Visayas)",
+      "region": "0800000000"
+    },
+    {
+      "name": "Sulu",
+      "psgc": "0906600000",
+      "regionName": "Region IX (Zamboanga Peninsula)",
+      "region": "0900000000"
+    },
+    {
+      "name": "Zamboanga del Norte",
+      "psgc": "0907200000",
+      "regionName": "Region IX (Zamboanga Peninsula)",
+      "region": "0900000000"
+    },
+    {
+      "name": "Zamboanga del Sur",
+      "psgc": "0907300000",
+      "regionName": "Region IX (Zamboanga Peninsula)",
+      "region": "0900000000"
+    },
+    {
+      "name": "Zamboanga Sibugay",
+      "psgc": "0908300000",
+      "regionName": "Region IX (Zamboanga Peninsula)",
+      "region": "0900000000"
+    },
+    {
+      "name": "Bukidnon",
+      "psgc": "1001300000",
+      "regionName": "Region X (Northern Mindanao)",
+      "region": "1000000000"
+    },
+    {
+      "name": "Camiguin",
+      "psgc": "1001800000",
+      "regionName": "Region X (Northern Mindanao)",
+      "region": "1000000000"
+    },
+    {
+      "name": "Lanao del Norte",
+      "psgc": "1003500000",
+      "regionName": "Region X (Northern Mindanao)",
+      "region": "1000000000"
+    },
+    {
+      "name": "Misamis Occidental",
+      "psgc": "1004200000",
+      "regionName": "Region X (Northern Mindanao)",
+      "region": "1000000000"
+    },
+    {
+      "name": "Misamis Oriental",
+      "psgc": "1004300000",
+      "regionName": "Region X (Northern Mindanao)",
+      "region": "1000000000"
+    },
+    {
+      "name": "Davao del Norte",
+      "psgc": "1102300000",
+      "regionName": "Region XI (Davao Region)",
+      "region": "1100000000"
+    },
+    {
+      "name": "Davao del Sur",
+      "psgc": "1102400000",
+      "regionName": "Region XI (Davao Region)",
+      "region": "1100000000"
+    },
+    {
+      "name": "Davao Oriental",
+      "psgc": "1102500000",
+      "regionName": "Region XI (Davao Region)",
+      "region": "1100000000"
+    },
+    {
+      "name": "Davao de Oro",
+      "psgc": "1108200000",
+      "regionName": "Region XI (Davao Region)",
+      "region": "1100000000"
+    },
+    {
+      "name": "Davao Occidental",
+      "psgc": "1108600000",
+      "regionName": "Region XI (Davao Region)",
+      "region": "1100000000"
+    },
+    {
+      "name": "Cotabato",
+      "psgc": "1204700000",
+      "regionName": "Region XII (SOCCSKSARGEN)",
+      "region": "1200000000"
+    },
+    {
+      "name": "South Cotabato",
+      "psgc": "1206300000",
+      "regionName": "Region XII (SOCCSKSARGEN)",
+      "region": "1200000000"
+    },
+    {
+      "name": "Sultan Kudarat",
+      "psgc": "1206500000",
+      "regionName": "Region XII (SOCCSKSARGEN)",
+      "region": "1200000000"
+    },
+    {
+      "name": "Sarangani",
+      "psgc": "1208000000",
+      "regionName": "Region XII (SOCCSKSARGEN)",
+      "region": "1200000000"
+    },
+    {
+      "name": "Agusan del Norte",
+      "psgc": "1600200000",
+      "regionName": "Region XIII (Caraga)",
+      "region": "1600000000"
+    },
+    {
+      "name": "Agusan del Sur",
+      "psgc": "1600300000",
+      "regionName": "Region XIII (Caraga)",
+      "region": "1600000000"
+    },
+    {
+      "name": "Surigao del Norte",
+      "psgc": "1606700000",
+      "regionName": "Region XIII (Caraga)",
+      "region": "1600000000"
+    },
+    {
+      "name": "Surigao del Sur",
+      "psgc": "1606800000",
+      "regionName": "Region XIII (Caraga)",
+      "region": "1600000000"
+    },
+    {
+      "name": "Dinagat Islands",
+      "psgc": "1608500000",
+      "regionName": "Region XIII (Caraga)",
+      "region": "1600000000"
+    },
+    {
+      "name": "Basilan",
+      "psgc": "1900700000",
+      "regionName": "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)",
+      "region": "1900000000"
+    },
+    {
+      "name": "Lanao del Sur",
+      "psgc": "1903600000",
+      "regionName": "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)",
+      "region": "1900000000"
+    },
+    {
+      "name": "Tawi-Tawi",
+      "psgc": "1907000000",
+      "regionName": "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)",
+      "region": "1900000000"
+    },
+    {
+      "name": "Maguindanao del Norte",
+      "psgc": "1908700000",
+      "regionName": "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)",
+      "region": "1900000000"
+    },
+    {
+      "name": "Maguindanao del Sur",
+      "psgc": "1908800000",
+      "regionName": "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)",
+      "region": "1900000000"
+    }
+  ],
+  "cities": [
+    {
+      "psgc": "1380100000",
+      "name": "City of Caloocan"
+    },
+    {
+      "psgc": "1380200000",
+      "name": "City of Las Piñas"
+    },
+    {
+      "psgc": "1380300000",
+      "name": "City of Makati"
+    },
+    {
+      "psgc": "1380400000",
+      "name": "City of Malabon"
+    },
+    {
+      "psgc": "1380500000",
+      "name": "City of Mandaluyong"
+    },
+    {
+      "psgc": "1380600000",
+      "name": "City of Manila"
+    },
+    {
+      "psgc": "1380700000",
+      "name": "City of Marikina"
+    },
+    {
+      "psgc": "1380800000",
+      "name": "City of Muntinlupa"
+    },
+    {
+      "psgc": "1380900000",
+      "name": "City of Navotas"
+    },
+    {
+      "psgc": "1381000000",
+      "name": "City of Parañaque"
+    },
+    {
+      "psgc": "1381100000",
+      "name": "Pasay City"
+    },
+    {
+      "psgc": "1381200000",
+      "name": "City of Pasig"
+    },
+    {
+      "psgc": "1381300000",
+      "name": "Quezon City"
+    },
+    {
+      "psgc": "1381400000",
+      "name": "City of San Juan"
+    },
+    {
+      "psgc": "1381500000",
+      "name": "City of Taguig"
+    },
+    {
+      "psgc": "1381600000",
+      "name": "City of Valenzuela"
+    },
+    {
+      "psgc": "1403213000",
+      "name": "City of Tabuk"
+    },
+    {
+      "psgc": "1430300000",
+      "name": "City of Baguio"
+    },
+    {
+      "psgc": "0102805000",
+      "name": "City of Batac"
+    },
+    {
+      "psgc": "0102812000",
+      "name": "City of Laoag"
+    },
+    {
+      "psgc": "0102906000",
+      "name": "City of Candon"
+    },
+    {
+      "psgc": "0102934000",
+      "name": "City of Vigan"
+    },
+    {
+      "psgc": "0103314000",
+      "name": "City of San Fernando"
+    },
+    {
+      "psgc": "0105503000",
+      "name": "City of Alaminos"
+    },
+    {
+      "psgc": "0105518000",
+      "name": "City of Dagupan"
+    },
+    {
+      "psgc": "0105532000",
+      "name": "City of San Carlos"
+    },
+    {
+      "psgc": "0105546000",
+      "name": "City of Urdaneta"
+    },
+    {
+      "psgc": "0201529000",
+      "name": "Tuguegarao City"
+    },
+    {
+      "psgc": "0203108000",
+      "name": "City of Cauayan"
+    },
+    {
+      "psgc": "0203114000",
+      "name": "City of Ilagan"
+    },
+    {
+      "psgc": "0203135000",
+      "name": "City of Santiago"
+    },
+    {
+      "psgc": "0300803000",
+      "name": "City of Balanga"
+    },
+    {
+      "psgc": "0301403000",
+      "name": "City of Baliwag"
+    },
+    {
+      "psgc": "0301410000",
+      "name": "City of Malolos"
+    },
+    {
+      "psgc": "0301412000",
+      "name": "City of Meycauayan"
+    },
+    {
+      "psgc": "0301420000",
+      "name": "City of San Jose Del Monte"
+    },
+    {
+      "psgc": "0304903000",
+      "name": "City of Cabanatuan"
+    },
+    {
+      "psgc": "0304908000",
+      "name": "City of Gapan"
+    },
+    {
+      "psgc": "0304917000",
+      "name": "Science City of Muñoz"
+    },
+    {
+      "psgc": "0304919000",
+      "name": "City of Palayan"
+    },
+    {
+      "psgc": "0304926000",
+      "name": "San Jose City"
+    },
+    {
+      "psgc": "0305409000",
+      "name": "Mabalacat City"
+    },
+    {
+      "psgc": "0305416000",
+      "name": "City of San Fernando"
+    },
+    {
+      "psgc": "0306916000",
+      "name": "City of Tarlac"
+    },
+    {
+      "psgc": "0330100000",
+      "name": "City of Angeles"
+    },
+    {
+      "psgc": "0331400000",
+      "name": "City of Olongapo"
+    },
+    {
+      "psgc": "0401005000",
+      "name": "Batangas City"
+    },
+    {
+      "psgc": "0401007000",
+      "name": "City of Calaca"
+    },
+    {
+      "psgc": "0401014000",
+      "name": "City of Lipa"
+    },
+    {
+      "psgc": "0401028000",
+      "name": "City of Sto. Tomas"
+    },
+    {
+      "psgc": "0401031000",
+      "name": "City of Tanauan"
+    },
+    {
+      "psgc": "0402103000",
+      "name": "City of Bacoor"
+    },
+    {
+      "psgc": "0402104000",
+      "name": "City of Carmona"
+    },
+    {
+      "psgc": "0402105000",
+      "name": "City of Cavite"
+    },
+    {
+      "psgc": "0402106000",
+      "name": "City of Dasmariñas"
+    },
+    {
+      "psgc": "0402108000",
+      "name": "City of General Trias"
+    },
+    {
+      "psgc": "0402109000",
+      "name": "City of Imus"
+    },
+    {
+      "psgc": "0402119000",
+      "name": "City of Tagaytay"
+    },
+    {
+      "psgc": "0402122000",
+      "name": "City of Trece Martires"
+    },
+    {
+      "psgc": "0403403000",
+      "name": "City of Biñan"
+    },
+    {
+      "psgc": "0403404000",
+      "name": "City of Cabuyao"
+    },
+    {
+      "psgc": "0403405000",
+      "name": "City of Calamba"
+    },
+    {
+      "psgc": "0403424000",
+      "name": "City of San Pablo"
+    },
+    {
+      "psgc": "0403425000",
+      "name": "City of San Pedro"
+    },
+    {
+      "psgc": "0403428000",
+      "name": "City of Santa Rosa"
+    },
+    {
+      "psgc": "0405647000",
+      "name": "City of Tayabas"
+    },
+    {
+      "psgc": "0405802000",
+      "name": "City of Antipolo"
+    },
+    {
+      "psgc": "0431200000",
+      "name": "City of Lucena"
+    },
+    {
+      "psgc": "1705205000",
+      "name": "City of Calapan"
+    },
+    {
+      "psgc": "1731500000",
+      "name": "City of Puerto Princesa"
+    },
+    {
+      "psgc": "0500506000",
+      "name": "City of Legazpi"
+    },
+    {
+      "psgc": "0500508000",
+      "name": "City of Ligao"
+    },
+    {
+      "psgc": "0500517000",
+      "name": "City of Tabaco"
+    },
+    {
+      "psgc": "0501716000",
+      "name": "City of Iriga"
+    },
+    {
+      "psgc": "0501724000",
+      "name": "City of Naga"
+    },
+    {
+      "psgc": "0504111000",
+      "name": "City of Masbate"
+    },
+    {
+      "psgc": "0506216000",
+      "name": "City of Sorsogon"
+    },
+    {
+      "psgc": "0601914000",
+      "name": "City of Roxas"
+    },
+    {
+      "psgc": "0603035000",
+      "name": "City of Passi"
+    },
+    {
+      "psgc": "0631000000",
+      "name": "City of Iloilo"
+    },
+    {
+      "psgc": "1804502000",
+      "name": "City of Bago"
+    },
+    {
+      "psgc": "1804504000",
+      "name": "City of Cadiz"
+    },
+    {
+      "psgc": "1804509000",
+      "name": "City of Escalante"
+    },
+    {
+      "psgc": "1804510000",
+      "name": "City of Himamaylan"
+    },
+    {
+      "psgc": "1804515000",
+      "name": "City of Kabankalan"
+    },
+    {
+      "psgc": "1804516000",
+      "name": "City of La Carlota"
+    },
+    {
+      "psgc": "1804523000",
+      "name": "City of Sagay"
+    },
+    {
+      "psgc": "1804524000",
+      "name": "City of San Carlos"
+    },
+    {
+      "psgc": "1804526000",
+      "name": "City of Silay"
+    },
+    {
+      "psgc": "1804527000",
+      "name": "City of Sipalay"
+    },
+    {
+      "psgc": "1804528000",
+      "name": "City of Talisay"
+    },
+    {
+      "psgc": "1804531000",
+      "name": "City of Victorias"
+    },
+    {
+      "psgc": "1804604000",
+      "name": "City of Bais"
+    },
+    {
+      "psgc": "1804606000",
+      "name": "City of Bayawan"
+    },
+    {
+      "psgc": "1804608000",
+      "name": "City of Canlaon"
+    },
+    {
+      "psgc": "1804610000",
+      "name": "City of Dumaguete"
+    },
+    {
+      "psgc": "1804611000",
+      "name": "City of Guihulngan"
+    },
+    {
+      "psgc": "1804621000",
+      "name": "City of Tanjay"
+    },
+    {
+      "psgc": "1830200000",
+      "name": "City of Bacolod"
+    },
+    {
+      "psgc": "0701242000",
+      "name": "City of Tagbilaran"
+    },
+    {
+      "psgc": "0702211000",
+      "name": "City of Bogo"
+    },
+    {
+      "psgc": "0702214000",
+      "name": "City of Carcar"
+    },
+    {
+      "psgc": "0702223000",
+      "name": "Danao City"
+    },
+    {
+      "psgc": "0702234000",
+      "name": "City of Naga"
+    },
+    {
+      "psgc": "0702250000",
+      "name": "City of Talisay"
+    },
+    {
+      "psgc": "0702251000",
+      "name": "City of Toledo"
+    },
+    {
+      "psgc": "0730600000",
+      "name": "City of Cebu"
+    },
+    {
+      "psgc": "0731100000",
+      "name": "City of Lapu-Lapu"
+    },
+    {
+      "psgc": "0731300000",
+      "name": "City of Mandaue"
+    },
+    {
+      "psgc": "0802604000",
+      "name": "City of Borongan"
+    },
+    {
+      "psgc": "0803708000",
+      "name": "City of Baybay"
+    },
+    {
+      "psgc": "0803738000",
+      "name": "Ormoc City"
+    },
+    {
+      "psgc": "0806003000",
+      "name": "City of Calbayog"
+    },
+    {
+      "psgc": "0806005000",
+      "name": "City of Catbalogan"
+    },
+    {
+      "psgc": "0806407000",
+      "name": "City of Maasin"
+    },
+    {
+      "psgc": "0831600000",
+      "name": "City of Tacloban"
+    },
+    {
+      "psgc": "0907201000",
+      "name": "City of Dapitan"
+    },
+    {
+      "psgc": "0907202000",
+      "name": "City of Dipolog"
+    },
+    {
+      "psgc": "0907322000",
+      "name": "City of Pagadian"
+    },
+    {
+      "psgc": "0931700000",
+      "name": "City of Zamboanga"
+    },
+    {
+      "psgc": "0990101000",
+      "name": "City of Isabela"
+    },
+    {
+      "psgc": "1001312000",
+      "name": "City of Malaybalay"
+    },
+    {
+      "psgc": "1001321000",
+      "name": "City of Valencia"
+    },
+    {
+      "psgc": "1004209000",
+      "name": "City of Oroquieta"
+    },
+    {
+      "psgc": "1004210000",
+      "name": "City of Ozamiz"
+    },
+    {
+      "psgc": "1004215000",
+      "name": "City of Tangub"
+    },
+    {
+      "psgc": "1004307000",
+      "name": "City of El Salvador"
+    },
+    {
+      "psgc": "1004308000",
+      "name": "City of Gingoog"
+    },
+    {
+      "psgc": "1030500000",
+      "name": "City of Cagayan De Oro"
+    },
+    {
+      "psgc": "1030900000",
+      "name": "City of Iligan"
+    },
+    {
+      "psgc": "1102315000",
+      "name": "City of Panabo"
+    },
+    {
+      "psgc": "1102317000",
+      "name": "Island Garden City of Samal"
+    },
+    {
+      "psgc": "1102319000",
+      "name": "City of Tagum"
+    },
+    {
+      "psgc": "1102403000",
+      "name": "City of Digos"
+    },
+    {
+      "psgc": "1102509000",
+      "name": "City of Mati"
+    },
+    {
+      "psgc": "1130700000",
+      "name": "City of Davao"
+    },
+    {
+      "psgc": "1204704000",
+      "name": "City of Kidapawan"
+    },
+    {
+      "psgc": "1206306000",
+      "name": "City of Koronadal"
+    },
+    {
+      "psgc": "1206511000",
+      "name": "City of Tacurong"
+    },
+    {
+      "psgc": "1230800000",
+      "name": "City of General Santos"
+    },
+    {
+      "psgc": "1600203000",
+      "name": "City of Cabadbaran"
+    },
+    {
+      "psgc": "1600301000",
+      "name": "City of Bayugan"
+    },
+    {
+      "psgc": "1606724000",
+      "name": "City of Surigao"
+    },
+    {
+      "psgc": "1606803000",
+      "name": "City of Bislig"
+    },
+    {
+      "psgc": "1606819000",
+      "name": "City of Tandag"
+    },
+    {
+      "psgc": "1630400000",
+      "name": "City of Butuan"
+    },
+    {
+      "psgc": "1900702000",
+      "name": "City of Lamitan"
+    },
+    {
+      "psgc": "1903617000",
+      "name": "City of Marawi"
+    },
+    {
+      "psgc": "1908703000",
+      "name": "City of Cotabato"
+    }
+  ]
+}

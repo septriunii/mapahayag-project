@@ -30,7 +30,7 @@ test('geographic typography preserves every source name and avoids label collisi
   page.on('pageerror', error => errors.push(error.message));
   page.on('request', request => requests.push(request.url()));
   const views = [
-    ['national', '#/', 18], ['region', '#/region/900000000', 4],
+    ['national', '#/', 18], ['region', '#/region/900000000', 5],
     ['province', '#/region/900000000/province/907200000', 27],
     ['ncr', '#/region/1300000000', 17],
     ['city', '#/region/900000000/province/907200000/municity/907201000', 1],

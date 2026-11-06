@@ -21,7 +21,8 @@ async function hoverRegion(page: Page, code: string) {
     const box = element.getBoundingClientRect();
     for (let y = box.y + 2; y < box.bottom; y += Math.max(2, box.height / 20)) {
       for (let x = box.x + 2; x < box.right; x += Math.max(2, box.width / 20)) {
-        if (document.elementFromPoint(x, y) === element) return { x, y };
+        const px = Math.round(x), py = Math.round(y);
+        if ([-1, 0, 1].every(dx => [-1, 0, 1].every(dy => document.elementFromPoint(px + dx, py + dy) === element))) return { x: px, y: py };
       }
     }
     throw new Error('No visible hit point for ' + element.getAttribute('data-psgc'));

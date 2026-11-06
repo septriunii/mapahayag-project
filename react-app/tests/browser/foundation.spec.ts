@@ -30,7 +30,7 @@ test('production preview preserves national paths, dark UI, drawer, and selectio
   await page.screenshot({ path: 'test-results/foundation-desktop.png' });
 });
 
-test('preserves the baseline national projection outside corrected Sulu regional grouping', async ({ page }) => {
+test('preserves geographic coordinates using the national maritime viewing extent', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/');
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);
@@ -39,9 +39,9 @@ test('preserves the baseline national projection outside corrected Sulu regional
   const mismatches = await page.evaluate(async () => {
     const d3 = (window as unknown as { d3: typeof import('d3') }).d3;
     const country = await (await fetch('/geo-nir/country.0.001.json')).json();
-    const scale = Math.min((1440 - 60) / (126.60 - 116.93), (900 - 60) / (20.84 - 4.64));
-    const offX = (1440 - (126.60 - 116.93) * scale) / 2, offY = (900 - (20.84 - 4.64) * scale) / 2;
-    const path = d3.geoPath().projection(d3.geoTransform({ point(lon, lat) { this.stream.point(offX + (lon - 116.93) * scale, offY + (20.84 - lat) * scale); } }));
+    const scale = Math.min((1440 - 60) / (131.2 - 112.2), (900 - 60) / (25.3 - 2.3));
+    const offX = (1440 - (131.2 - 112.2) * scale) / 2, offY = (900 - (25.3 - 2.3) * scale) / 2;
+    const path = d3.geoPath().projection(d3.geoTransform({ point(lon, lat) { this.stream.point(offX + (lon - 112.2) * scale, offY + (25.3 - lat) * scale); } }));
     return country.features.filter((f: import('../../src/geography/types').GeographicFeature) => ![900000000, 1900000000].includes(Number(f.properties.adm1_psgc)) && document.querySelector(`path[data-psgc="${f.properties.adm1_psgc}"]`)?.getAttribute('d') !== path(f)).length;
   });
   expect(mismatches).toBe(0);

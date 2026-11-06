@@ -7,9 +7,9 @@ for (const alignment of ['nir', 'legacy']) {
     await page.getByRole('button', { name: 'Close details menu' }).click();
     const point = await page.locator('svg').evaluate(svg => {
       const box = svg.getBoundingClientRect();
-      const scale = Math.min((box.width - 60) / (126.60 - 116.93), (box.height - 60) / (20.84 - 4.64));
-      const x = box.x + (box.width - (126.60 - 116.93) * scale) / 2 + (121.13 - 116.93) * scale;
-      const y = box.y + (box.height - (20.84 - 4.64) * scale) / 2 + (20.84 - 6.0) * scale;
+      const scale = Math.min((box.width - 60) / (131.2 - 112.2), (box.height - 60) / (25.3 - 2.3));
+      const x = box.x + (box.width - (131.2 - 112.2) * scale) / 2 + (121.13 - 112.2) * scale;
+      const y = box.y + (box.height - (25.3 - 2.3) * scale) / 2 + (25.3 - 6.0) * scale;
       return { x, y, owner: document.elementFromPoint(x, y)?.getAttribute('data-psgc') };
     });
     expect(point.owner).toBe('900000000');
@@ -27,7 +27,7 @@ for (const alignment of ['nir', 'legacy']) {
     await expect(page.locator('[data-profile-key="municity:0906602000"]')).toBeVisible();
     await expect(page.locator('path[data-psgc]')).toHaveCount(1);
     await expect(page.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-    await page.waitForFunction(() => [...document.querySelectorAll('svg path, svg text')].every(node => getComputedStyle(node).opacity === '1'));
+    await page.waitForFunction(() => [...document.querySelectorAll('.map-feature, .map-label, .map-boundaries')].every(node => getComputedStyle(node).opacity === '1'));
     await expect(page.locator('#back-btn')).toHaveText('← Sulu');
     await page.screenshot({ path: info.outputPath('sulu-jolo.png') });
     await page.locator('#back-btn').click(); await page.locator('#back-btn').click();

@@ -51,7 +51,7 @@ export function getProfileCatalog(key: string): Result {
     notices.push({ title: 'Administrative alignment notice', text: `The current PSA code is ${row.psgc}; the pinned map retains source code ${row.mapPsgc}. This locality is displayed under ${row.regionName}.${alignmentSource === sulu ? ' Older Sulu links redirect to Region IX without changing geographic boundaries.' : ''}`, sourceIds: ['municipal-listing', alignmentSource.id] });
   }
   if (row.mapName !== row.name) {
-    notices.push({ title: 'Source naming note', text: `The map label is “${row.mapName}”; this PSA listing uses “${row.name}”. The profile is matched by the verified PSGC identity.`, sourceIds: ['municipal-listing'] });
+    notices.push({ title: 'Source naming note', text: `The pinned geographic source uses “${row.mapName}”; the current map label and PSA listing use “${row.name}”. The profile is matched by the verified PSGC identity.`, sourceIds: ['municipal-listing'] });
   }
   const unavailable = (id: string, label: string, note: string) => ({ id, label, value: null, status: 'unavailable' as const, referenceDate: null, sourceIds: [], note });
   const gap = (text: string) => ({ text, status: 'unavailable' as const, sourceIds: [] });

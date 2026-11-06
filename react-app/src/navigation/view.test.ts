@@ -47,7 +47,7 @@ it.each([
   '#/region/900000000/province/702200000',
   '#/region/900000000/municity/907201000',
   '#/region/900000000/province/907200000/municity/630200000',
-  '#/region/600000000/province/604500000',
+  '#/region/700000000/province/604500000',
   '#/region/1300000000/province/1307400000/municity/1380600000',
 ])('rejects nonexistent or mismatched hierarchy %s', async hash => {
   const { config, repository } = geographyFixture();

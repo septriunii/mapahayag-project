@@ -2,7 +2,9 @@ import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import { easeCubicInOut, select, zoom, zoomIdentity } from 'd3';
 import type { ZoomBehavior, ZoomTransform } from 'd3';
 import type { CSSProperties } from 'react';
-import { GeographicLabels } from './GeographicLabels';
+import { GeographicLabels, useGeographicLabels } from './GeographicLabels';
+import { MaritimeLayer } from './MaritimeLayer';
+import { MARITIME_BOUNDS } from '../geography/maritime';
 import type { MapConfig } from '../config/schema';
 import { createColorLookup } from '../config/colors';
 import { makePath, paddedBounds } from '../geography/projection';
@@ -16,7 +18,7 @@ import { useViewport } from '../hooks/useViewport';
 interface Props { view: MapView; config: MapConfig; onSelect: (feature: GeographicFeature) => void; busy: boolean; selected?: { view: MapView; code: string } }
 
 function viewPath(view: MapView, width: number, height: number) {
-  return makePath(width, height, view.route.level === 'national' ? undefined : paddedBounds(view.collection.features, view.route.level === 'municity'));
+  return makePath(width, height, view.route.level === 'national' ? MARITIME_BOUNDS : paddedBounds(view.collection.features, view.route.level === 'municity'));
 }
 
 export function MapCanvas({ view, config, onSelect, busy, selected }: Props) {
@@ -78,15 +80,17 @@ export function MapCanvas({ view, config, onSelect, busy, selected }: Props) {
   // and supplies coordinates; animation frames also commit through React state.
   useEffect(() => { behavior.current?.filter(event => !disabled && (!event.ctrlKey || event.type === 'wheel') && !event.button); }, [disabled]);
   const labelPath = useMemo(() => viewPath(displayed, width, height), [displayed, width, height]);
-  return <svg ref={svg} aria-label={displayed.route.level === 'national' ? 'Philippines national map' : `${displayed.details?.name} map`}
+  const labelPlacement = useGeographicLabels(displayed, labelPath, width, labelScale);
+  return <><svg ref={svg} aria-label={displayed.route.level === 'national' ? 'Philippines national map' : `${displayed.details?.name} map`}
     aria-busy={disabled} data-view={formatRoute(displayed.route)} viewBox={`0 0 ${width} ${height}`} className="block h-full w-full touch-none cursor-grab active:cursor-grabbing">
     <g key={formatRoute(displayed.route)} transform={transform.toString()} opacity={opacity}
       style={{ '--map-label-counter-scale': 1 / transform.k } as CSSProperties} className={disabled ? 'pointer-events-none' : undefined}>
+      <MaritimeLayer view={displayed} path={labelPath} width={width} height={height} scale={labelScale} administrativeLabels={labelPlacement.labels} />
       <GeographicLayer view={displayed} config={config} onSelect={onSelect} selected={selected} disabled={disabled} width={width} height={height} />
-      <GeographicLabels view={displayed} path={labelPath}
-        width={width} scale={labelScale} disabled={disabled} onSelect={onSelect} />
+      <GeographicLabels view={displayed} placement={labelPlacement} disabled={disabled} onSelect={onSelect} />
     </g>
-  </svg>;
+  </svg>
+  </>;
 }
 
 const GeographicLayer = memo(function GeographicLayer({ view, config, onSelect, selected, disabled, width, height }: Omit<Props, 'busy'> & { disabled: boolean; width: number; height: number }) {

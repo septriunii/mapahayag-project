@@ -7,11 +7,11 @@ import type { makePath } from '../geography/projection';
 import type { MapView } from '../navigation/view';
 
 interface Props {
-  view: MapView; path: ReturnType<typeof makePath>; width: number;
-  scale: number; disabled: boolean; onSelect: (feature: GeographicFeature) => void;
+  view: MapView; placement: ReturnType<typeof useGeographicLabels>;
+  disabled: boolean; onSelect: (feature: GeographicFeature) => void;
 }
 
-export const GeographicLabels = memo(function GeographicLabels({ view, path, width, scale, disabled, onSelect }: Props) {
+export function useGeographicLabels(view: MapView, path: ReturnType<typeof makePath>, width: number, scale: number) {
   const level = view.route.level === 'municity' ? 'city' : view.level;
   const metrics = useMemo(() => {
     const style = getComputedStyle(document.documentElement);
@@ -31,6 +31,11 @@ export const GeographicLabels = memo(function GeographicLabels({ view, path, wid
     return [{ ...geometry, code: featureCode(feature, view.level), name: view.level === 'region' ? name.match(/\(([^)]+)\)/)?.[1] ?? name : name }];
   }), [view, path]);
   const labels = useMemo(() => placeLabels(seeds, metrics.measure, metrics.maxWidth, metrics.lineHeight, scale, width), [seeds, metrics, scale, width]);
+  return useMemo(() => ({ labels, metrics, level }), [labels, metrics, level]);
+}
+
+export const GeographicLabels = memo(function GeographicLabels({ view, placement, disabled, onSelect }: Props) {
+  const { labels, metrics, level } = placement;
   const features = useMemo(() => new Map<string, GeographicFeature>(view.collection.features.map(feature => [featureCode(feature, view.level), feature])), [view]);
   const clickable = view.route.level === 'province';
   return <g data-map-labels="" data-font-ready="true" className={disabled ? 'pointer-events-none' : undefined}>

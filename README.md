@@ -80,3 +80,7 @@ Full credit goes to the original developer and contributors for the foundational
 For detailed explanations of how the map works, its geographic data sources, configuration, and original implementation, please refer to the **[original repository's README](https://github.com/tordecilla/ph-drilldown-map#readme)**.
 
 This project aims to build upon that foundation through React modernization, improved user experience, and future geographic features.
+
+The React sea and ocean labels use naming references from NAMRIA and PAGASA
+publications. Geographic references and implementation details are recorded in
+[the maritime layer notes](docs/migration/MARITIME-CONTEXT.md).

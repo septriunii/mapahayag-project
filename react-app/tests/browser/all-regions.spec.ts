@@ -21,7 +21,7 @@ for (const profile of [...pilots, ...additions].filter(item => item.level === 'r
     await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
     await expect(article).toBeVisible();
     if (['0600000000', '1300000000', '1800000000', '1900000000'].includes(profile.psgc!)) {
-      await page.waitForFunction(() => [...document.querySelectorAll('svg path, svg text')].every(node => getComputedStyle(node).opacity === '1'));
+      await page.waitForFunction(() => [...document.querySelectorAll('.map-feature, .map-label, .map-boundaries')].every(node => getComputedStyle(node).opacity === '1'));
       await page.screenshot({ path: info.outputPath('regional-profile.png') });
     }
     await page.locator('#back-btn').click();

@@ -1,6 +1,6 @@
 import { normalizePsgc } from '../geography/psgc';
-import type { Psgc } from '../geography/types';
-import { BARMM, REGION_IX, SULU } from '../geography/alignment';
+import type { Alignment, Psgc } from '../geography/types';
+import { BARMM, NIR, REGION_IX, SULU, viewRegion } from '../geography/alignment';
 import aliases from '../data/municipal-profile-aliases.json';
 
 export type MapRoute =
@@ -12,6 +12,27 @@ export type MapRoute =
 const currentSulu = normalizePsgc('0906600000');
 const municipalSources = new Map(Object.entries(aliases).filter(([source]) => source.startsWith('19066'))
   .map(([source, current]) => [normalizePsgc(current), normalizePsgc(source)]));
+
+const nirProvinces = [
+  { source: '604500000', current: '1804500000', formerRegion: '600000000' },
+  { source: '704600000', current: '1804600000', formerRegion: '700000000' },
+  { source: '706100000', current: '1806100000', formerRegion: '700000000' },
+];
+const nirMunicipalSources = new Map(Object.entries(aliases).filter(([, current]) => current.startsWith('18'))
+  .map(([source, current]) => [normalizePsgc(current), normalizePsgc(source)]));
+
+/** Resolve explicitly verified NIR identities for the active map alignment.
+ * Unknown province/region combinations still fail hierarchy validation. */
+export function canonicalAlignmentRoute(input: MapRoute, alignment: Alignment): MapRoute {
+  const route = canonicalSuluRoute(input);
+  if (route.level === 'national' || route.level === 'region' || !route.province) return route;
+  const province = nirProvinces.find(item => item.source === route.province || item.current === route.province);
+  if (!province || (route.region !== NIR && route.region !== province.formerRegion)) return route;
+  const region = viewRegion(province.source, province.formerRegion, alignment);
+  const source = normalizePsgc(province.source);
+  return route.level === 'province' ? { ...route, region, province: source }
+    : { ...route, region, province: source, municity: nirMunicipalSources.get(route.municity) ?? route.municity };
+}
 
 /** Accept old BARMM links and current official IDs; routes retain source IDs. */
 export function canonicalSuluRoute(route: MapRoute): MapRoute {

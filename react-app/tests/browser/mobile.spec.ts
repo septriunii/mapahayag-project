@@ -1,6 +1,40 @@
 import { expect, test, type Page } from '@playwright/test';
 import { selectSvgLabel } from './svgInput';
 
+test('maritime context fits narrow screens and keeps touch navigation usable', async ({ page }, info) => {
+  await page.goto('/?review=maritime');
+  await expect(page.locator('[data-water-label]').first()).toBeVisible();
+  await expect(page.locator('[data-eez-outline], [data-par-outline], [data-maritime-legend]')).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.waitForFunction(() => [...document.querySelectorAll('.map-feature, .map-label')].every(node => getComputedStyle(node).opacity === '1'));
+  const collisions = await page.evaluate(() => {
+    const administrative = [...document.querySelectorAll('.map-label')].map(node => node.getBoundingClientRect());
+    return [...document.querySelectorAll('[data-water-label]')].filter(node => {
+      const box = node.getBoundingClientRect();
+      return administrative.some(other => Math.min(box.right, other.right) - Math.max(box.left, other.left) > 0 && Math.min(box.bottom, other.bottom) - Math.max(box.top, other.top) > 0);
+    }).map(node => node.getAttribute('data-water-label'));
+  });
+  expect(collisions).toEqual([]);
+  await page.screenshot({ path: info.outputPath('maritime-mobile.png') });
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
+  await page.getByRole('button', { name: 'Close details menu' }).tap();
+  await page.locator('path[data-psgc="1800000000"]').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/1800000000');
+  await expect(page.locator('[data-eez-outline]')).toHaveCount(0);
+});
+
+test('official NIR PSGC links retain touch navigation on phones and tablets', async ({ page }) => {
+  await page.goto('/#/region/1800000000/province/1804500000/municity/1830200000');
+  await expect(page.locator('[data-profile-key="municity:1830200000"]')).toBeVisible();
+  await expect(page.locator('#detail-lgu-name')).toContainText('Bacolod');
+  await page.getByRole('button', { name: 'Close details menu' }).tap();
+  await page.locator('#back-btn').tap();
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/1800000000/province/604500000');
+  await page.locator('#back-btn').tap();
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/1800000000');
+});
+
 test('Sulu saved links and touch Back controls use Region IX on phones and tablets', async ({ page }) => {
   await page.goto('/#/region/1900000000/province/1906600000/municity/1906602000');
   await expect(page.locator('[data-profile-key="municity:0906602000"]')).toBeVisible();
@@ -39,7 +73,7 @@ test('pilot profile scrolls independently at 320px while header and parent navig
   await page.goto('/#/region/900000000'); await ready(page, '#/region/900000000');
   await page.getByRole('button', { name: 'Open details menu' }).tap();
   await expect(page.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  await page.waitForFunction(() => [...document.querySelectorAll('svg path, svg text')].every(node => getComputedStyle(node).opacity === '1'));
+  await page.waitForFunction(() => [...document.querySelectorAll('.map-feature, .map-label, .map-boundaries')].every(node => getComputedStyle(node).opacity === '1'));
   const header = await page.locator('#detail-header').boundingBox();
   await expect(page.locator('[data-profile-key="region:0900000000"]')).toBeVisible();
   expect(await page.locator('#detail-body').evaluate(node => node.scrollWidth <= node.clientWidth)).toBe(true);
@@ -73,7 +107,7 @@ async function settledMap(page: Page) {
   // DOM readiness precedes label reveal and the drawer's closing transition.
   // Capture the steady interface rather than an intermediate animation frame.
   await expect(page.locator('#detail')).toHaveCSS('visibility', 'hidden');
-  await page.waitForFunction(() => [...document.querySelectorAll('svg path, svg text')]
+  await page.waitForFunction(() => [...document.querySelectorAll('.map-feature, .map-label, .map-boundaries')]
     .every(element => getComputedStyle(element).opacity === '1'));
 }
 async function tapPolygon(page: Page, code: string) {

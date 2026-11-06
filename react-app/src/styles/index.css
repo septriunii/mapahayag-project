@@ -14,6 +14,7 @@
   --color-map-label-secondary: #aeb7b0;
   --color-map-label-minor: #a8b3ab;
   --color-map-label-halo: #24282b;
+  --color-water-label: #9aaeb4;
   --map-label-region-size: 12px;
   --map-label-province-size: 11.5px;
   --map-label-municity-size: 10.5px;
@@ -84,6 +85,15 @@ html, body, #root { margin: 0; width: 100%; height: 100%; overflow: hidden; back
 }
 .map-label-province { fill: var(--color-map-label-secondary); }
 .map-label-municity { fill: var(--color-map-label-minor); }
+
+.map-water-label {
+  font-family: var(--font-ui); font-size: var(--water-label-size); font-style: italic;
+  font-weight: 400; letter-spacing: 1px; fill: var(--color-water-label);
+  stroke: var(--color-map); stroke-width: 2px; paint-order: stroke fill;
+  transform: scale(var(--map-label-counter-scale, 1));
+}
+.map-water-label-ocean { letter-spacing: 1.8px; }
+.map-water-label-local { letter-spacing: 0.4px; }
 
 :where(button):focus-visible {
   outline: 2px solid var(--color-interaction-border);
