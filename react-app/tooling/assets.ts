@@ -2,7 +2,8 @@ import { cp, mkdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Plugin } from 'vite';
-import { barangayPilot, barangayPilotPath } from '../src/geography/barangayPilot.ts';
+import { barangayBoundaryPath, type BarangayCoverage } from '../src/geography/barangayCoverage.ts';
+import barangayManifest from '../src/data/barangay-coverage.json' with { type: 'json' };
 
 const repo = fileURLToPath(new URL('../../', import.meta.url));
 const geo = 'philippines-json-maps/2023/geojson';
@@ -11,8 +12,9 @@ export const assetPaths = [
   'philippines-json-maps/LICENSE',
   `${geo}/country/lowres`, `${geo}/regions/lowres`, `${geo}/provdists/lowres`,
   ...[1303900000, 1307400000, 1307500000, 1307600000].map(code => `${geo}/provdists/medres/municities-provdist-${code}.0.01.json`),
-  ...[...barangayPilot.keys()].map(code => `${geo}/${barangayPilotPath(code)}`),
 ];
+const barangayPaths = new Set(Object.entries(barangayManifest as Record<string, BarangayCoverage | null>)
+  .flatMap(([code, coverage]) => coverage ? [`${geo}/${barangayBoundaryPath(code, coverage.high)}`] : []));
 
 /** Read-only dev mount; production output copies existing files without rewriting them.
  * No symlinks or external runtime URL dependency: dist is self-contained.
@@ -26,7 +28,7 @@ export function migrationAssets(): Plugin {
       server.middlewares.use(async (req, res, next) => {
         try {
           const relative = decodeURIComponent(new URL(req.url ?? '/', 'http://localhost').pathname).slice(1);
-          if (!assetPaths.some(asset => relative === asset || relative.startsWith(`${asset}/`))) return next();
+          if (!barangayPaths.has(relative) && !assetPaths.some(asset => relative === asset || relative.startsWith(`${asset}/`))) return next();
           const filename = path.resolve(repo, relative);
           if (!filename.startsWith(repo) || !(await stat(filename)).isFile()) return next();
           res.setHeader('Content-Type', relative.endsWith('.json') ? 'application/json' : 'text/plain');
@@ -35,7 +37,7 @@ export function migrationAssets(): Plugin {
       });
     },
     async closeBundle() {
-      for (const relative of assetPaths) {
+      for (const relative of [...assetPaths, ...barangayPaths]) {
         const destination = path.join(outDir, relative);
         await mkdir(path.dirname(destination), { recursive: true });
         // Throws if the pinned submodule isn't initialized. Never build a silently incomplete map.

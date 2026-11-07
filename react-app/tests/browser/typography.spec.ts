@@ -33,7 +33,7 @@ test('geographic typography preserves every source name and avoids label collisi
     ['national', '#/', 18], ['region', '#/region/900000000', 5],
     ['province', '#/region/900000000/province/907200000', 27],
     ['ncr', '#/region/1300000000', 17],
-    ['city', '#/region/900000000/province/907200000/municity/907201000', 1],
+    ['city', '#/region/1300000000/municity/1380600000', 1],
   ] as const;
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 });
@@ -85,6 +85,7 @@ test('label screen size stays steady through zoom and wrapped municipality names
   await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
   await selectSvgLabel(page, 'text[data-label-psgc="907201000"]');
   await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/900000000/province/907200000/municity/907201000');
+  await page.getByRole('button', { name: 'Open details menu' }).click();
   await expect(page.locator('#detail-lgu-name')).toHaveText('City of Dapitan');
 });
 

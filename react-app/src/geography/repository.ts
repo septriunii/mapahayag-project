@@ -1,12 +1,20 @@
 import type { MapConfig } from '../config/schema';
+import { z } from 'zod';
 import { ResourceCache } from './cache';
 import { BARMM, REGION_IX, SULU, NCR, NCR_DISTRICTS, NIR, usesNirOverride } from './alignment';
 import { currentSuluNational } from './sulu';
 import { withCurrentNames } from './currentNames';
 import { featureCode, normalizePsgc } from './psgc';
 import { parseGeography } from './validate';
-import { barangayPilot, barangayPilotPath } from './barangayPilot';
+import { barangayBoundaryPath, type BarangayCoverage } from './barangayCoverage';
 import type { GeographicLevel, GeographicResource, GeographicView, SourcePsgc } from './types';
+
+const barangaySource = z.object({
+  type: z.literal('FeatureCollection'),
+  features: z.array(z.looseObject({
+    properties: z.looseObject({ adm3_psgc: z.unknown(), adm4_psgc: z.unknown() }),
+  })),
+});
 
 export class GeographicRepository {
   private readonly assets: URL;
@@ -52,17 +60,32 @@ export class GeographicRepository {
     if (region === BARMM) return { level: 'province', collection: { ...data.collection, features: data.collection.features.filter(feature => featureCode(feature, 'province') !== SULU) }, warnings: resourceWarnings(data) };
     return { level: 'province', collection: data.collection, warnings: resourceWarnings(data) };
   }
-  async barangays(parent: SourcePsgc): Promise<GeographicView> {
+  async barangays(parent: SourcePsgc): Promise<(GeographicView & { expected: number }) | 'unavailable' | undefined> {
     const city = normalizePsgc(parent);
-    const count = barangayPilot.get(city);
-    if (!count) throw new Error('Barangay view is outside the pilot area');
-    return this.cache.load(this.geography(barangayPilotPath(city)), 'geography:barangay', input => {
-      const data = parseGeography(input, 'barangay');
-      if (data.collection.features.length !== count || data.missingNames.length ||
-          data.collection.features.some(feature => featureCode(feature, 'municity') !== city)) {
+    const { default: manifest } = await import('../data/barangay-coverage.json');
+    const coverage = (manifest as Record<string, BarangayCoverage | null | undefined>)[city];
+    if (coverage === null) return 'unavailable';
+    if (!coverage) return;
+    return this.cache.load(this.geography(barangayBoundaryPath(city, coverage.high)), 'geography:barangay', input => {
+      const source = barangaySource.parse(input);
+      const omitted = new Set(coverage.omit);
+      const kept = source.features.filter(feature => {
+        if (normalizePsgc(feature.properties.adm3_psgc) !== city) throw new Error('Barangay boundary has the wrong source parent');
+        return !omitted.delete(normalizePsgc(feature.properties.adm4_psgc));
+      });
+      const data = parseGeography({ ...source, features: kept }, 'barangay');
+      if (omitted.size || data.collection.features.length !== coverage.count || data.missingNames.length || data.omittedNullGeometry.length) {
         throw new Error('Barangay boundaries failed coverage or parent validation');
       }
-      return { level: 'barangay', collection: data.collection, warnings: [] };
+      const features = data.collection.features.map(feature => {
+        const correction = coverage.corrections?.[featureCode(feature, 'barangay')];
+        if (!correction) return feature;
+        return { ...feature, properties: { ...feature.properties, adm4_psgc: correction.code, adm4_en: correction.name } };
+      });
+      if (new Set(features.map(feature => featureCode(feature, 'barangay'))).size !== features.length) {
+        throw new Error('Duplicate barangay PSGC after applying the current directory');
+      }
+      return { level: 'barangay', collection: { ...data.collection, features }, warnings: [], expected: coverage.expected ?? coverage.count };
     });
   }
 

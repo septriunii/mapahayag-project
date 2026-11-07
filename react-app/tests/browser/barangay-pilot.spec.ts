@@ -4,6 +4,7 @@ import { selectSvgLabel } from './svgInput';
 for (const [name, province, city, count] of [
   ['Zamboanga City', '907300000', '931700000', 98],
   ['Titay', '908300000', '908315000', 30],
+  ['Isabela City', '990100000', '990101000', 45],
 ] as const) {
   test(`${name} opens barangay boundaries and names from its existing view`, async ({ page }, info) => {
     if (city === '908315000') await page.setViewportSize({ width: 390, height: 844 });
@@ -32,7 +33,9 @@ for (const [name, province, city, count] of [
     await expect(shape).toHaveAttribute('aria-pressed', 'true');
     await page.screenshot({ path: info.outputPath('barangays.png'), animations: 'disabled' });
     await page.getByRole('button', { name: 'Open details menu' }).click();
-    await expect(page.locator('#detail-lgu-name')).toHaveText(city === '931700000' ? 'City of Zamboanga' : 'Titay');
+    await expect(page.locator('#detail-lgu-name')).toHaveText({
+      '931700000': 'City of Zamboanga', '908315000': 'Titay', '990101000': 'City of Isabela',
+    }[city]);
     await expect(page.getByRole('button', { name: 'View barangays' })).toHaveCount(0);
     await close.click();
     await expect(page.locator('#detail')).toHaveCSS('visibility', 'hidden');

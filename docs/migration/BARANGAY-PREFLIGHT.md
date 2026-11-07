@@ -55,3 +55,67 @@ file contains all 30 polygons. For an existing sparse checkout, populate
 geographic submodule before building. The build copies only the 17 selected
 files. The browser loads one on demand when its city or municipality opens.
 The details menu still opens the city or municipality profile.
+
+## Region IX expansion
+
+The local rollout now covers all 91 Region IX city and municipality routes,
+including Sulu and Isabela City. The 2,314 valid source polygons match the
+[PSA Region IX summary](https://psa.gov.ph/classification/psgc/provinces/0900000000).
+Every polygon has a unique source identifier and the expected explicit parent
+identifier. The audit validates pinned 2023 geometry and parent assignments and
+compares official totals. It does not replace a current barangay-by-barangay
+PSGC crosswalk.
+
+The build now copies the 91 Region IX files. Ten localities use high resolution
+to recover absent or malformed medium-resolution polygons: Polanco, Bayog,
+Mahayag, Tukuran, Lakewood, Sominot, Tigbao, Titay, Isabela City, and Siasi.
+Original source files and coordinates are retained.
+
+The development-only query `?review=barangay-mobile` also enables Cebu City
+and Davao City with 80 and 182 barangays respectively. Their files are served
+locally for review and are excluded from production output. NCR, Iloilo City,
+Baguio City, and Tacloban City remain excluded.
+
+## Nationwide local review
+
+The map now opens barangay boundaries and names directly for 1,608 cities
+and municipalities. Cebu and Davao use the normal routes. The 20 intentional
+exclusions are the 17 NCR localities and Iloilo, Baguio, and Tacloban cities.
+Only the selected locality's polygon file is fetched. The coverage registry
+is loaded at the first city or municipality visit.
+
+The audit matched 39,667 renderable source polygons against the September
+30, 2026 PSGC workbook. Eleven localities show a visible notice with the
+number of missing boundaries. Fourteen are held: Calaca after the San Rafael
+merger, five localities without a selectable parent polygon, and eight Special
+Geographic Area municipalities without a verified parent in the existing map.
+The [coverage audit](barangay-coverage-audit.json) lists each exception.
+
+The workbook was retrieved from the public
+[PSGC API repository mirror](https://github.com/rbillyjames0221/psgc-api/blob/main/seed/PSGC-3Q-2026-Publication-Datafile.xlsx)
+after the official file server returned HTTP 403. Its extraction reconciles
+1,642 city and municipality rows and 42,010 barangay rows against the
+[PSA release](https://psa.gov.ph/classification/psgc). The mirror's SHA-256 was
+`8aad47f84e4f6317dc4222b9fe35d36b5d71f2b74ad8f0c7622289c131dc9a59`.
+The matching uses the existing audited current municipality IDs, explicit
+parent columns in the boundary source, and PSGC identifiers. Rekeyed NIR and
+Sulu barangays must also agree on the name or documented previous name.
+One exception is the [documented Anhawan correction](https://psa.gov.ph/system/files/scd/Press%20Release%204Q%20PSGC%20Updates.pdf).
+[Guintolan is listed under Imelda](https://psa.gov.ph/classification/psgc/barangays/0908304000).
+Its old polygon is removed from Payao, and Imelda reports the missing boundary.
+
+The audit verifies identifiers, source parent assignments and renderable
+geometry structure. It does not independently survey polygon accuracy or
+reconstruct post-2023 boundary changes. Where the 2023 source lacks current
+polygons, the map uses the matched shapes and reports the gap.
+
+To reproduce from the repository root with a local workbook:
+
+```powershell
+python react-app/scripts/extract-barangay-psgc.py <workbook.xlsx> <snapshot.json>
+node react-app/scripts/audit-barangay-coverage.mjs <snapshot.json> --write
+```
+
+The extractor requires `openpyxl`. The build reads the generated registry and
+the pinned medium- and high-resolution barangay folders from the geographic
+submodule. A sparse checkout must include those folders.

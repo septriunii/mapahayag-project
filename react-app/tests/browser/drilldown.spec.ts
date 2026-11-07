@@ -32,11 +32,13 @@ test('ordinary drilldown, parent controls, browser history, deep links and cache
   await selectSvgLabel(page, 'text[data-label-psgc="907201000"]');
   const cityHash = provinceHash + '/municity/907201000';
   await ready(page, cityHash);
-  await expect(page.locator('path[data-psgc]')).toHaveCount(1);
+  await expect(page.locator('path[data-psgc]')).toHaveCount(50);
+  await page.getByRole('button', { name: 'Open details menu' }).click();
   await expect(page.locator('#detail-lgu-name')).toHaveText('City of Dapitan');
   await expect(page.locator('#detail-region')).toHaveText('Zamboanga del Norte');
   await expect(page.locator('#back-btn')).toHaveText('← Zamboanga del Norte');
   await page.screenshot({ path: 'test-results/drilldown-city.png' });
+  await page.getByRole('button', { name: 'Close details menu' }).click();
   await page.goBack();
   await ready(page, provinceHash);
   await page.goForward();
@@ -45,7 +47,7 @@ test('ordinary drilldown, parent controls, browser history, deep links and cache
   expect(requests.filter(url => url.includes('huc-boundaries'))).toHaveLength(1);
   await page.reload();
   await ready(page, cityHash);
-  await expect(page.locator('path[data-psgc]')).toHaveCount(1);
+  await expect(page.locator('path[data-psgc]')).toHaveCount(50);
   await page.locator('#back-btn').click();
   await ready(page, provinceHash);
   await page.locator('#back-btn').click();
@@ -66,6 +68,7 @@ for (const [alignment, region, provinceCount] of [['nir', '1800000000', 3], ['le
     await ready(page, provincial);
     await activate(page, '630200000');
     await ready(page, provincial + '/municity/630200000');
+    await page.getByRole('button', { name: 'Open details menu' }).click();
     await expect(page.locator('#detail-lgu-name')).toHaveText('City of Bacolod');
     await page.reload();
     await ready(page, provincial + '/municity/630200000');
@@ -192,7 +195,7 @@ test('city zoom, responsive deep links and safe metric details work together', a
   await expect(page.locator('svg > g')).toHaveAttribute('transform', 'translate(0,0) scale(1)');
 });
 
-test('regional, provincial, NCR and isolated city paths match legacy rendering', async ({ page, context }) => {
+test('regional, provincial and NCR paths match legacy rendering', async ({ page, context }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   const baseline = await context.newPage();
   await baseline.setViewportSize({ width: 1440, height: 900 });
@@ -203,7 +206,8 @@ test('regional, provincial, NCR and isolated city paths match legacy rendering',
     // Label positions/type are intentionally redesigned; typography.spec.ts
     // checks source names, interaction, placement and fixed screen sizes.
   });
-  for (const hash of ['#/region/900000000', '#/region/900000000/province/907200000', '#/region/1300000000', '#/region/1800000000/province/604500000']) {
+  // Region IX intentionally differs from legacy because React includes Sulu.
+  for (const hash of ['#/region/200000000', '#/region/900000000/province/907200000', '#/region/1300000000', '#/region/1800000000/province/604500000']) {
     await page.goto('/' + hash);
     await ready(page, hash);
     await baseline.goto('/baseline.html' + hash);
@@ -214,13 +218,5 @@ test('regional, provincial, NCR and isolated city paths match legacy rendering',
     if (hash.includes('/province/')) await expect(baseline.locator('path.municity')).not.toHaveCount(0);
     expect(await page.evaluate(snapshot)).toEqual(await baseline.evaluate(snapshot));
   }
-  // The legacy municipality deep-link bug prevents using a fresh city URL as
-  // a reference. Reach Bacolod through its province, then compare its view.
-  if (await baseline.locator('#detail-close').isVisible()) await baseline.locator('#detail-close').click();
-  await selectSvgLabel(baseline, 'text.huc-label');
-  await page.goto('/#/region/1800000000/province/604500000/municity/630200000');
-  await ready(page, '#/region/1800000000/province/604500000/municity/630200000');
-  await expect(baseline.locator('svg path')).toHaveCount(1);
-  expect(await page.evaluate(snapshot)).toEqual(await baseline.evaluate(snapshot));
   await baseline.close();
 });

@@ -26,6 +26,8 @@ test('maritime context fits narrow screens and keeps touch navigation usable', a
 
 test('official NIR PSGC links retain touch navigation on phones and tablets', async ({ page }) => {
   await page.goto('/#/region/1800000000/province/1804500000/municity/1830200000');
+  await ready(page, '#/region/1800000000/province/604500000/municity/630200000');
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
   await expect(page.locator('[data-profile-key="municity:1830200000"]')).toBeVisible();
   await expect(page.locator('#detail-lgu-name')).toContainText('Bacolod');
   await page.getByRole('button', { name: 'Close details menu' }).tap();
@@ -37,6 +39,9 @@ test('official NIR PSGC links retain touch navigation on phones and tablets', as
 
 test('Sulu saved links and touch Back controls use Region IX on phones and tablets', async ({ page }) => {
   await page.goto('/#/region/1900000000/province/1906600000/municity/1906602000');
+  await ready(page, '#/region/900000000/province/1906600000/municity/1906602000');
+  await expect(page.locator('path[data-psgc]')).toHaveCount(8);
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
   await expect(page.locator('[data-profile-key="municity:0906602000"]')).toBeVisible();
   await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/900000000/province/1906600000/municity/1906602000');
   await page.getByRole('button', { name: 'Close details menu' }).tap();
@@ -53,6 +58,8 @@ test('Sulu saved links and touch Back controls use Region IX on phones and table
 test('municipal profile fits a 320px drawer and scrolls without moving the map', async ({ page }, info) => {
   await page.setViewportSize({ width: 320, height: 568 });
   await page.goto('/#/region/900000000/province/907200000/municity/907203000');
+  await ready(page, '#/region/900000000/province/907200000/municity/907203000');
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
   const article = page.locator('[data-profile-key="municity:0907203000"]');
   await expect(article).toBeVisible();
   await expect(page.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
@@ -67,6 +74,35 @@ test('municipal profile fits a 320px drawer and scrolls without moving the map',
   await expect(page.locator('svg > g')).toHaveAttribute('transform', transform!);
   await page.screenshot({ path: info.outputPath('municipal-profile-narrow.png') });
 });
+
+for (const [name, hash, count] of [
+  ['Cebu City', '#/region/700000000/province/702200000/municity/730600000', 80],
+  ['Davao City', '#/region/1100000000/province/1102400000/municity/1130700000', 182],
+] as const) {
+  test(`${name} barangay mobile review loads one file and supports touch selection`, async ({ page }, info) => {
+    const requests: string[] = [], errors: string[] = [];
+    page.on('pageerror', error => errors.push(error.message));
+    page.on('request', request => { if (request.url().includes('bgysubmuns')) requests.push(request.url()); });
+    await page.goto('/' + hash);
+    await ready(page, hash);
+    await expect(page.locator('path[data-psgc]')).toHaveCount(count);
+    await expect(page.locator('#detail')).toHaveCSS('visibility', 'hidden');
+    await expect(page.locator('#status')).toHaveText(`${count} barangays`);
+    await settledMap(page);
+    const first = page.locator('[data-label-name]').first();
+    const code = await first.getAttribute('data-label-psgc');
+    const name = await first.getAttribute('data-label-name');
+    await selectSvgLabel(page, `[data-label-psgc="${code}"]`, true);
+    await expect(page.locator('#status')).toHaveText(name!);
+    await expect(page.locator(`path[data-psgc="${code}"]`)).toHaveAttribute('aria-pressed', 'true');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.screenshot({ path: info.outputPath('barangay-mobile.png') });
+    await page.locator('#back-btn').tap();
+    await ready(page, hash.split('/municity/')[0]);
+    expect(requests).toHaveLength(1);
+    expect(errors).toEqual([]);
+  });
+}
 
 test('pilot profile scrolls independently at 320px while header and parent navigation remain usable', async ({ page }, info) => {
   await page.setViewportSize({ width: 320, height: 568 });
@@ -139,11 +175,11 @@ test('touch drilldown, city reload and parent navigation work on phones/tablets'
   await ready(page, province);
   await selectSvgLabel(page, 'text[data-label-psgc="907201000"]', true);
   await ready(page, province + '/municity/907201000');
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
   await expect(page.locator('#detail-lgu-name')).toHaveText('City of Dapitan');
   await page.getByRole('button', { name: 'Close details menu' }).tap();
   await page.reload();
   await ready(page, province + '/municity/907201000');
-  await page.getByRole('button', { name: 'Close details menu' }).tap();
   await page.locator('#back-btn').tap();
   await ready(page, province);
   await settledMap(page);

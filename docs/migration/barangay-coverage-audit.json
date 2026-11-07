@@ -1,0 +1,338 @@
+{
+  "snapshot": "2026-09-30",
+  "totals": {
+    "enabled": 1608,
+    "polygons": 39667,
+    "partial": 11,
+    "held": 14,
+    "excluded": 20
+  },
+  "partial": [
+    [
+      "0102910000",
+      "Gregorio del Pilar",
+      6,
+      7,
+      [
+        "0102910008"
+      ],
+      []
+    ],
+    [
+      "0205008000",
+      "Dupax del Sur",
+      18,
+      19,
+      [
+        "0205008007"
+      ],
+      []
+    ],
+    [
+      "0304903000",
+      "City of Cabanatuan",
+      88,
+      89,
+      [
+        "0304903075"
+      ],
+      []
+    ],
+    [
+      "0504117000",
+      "Placer",
+      34,
+      35,
+      [
+        "0504117022"
+      ],
+      []
+    ],
+    [
+      "0802614000",
+      "Maslog",
+      11,
+      12,
+      [
+        "0802614008"
+      ],
+      []
+    ],
+    [
+      "0908304000",
+      "Imelda",
+      18,
+      19,
+      [],
+      [
+        [
+          "0908304019",
+          "Guintolan"
+        ]
+      ]
+    ],
+    [
+      "1206317000",
+      "Tupi",
+      15,
+      16,
+      [],
+      [
+        [
+          "1206317017",
+          "Juan-Loreto Tamayo"
+        ]
+      ]
+    ],
+    [
+      "1400104000",
+      "Bucloc",
+      3,
+      4,
+      [
+        "1400104001"
+      ],
+      []
+    ],
+    [
+      "1400106000",
+      "Danglas",
+      5,
+      7,
+      [
+        "1400106007",
+        "1400106008"
+      ],
+      []
+    ],
+    [
+      "1606801000",
+      "Barobo",
+      21,
+      22,
+      [],
+      [
+        [
+          "1606801027",
+          "Guinhalinan"
+        ]
+      ]
+    ],
+    [
+      "1903617000",
+      "City of Marawi",
+      98,
+      101,
+      [],
+      [
+        [
+          "1903617146",
+          "Angoyao"
+        ],
+        [
+          "1903617147",
+          "Sultan Corobong"
+        ],
+        [
+          "1903617148",
+          "Sultan Panoroganan"
+        ]
+      ]
+    ]
+  ],
+  "held": [
+    [
+      "0401007000",
+      "City of Calaca",
+      "Unmatched source barangays",
+      39,
+      [
+        [
+          "0401007038",
+          "San Rafael",
+          null
+        ]
+      ]
+    ],
+    [
+      "0403425000",
+      "City of San Pedro",
+      "No selectable city or municipality polygon",
+      27
+    ],
+    [
+      "0405807000",
+      "Jala-Jala",
+      "No selectable city or municipality polygon",
+      11
+    ],
+    [
+      "0806419000",
+      "Limasawa",
+      "No selectable city or municipality polygon",
+      6
+    ],
+    [
+      "1204712000",
+      "Pikit",
+      "No selectable city or municipality polygon",
+      20
+    ],
+    [
+      "1705321000",
+      "Kalayaan",
+      "No selectable city or municipality polygon",
+      1
+    ],
+    [
+      "1999901000",
+      "Kapalawan",
+      "No verified map parent",
+      7
+    ],
+    [
+      "1999902000",
+      "Old Kaabakan",
+      "No verified map parent",
+      7
+    ],
+    [
+      "1999903000",
+      "Kadayangan",
+      "No verified map parent",
+      7
+    ],
+    [
+      "1999904000",
+      "Nabalawag",
+      "No verified map parent",
+      7
+    ],
+    [
+      "1999905000",
+      "Pahamuddin",
+      "No verified map parent",
+      12
+    ],
+    [
+      "1999906000",
+      "Malidegao",
+      "No verified map parent",
+      7
+    ],
+    [
+      "1999907000",
+      "Ligawasan",
+      "No verified map parent",
+      7
+    ],
+    [
+      "1999908000",
+      "Tugunan",
+      "No verified map parent",
+      9
+    ]
+  ],
+  "excluded": [
+    [
+      "0631000000",
+      "City of Iloilo",
+      180
+    ],
+    [
+      "0831600000",
+      "City of Tacloban",
+      138
+    ],
+    [
+      "1380100000",
+      "City of Caloocan",
+      193
+    ],
+    [
+      "1380200000",
+      "City of Las Piñas",
+      20
+    ],
+    [
+      "1380300000",
+      "City of Makati",
+      23
+    ],
+    [
+      "1380400000",
+      "City of Malabon",
+      21
+    ],
+    [
+      "1380500000",
+      "City of Mandaluyong",
+      27
+    ],
+    [
+      "1380600000",
+      "City of Manila",
+      897
+    ],
+    [
+      "1380700000",
+      "City of Marikina",
+      16
+    ],
+    [
+      "1380800000",
+      "City of Muntinlupa",
+      9
+    ],
+    [
+      "1380900000",
+      "City of Navotas",
+      18
+    ],
+    [
+      "1381000000",
+      "City of Parañaque",
+      16
+    ],
+    [
+      "1381100000",
+      "Pasay City",
+      201
+    ],
+    [
+      "1381200000",
+      "City of Pasig",
+      30
+    ],
+    [
+      "1381300000",
+      "Quezon City",
+      142
+    ],
+    [
+      "1381400000",
+      "City of San Juan",
+      21
+    ],
+    [
+      "1381500000",
+      "City of Taguig",
+      38
+    ],
+    [
+      "1381600000",
+      "City of Valenzuela",
+      33
+    ],
+    [
+      "1381701000",
+      "Pateros",
+      10
+    ],
+    [
+      "1430300000",
+      "City of Baguio",
+      129
+    ]
+  ]
+}

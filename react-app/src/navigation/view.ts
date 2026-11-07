@@ -1,7 +1,6 @@
 import type { MapConfig, DataRecord } from '../config/schema';
 import { BARMM, NCR, NCR_DISTRICTS } from '../geography/alignment';
 import { featureCode } from '../geography/psgc';
-import { barangayPilot } from '../geography/barangayPilot';
 import type { GeographicRepository } from '../geography/repository';
 import type { GeographicCollection, GeographicFeature, GeographicLevel, GeographicView, Psgc } from '../geography/types';
 import { nameProperty } from '../geography/types';
@@ -20,6 +19,7 @@ export interface MapView extends GeographicView {
   details?: LocationDetails;
   backLabel?: string;
   statusText: string;
+  coverageNote?: string;
 }
 
 export function locationDetails(feature: GeographicFeature, level: GeographicLevel, parent: string, config: MapConfig): LocationDetails {
@@ -81,9 +81,15 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
   if (route.level === 'province') return provinceView;
   const city = find(provincial.collection, 'municity', route.municity);
   const cityView = isolatedCity(city, route, provinceDetails.name, config, warnings);
-  if (!barangayPilot.has(route.municity)) return cityView;
   const barangays = await repository.barangays(route.municity);
-  return { ...cityView, ...barangays, statusText: `${barangays.collection.features.length} barangays` };
+  if (barangays === 'unavailable') return { ...cityView, coverageNote: 'Barangay boundaries unavailable' };
+  if (!barangays) return cityView;
+  const count = barangays.collection.features.length;
+  const missing = barangays.expected - count;
+  return {
+    ...cityView, ...barangays, statusText: `${count} barangays`,
+    ...(missing > 0 ? { coverageNote: `${missing} of ${barangays.expected} barangay boundaries unavailable` } : {}),
+  };
 }
 
 function isolatedCity(city: GeographicFeature, route: MapRoute, parent: string, config: MapConfig, warnings: string[]): MapView {

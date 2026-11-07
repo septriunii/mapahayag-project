@@ -70,6 +70,7 @@ function MapApplication({ config, national, configUrl }: { config: MapConfig; na
   const selection = (selected?.view === view ? selected?.details : undefined) ?? view?.details;
   const profileKey = navigation.status === 'ready' && view && (!showingBarangays || drawerOpen) ? profileKeyForSelection(view.route, selection) : undefined;
   const profileState = useGeographicProfile(profileKey);
+  const statusText = [selectedBarangay ?? view?.statusText, view?.coverageNote].filter(Boolean).join(' · ');
   return <>
     {view && <MapCanvas view={view} config={config} onSelect={select} selected={selected} busy={navigation.status !== 'ready'} />}
     <button id="info-btn" type="button" aria-label="Open details menu" aria-controls="detail" aria-expanded={drawerOpen}
@@ -81,7 +82,7 @@ function MapApplication({ config, national, configUrl }: { config: MapConfig; na
       profile={profileState.profile} sources={profileState.sources} profileLoading={profileState.loading}
       busy={navigation.status === 'loading'} navigationError={error}
       profileError={profileState.error} />
-    <MapStatus error={error} onRetry={navigation.retry} text={navigation.status === 'loading' ? 'Loading…' : selectedBarangay ?? view?.statusText ?? ''} warnings={navigation.status === 'ready' ? view?.warnings : undefined} />
+    <MapStatus error={error} onRetry={navigation.retry} text={navigation.status === 'loading' ? 'Loading…' : statusText} warnings={navigation.status === 'ready' ? view?.warnings : undefined} />
   </>;
 }
 

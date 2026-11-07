@@ -17,6 +17,7 @@ for (const [region, province, municipality, name] of [
     await expect(page.locator(`path[data-psgc="${municipality}"]`)).toHaveAttribute('aria-label', name);
     await selectSvgLabel(page, `[data-label-psgc="${municipality}"]`);
     await expect(page.locator('svg')).toHaveAttribute('data-view', `#/region/${region}/province/${province}/municity/${municipality}`);
+    await page.getByRole('button', { name: 'Open details menu' }).click();
     await expect(page.locator('#detail-lgu-name')).toHaveText(name);
     await expect(page.locator('[data-profile-key]')).toContainText(name);
     expect(errors).toEqual([]);
@@ -30,6 +31,7 @@ for (const alignment of ['nir', 'legacy']) {
     await page.goto(`/?alignment=${alignment}#/region/1800000000/province/1804500000/municity/1830200000`);
     await expect(page.locator('svg')).toHaveAttribute('data-view', canonical);
     await expect(page).toHaveURL(new RegExp(canonical + '$'));
+    await page.getByRole('button', { name: 'Open details menu' }).click();
     await expect(page.locator('#detail-lgu-name')).toContainText('Bacolod');
     await page.reload();
     await expect(page.locator('svg')).toHaveAttribute('data-view', canonical);

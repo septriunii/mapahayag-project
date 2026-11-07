@@ -4,7 +4,7 @@ import { featureCode } from '../geography/psgc';
 import { formatRoute, parentRoute, parseRoute } from './routes';
 import { resolveView, selectionRoute } from './view';
 
-it('resolves ordinary geographic ancestry down to an isolated city', async () => {
+it('resolves ordinary geographic ancestry down to a city with barangays', async () => {
   const { config, repository } = geographyFixture();
   const national = (await repository.national()).collection;
   const region = await resolveView(parseRoute('#/region/900000000'), config, national, repository);
@@ -15,7 +15,8 @@ it('resolves ordinary geographic ancestry down to an isolated city', async () =>
   expect(provincial.details?.name).toBe('Zamboanga del Norte');
   const city = provincial.collection.features[0];
   const municipal = await resolveView(selectionRoute(provincial, city, config)!, config, national, repository);
-  expect(municipal.collection.features).toEqual([city]);
+  expect(municipal.level).toBe('barangay');
+  expect(municipal.collection.features).toHaveLength(50);
   expect(municipal.details?.name).toBe('City of Dapitan');
   expect(municipal.backLabel).toBe('Zamboanga del Norte');
   expect(parentRoute(municipal.route)).toEqual(route);

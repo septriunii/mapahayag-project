@@ -1,6 +1,12 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import index from '../../../psgc-index.json' with { type: 'json' };
 import facts from '../../src/data/municipal-facts.json' with { type: 'json' };
+import coverage from '../../src/data/barangay-coverage.json' with { type: 'json' };
+
+async function openBarangayParentProfile(page: Page) {
+  await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
+  await page.getByRole('button', { name: 'Open details menu' }).click();
+}
 
 // One real municipality per mapped province, plus NCR and special city paths.
 const samples = index.municities.filter((row, position, rows) =>
@@ -18,9 +24,11 @@ for (const sample of samples) {
       ? `#/region/${sample.region_psgc}/municity/${sample.psgc}`
       : `#/region/${region}/province/${sample.province_psgc}/municity/${sample.psgc}`;
     const fact = facts.records.find(row => Number(row.mapPsgc) === sample.psgc)!;
+    const opensBarangays = Boolean(coverage[String(sample.psgc) as keyof typeof coverage]);
     await page.goto('/' + hash);
     await expect(page.locator('svg')).toHaveAttribute('data-view', hash);
     const article = page.locator(`[data-profile-key="municity:${fact.psgc}"]`);
+    if (opensBarangays) await openBarangayParentProfile(page);
     await expect(article).toBeVisible();
     await expect(page.locator('[data-profile-key]')).toHaveCount(1);
     await expect(article.locator('[data-metric="population"]')).toContainText(fact.population.toLocaleString('en-PH'));
@@ -28,10 +36,13 @@ for (const sample of samples) {
     await expect(article.getByRole('region', { name: 'Economy and Culture' })).toContainText('Not yet verified');
     await expect(article.locator('[data-metric="barangays"]')).toContainText('Data unavailable');
     await page.reload();
+    if (opensBarangays) await openBarangayParentProfile(page);
     await expect(article).toBeVisible();
+    if (opensBarangays) await page.getByRole('button', { name: 'Close details menu' }).click();
     await page.locator('#back-btn').click();
     await expect(article).toHaveCount(0);
     await page.goBack();
+    if (opensBarangays) await openBarangayParentProfile(page);
     await expect(article).toBeVisible();
   });
 }
@@ -44,12 +55,16 @@ test('municipal facts load on demand, cache across visits and preserve configure
   await expect(page.locator('[data-profile-key="national"]')).toBeVisible();
   expect(requests).toHaveLength(0);
   await page.goto('/#/region/900000000/province/907200000/municity/907203000');
+  await openBarangayParentProfile(page);
   await expect(page.locator('[data-profile-key="municity:0907203000"]')).toBeVisible();
   await expect(page.locator('#detail-body')).toContainText('<img src=x');
   await expect(page.locator('#detail img')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Close details menu' }).click();
   await page.locator('#back-btn').click();
   await page.locator('path[data-psgc="907204000"]').focus();
   await page.keyboard.press('Enter');
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/900000000/province/907200000/municity/907204000');
+  await openBarangayParentProfile(page);
   await expect(page.locator('[data-profile-key="municity:0907204000"]')).toContainText('7,874');
   expect(requests).toHaveLength(1);
 });
@@ -57,9 +72,12 @@ test('municipal facts load on demand, cache across visits and preserve configure
 test('failed municipal catalog preserves the working map and existing detail fallback', async ({ page }) => {
   await page.route('**/assets/municipalData-*.js', route => route.abort());
   await page.goto('/#/region/900000000/province/907200000/municity/907203000');
-  await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
+  await openBarangayParentProfile(page);
   await expect(page.locator('#detail-body')).toContainText('Geographic profile unavailable');
   await expect(page.locator('[data-profile-key]')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Close details menu' }).click();
   await page.locator('#back-btn').click();
+  await expect(page.locator('svg')).toHaveAttribute('data-view', '#/region/900000000/province/907200000');
+  await openBarangayParentProfile(page);
   await expect(page.locator('[data-profile-key="province:0907200000"]')).toBeVisible();
 });

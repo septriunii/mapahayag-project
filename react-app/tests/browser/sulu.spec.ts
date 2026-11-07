@@ -24,8 +24,9 @@ for (const alignment of ['nir', 'legacy']) {
     await expect(page.locator('#detail-region')).toContainText('Region IX');
     await expect(page.locator('path[data-psgc]')).toHaveCount(19);
     await page.locator('path[data-psgc="1906602000"]').focus(); await page.keyboard.press('Enter');
+    await expect(page.locator('path[data-psgc]')).toHaveCount(8);
+    await page.getByRole('button', { name: 'Open details menu' }).click();
     await expect(page.locator('[data-profile-key="municity:0906602000"]')).toBeVisible();
-    await expect(page.locator('path[data-psgc]')).toHaveCount(1);
     await expect(page.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
     await page.waitForFunction(() => [...document.querySelectorAll('.map-feature, .map-label, .map-boundaries')].every(node => getComputedStyle(node).opacity === '1'));
     await expect(page.locator('#back-btn')).toHaveText('← Sulu');
@@ -42,12 +43,16 @@ test('old BARMM bookmarks and official PSGCs redirect cleanly through reload and
   const province = '#/region/900000000/province/1906600000';
   await page.goto('/#/region/1900000000/province/1906600000/municity/1906602000');
   await expect(page).toHaveURL(new RegExp(province + '/municity/1906602000$'));
+  await expect(page.locator('path[data-psgc]')).toHaveCount(8);
+  await page.getByRole('button', { name: 'Open details menu' }).click();
   await expect(page.locator('[data-profile-key="municity:0906602000"]')).toBeVisible();
   await page.reload();
   await expect(page.locator('#back-btn')).toHaveText('← Sulu');
   await page.locator('#back-btn').click();
   await expect(page.locator('#back-btn')).toContainText('Region IX');
   await page.goBack();
+  await expect(page.locator('path[data-psgc]')).toHaveCount(8);
+  await page.getByRole('button', { name: 'Open details menu' }).click();
   await expect(page.locator('[data-profile-key="municity:0906602000"]')).toBeVisible();
   await page.goto('/#/region/0900000000/province/0906600000/municity/0906602000');
   await expect(page).toHaveURL(new RegExp(province + '/municity/1906602000$'));

@@ -138,8 +138,6 @@ test('administrative linework stays thin through wheel zoom, pan and every drill
       const sidebarFont = await page.locator('#detail').evaluate(node => getComputedStyle(node).fontFamily);
       await expect(page.locator('#back-btn')).toHaveCSS('font-family', sidebarFont);
     }
-    // Hash navigation retains the existing drawer state; city arrival opens it.
-    if (hash.includes('/municity/')) await expect(page.getByRole('button', { name: 'Close details menu' })).toBeVisible();
     if (await page.getByRole('button', { name: 'Close details menu' }).isVisible()) {
       await page.getByRole('button', { name: 'Close details menu' }).click();
     }
@@ -148,8 +146,7 @@ test('administrative linework stays thin through wheel zoom, pan and every drill
     await expect(mesh).toHaveCSS('stroke', palette.border);
     await expect(mesh).toHaveCSS('stroke-width', width);
     await expect(mesh).toHaveCSS('vector-effect', 'non-scaling-stroke');
-    if (hash.includes('/municity/')) await expect(mesh).toHaveAttribute('d', '');
-    else expect((await mesh.getAttribute('d'))!.length).toBeGreaterThan(0);
+    expect((await mesh.getAttribute('d'))!.length).toBeGreaterThan(0);
     const feature = page.locator('path[data-psgc]').first();
     const geometry = await feature.getAttribute('d');
     const boundaryGeometry = await mesh.getAttribute('d');
