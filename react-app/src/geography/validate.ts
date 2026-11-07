@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { psgcSchema } from './psgc';
 import { codeProperty, nameProperty } from './types';
-import type { GeographicLevel, GeographicResource } from './types';
+import type { MapGeographicLevel, GeographicResource } from './types';
 import type { Polygon, MultiPolygon } from 'geojson';
 
 /** Validate every coordinate without cloning the large nested arrays. The
@@ -32,7 +32,7 @@ const featureSchema = z.object({ type: z.literal('Feature'), properties: z.recor
 const collectionSchema = z.object({ type: z.literal('FeatureCollection'), features: z.array(featureSchema) }).passthrough();
 const nameSchema = z.string().min(1).nullable();
 
-export function parseGeography(input: unknown, level: GeographicLevel): GeographicResource {
+export function parseGeography(input: unknown, level: MapGeographicLevel): GeographicResource {
   const data = collectionSchema.parse(input);
   const seen = new Set<string>();
   const omittedNullGeometry: string[] = [];

@@ -18,7 +18,7 @@ import { useViewport } from '../hooks/useViewport';
 interface Props { view: MapView; config: MapConfig; onSelect: (feature: GeographicFeature) => void; busy: boolean; selected?: { view: MapView; code: string } }
 
 function viewPath(view: MapView, width: number, height: number) {
-  return makePath(width, height, view.route.level === 'national' ? MARITIME_BOUNDS : paddedBounds(view.collection.features, view.route.level === 'municity'));
+  return makePath(width, height, view.route.level === 'national' ? MARITIME_BOUNDS : paddedBounds(view.collection.features, view.route.level === 'municity' && view.level !== 'barangay'));
 }
 
 export function MapCanvas({ view, config, onSelect, busy, selected }: Props) {
@@ -81,7 +81,7 @@ export function MapCanvas({ view, config, onSelect, busy, selected }: Props) {
   useEffect(() => { behavior.current?.filter(event => !disabled && (!event.ctrlKey || event.type === 'wheel') && !event.button); }, [disabled]);
   const labelPath = useMemo(() => viewPath(displayed, width, height), [displayed, width, height]);
   const labelPlacement = useGeographicLabels(displayed, labelPath, width, labelScale);
-  return <><svg ref={svg} aria-label={displayed.route.level === 'national' ? 'Philippines national map' : `${displayed.details?.name} map`}
+  return <><svg ref={svg} aria-label={displayed.route.level === 'national' ? 'Philippines national map' : `${displayed.details?.name} ${displayed.level === 'barangay' ? 'barangay map' : 'map'}`}
     aria-busy={disabled} data-view={formatRoute(displayed.route)} viewBox={`0 0 ${width} ${height}`} className="block h-full w-full touch-none cursor-grab active:cursor-grabbing">
     <g key={formatRoute(displayed.route)} transform={transform.toString()} opacity={opacity}
       style={{ '--map-label-counter-scale': 1 / transform.k } as CSSProperties} className={disabled ? 'pointer-events-none' : undefined}>
@@ -98,7 +98,10 @@ const GeographicLayer = memo(function GeographicLayer({ view, config, onSelect, 
   const color = useMemo(() => createColorLookup(config), [config]);
   const boundaries = useMemo(() => administrativeBoundaries(view.collection), [view.collection]);
   const boundaryPath = useMemo(() => path(boundaries) ?? '', [path, boundaries]);
-  const shapes = useMemo(() => view.collection.features.map(feature => ({ feature, code: featureCode(feature, view.level), d: path(feature) ?? '', fill: color(view.level, featureCode(feature, view.level)) })), [view, path, color]);
+  const shapes = useMemo(() => view.collection.features.map(feature => {
+    const code = featureCode(feature, view.level);
+    return { feature, code, d: path(feature) ?? '', fill: view.level === 'barangay' ? 'var(--color-land)' : color(view.level, code) };
+  }), [view, path, color]);
   const lineworkClass = view.level === 'region' ? 'map-linework-region' : view.level === 'province' ? 'map-linework-province' : 'map-linework-municipality';
   return <>
     {view.background?.features.map((feature, index) => <path key={index} className="region-bg pointer-events-none" d={path(feature) ?? ''} fill="var(--color-land)" stroke="none" />)}
@@ -106,7 +109,7 @@ const GeographicLayer = memo(function GeographicLayer({ view, config, onSelect, 
       fill={fill} vectorEffect="non-scaling-stroke" role="button" tabIndex={disabled ? -1 : 0} aria-label={feature.properties[nameProperty[view.level]] ?? code}
       aria-pressed={(selected?.view === view && selected.code === code) || (view.route.level === 'municity' && view.route.municity === code)}
       onClick={event => { if (!disabled && !event.defaultPrevented) onSelect(feature); }} onKeyDown={event => { if (!disabled && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); onSelect(feature); } }}
-      className="map-feature motion-safe:animate-map-shapes cursor-pointer" />)}
+      className="map-feature motion-safe:animate-map-shapes cursor-pointer">{view.level === 'barangay' && <title>{feature.properties.adm4_en}</title>}</path>)}
     <path data-administrative-borders="" aria-hidden="true" d={boundaryPath} fill="none" vectorEffect="non-scaling-stroke"
       className={`map-boundaries ${lineworkClass} motion-safe:animate-map-shapes pointer-events-none`} />
   </>;

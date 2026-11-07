@@ -66,9 +66,8 @@ export function wrapLabel(name: string, maxWidth: number, measure: (text: string
   return lines;
 }
 
-/** Deterministic bounded placement. Keep every name; prefer an interior center,
- * then nearby free space. Re-run after zoom settles, never on each pan frame. */
-export function placeLabels(seeds: LabelSeed[], measure: (text: string) => number, maxWidth: number, lineHeight: number, scale = 1, viewportWidth = Infinity): PlacedLabel[] {
+/** Deterministic placement. Dense barangay views omit crowded names until zoomed. */
+export function placeLabels(seeds: LabelSeed[], measure: (text: string) => number, maxWidth: number, lineHeight: number, scale = 1, viewportWidth = Infinity, interiorOnly = false): PlacedLabel[] {
   const placed: PlacedLabel[] = [];
   const boxes: { x: number; y: number; width: number; height: number }[] = [];
   for (const seed of [...seeds].sort((a, b) => b.area - a.area || a.code.localeCompare(b.code))) {
@@ -88,11 +87,13 @@ export function placeLabels(seeds: LabelSeed[], measure: (text: string) => numbe
         // At the fitted view keep complete names inside the screen. Panned or
         // zoomed views retain geographic movement instead of pinning text to UI.
         const clipped = scale === 1 ? Math.max(0, 4 - x) + Math.max(0, x + width - viewportWidth + 4) : 0;
+        if (interiorOnly && (!interior || overlap > 0 || clipped > 0)) continue;
         const score = clipped * 100000 + overlap * 1000 + (interior ? 0 : 250) + (dx * dx + dy * dy) / 10;
         if (score < best) { best = score; chosen = { dx, dy }; }
       }
       if (best === 0) break;
     }
+    if (!Number.isFinite(best)) continue;
     placed.push({ ...seed, lines, ...chosen, width, height });
     boxes.push({ x: seed.anchor[0] * scale + chosen.dx - width / 2, y: seed.anchor[1] * scale + chosen.dy - height / 2, width, height });
   }

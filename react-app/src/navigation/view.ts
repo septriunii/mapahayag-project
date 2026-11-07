@@ -1,6 +1,7 @@
 import type { MapConfig, DataRecord } from '../config/schema';
 import { BARMM, NCR, NCR_DISTRICTS } from '../geography/alignment';
 import { featureCode } from '../geography/psgc';
+import { barangayPilot } from '../geography/barangayPilot';
 import type { GeographicRepository } from '../geography/repository';
 import type { GeographicCollection, GeographicFeature, GeographicLevel, GeographicView, Psgc } from '../geography/types';
 import { nameProperty } from '../geography/types';
@@ -78,7 +79,11 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
     statusText: `${provinceDetails.name} — ${provincial.collection.features.length} municipalities/cities`,
   };
   if (route.level === 'province') return provinceView;
-  return isolatedCity(find(provincial.collection, 'municity', route.municity), route, provinceDetails.name, config, warnings);
+  const city = find(provincial.collection, 'municity', route.municity);
+  const cityView = isolatedCity(city, route, provinceDetails.name, config, warnings);
+  if (!barangayPilot.has(route.municity)) return cityView;
+  const barangays = await repository.barangays(route.municity);
+  return { ...cityView, ...barangays, statusText: `${barangays.collection.features.length} barangays` };
 }
 
 function isolatedCity(city: GeographicFeature, route: MapRoute, parent: string, config: MapConfig, warnings: string[]): MapView {

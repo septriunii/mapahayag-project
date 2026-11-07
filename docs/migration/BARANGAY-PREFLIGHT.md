@@ -38,4 +38,20 @@ Outstanding: current official barangay identity/parent crosswalk, recent
 mergers and renamed barangays, polygon validity and coverage verification,
 geometry resolution selection, lazy loading and caching, routing, exclusions,
 names-only selection UI, desktop/mobile checks, production asset packaging.
-No barangay UI or deployment is enabled by this preflight.
+## Local pilot
+
+The pilot enables Zamboanga City and the 16 municipalities of Zamboanga
+Sibugay. Their 487 polygons match the totals in the PSA's
+[Zamboanga City listing](https://psa.gov.ph/classification/psgc/barangays/0931700000)
+and [Zamboanga Sibugay listing](https://psa.gov.ph/classification/psgc/citimuni/0908300000).
+The repository validates each source feature's explicit municipality code,
+unique barangay code, name, and geometry. The pinned 2023 source names and
+boundaries are retained. This does not establish a current individual
+PSGC crosswalk or independently certify the polygon boundaries.
+
+The pilot uses medium-resolution files, except Titay, where the high-resolution
+file contains all 30 polygons. For an existing sparse checkout, populate
+`2023/geojson/municities/medres` and `2023/geojson/municities/hires` in the
+geographic submodule before building. The build copies only the 17 selected
+files. The browser loads one on demand when its city or municipality opens.
+The details menu still opens the city or municipality profile.

@@ -5,6 +5,7 @@ import { currentSuluNational } from './sulu';
 import { withCurrentNames } from './currentNames';
 import { featureCode, normalizePsgc } from './psgc';
 import { parseGeography } from './validate';
+import { barangayPilot, barangayPilotPath } from './barangayPilot';
 import type { GeographicLevel, GeographicResource, GeographicView, SourcePsgc } from './types';
 
 export class GeographicRepository {
@@ -51,6 +52,20 @@ export class GeographicRepository {
     if (region === BARMM) return { level: 'province', collection: { ...data.collection, features: data.collection.features.filter(feature => featureCode(feature, 'province') !== SULU) }, warnings: resourceWarnings(data) };
     return { level: 'province', collection: data.collection, warnings: resourceWarnings(data) };
   }
+  async barangays(parent: SourcePsgc): Promise<GeographicView> {
+    const city = normalizePsgc(parent);
+    const count = barangayPilot.get(city);
+    if (!count) throw new Error('Barangay view is outside the pilot area');
+    return this.cache.load(this.geography(barangayPilotPath(city)), 'geography:barangay', input => {
+      const data = parseGeography(input, 'barangay');
+      if (data.collection.features.length !== count || data.missingNames.length ||
+          data.collection.features.some(feature => featureCode(feature, 'municity') !== city)) {
+        throw new Error('Barangay boundaries failed coverage or parent validation');
+      }
+      return { level: 'barangay', collection: data.collection, warnings: [] };
+    });
+  }
+
   async province(provinceCode: SourcePsgc): Promise<GeographicView> {
     const province = normalizePsgc(provinceCode);
     // Supplementary boundaries are required; a failure must not silently hide cities.

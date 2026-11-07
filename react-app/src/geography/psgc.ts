@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import type { GeographicFeature, GeographicLevel, Psgc } from './types';
+import type { GeographicFeature, MapGeographicLevel, Psgc } from './types';
 import { codeProperty } from './types';
 
 // Normalize representation only. Never infer code-vintage conversions or ancestry.
@@ -9,6 +9,6 @@ export const psgcSchema = z.union([
 ]).transform(value => String(BigInt(value)) as Psgc).refine(value => value !== '0', 'PSGC must be positive');
 
 export function normalizePsgc(value: unknown): Psgc { return psgcSchema.parse(value); }
-export function featureCode(feature: GeographicFeature, level: GeographicLevel): Psgc {
+export function featureCode(feature: GeographicFeature, level: MapGeographicLevel): Psgc {
   return normalizePsgc(feature.properties[codeProperty[level]]);
 }

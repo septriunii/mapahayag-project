@@ -12,7 +12,7 @@ interface Props {
 }
 
 export function useGeographicLabels(view: MapView, path: ReturnType<typeof makePath>, width: number, scale: number) {
-  const level = view.route.level === 'municity' ? 'city' : view.level;
+  const level = view.level === 'barangay' ? 'municity' : view.route.level === 'municity' ? 'city' : view.level;
   const metrics = useMemo(() => {
     const style = getComputedStyle(document.documentElement);
     const size = parseFloat(style.getPropertyValue(`--map-label-${level}-size`)) * (width < 600 ? parseFloat(style.getPropertyValue('--map-label-mobile-scale')) : 1);
@@ -30,14 +30,14 @@ export function useGeographicLabels(view: MapView, path: ReturnType<typeof makeP
     if (!geometry) return [];
     return [{ ...geometry, code: featureCode(feature, view.level), name: view.level === 'region' ? name.match(/\(([^)]+)\)/)?.[1] ?? name : name }];
   }), [view, path]);
-  const labels = useMemo(() => placeLabels(seeds, metrics.measure, metrics.maxWidth, metrics.lineHeight, scale, width), [seeds, metrics, scale, width]);
+  const labels = useMemo(() => placeLabels(seeds, metrics.measure, metrics.maxWidth, metrics.lineHeight, scale, width, view.level === 'barangay'), [seeds, metrics, scale, width, view.level]);
   return useMemo(() => ({ labels, metrics, level }), [labels, metrics, level]);
 }
 
 export const GeographicLabels = memo(function GeographicLabels({ view, placement, disabled, onSelect }: Props) {
   const { labels, metrics, level } = placement;
   const features = useMemo(() => new Map<string, GeographicFeature>(view.collection.features.map(feature => [featureCode(feature, view.level), feature])), [view]);
-  const clickable = view.route.level === 'province';
+  const clickable = view.route.level === 'province' || view.level === 'barangay';
   return <g data-map-labels="" data-font-ready="true" className={disabled ? 'pointer-events-none' : undefined}>
     {labels.map(label => <g key={label.code} transform={`translate(${label.anchor[0]},${label.anchor[1]})`}>
       <text data-label-psgc={label.code} data-label-name={label.name} aria-label={label.name}

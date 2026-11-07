@@ -2,6 +2,7 @@ import { cp, mkdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Plugin } from 'vite';
+import { barangayPilot, barangayPilotPath } from '../src/geography/barangayPilot.ts';
 
 const repo = fileURLToPath(new URL('../../', import.meta.url));
 const geo = 'philippines-json-maps/2023/geojson';
@@ -10,6 +11,7 @@ export const assetPaths = [
   'philippines-json-maps/LICENSE',
   `${geo}/country/lowres`, `${geo}/regions/lowres`, `${geo}/provdists/lowres`,
   ...[1303900000, 1307400000, 1307500000, 1307600000].map(code => `${geo}/provdists/medres/municities-provdist-${code}.0.01.json`),
+  ...[...barangayPilot.keys()].map(code => `${geo}/${barangayPilotPath(code)}`),
 ];
 
 /** Read-only dev mount; production output copies existing files without rewriting them.

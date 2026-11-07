@@ -5,7 +5,7 @@ import { DetailsDrawer } from '../components/DetailsDrawer';
 import { MapCanvas } from '../components/MapCanvas';
 import { locationDetails, selectionRoute, type LocationDetails, type MapView } from '../navigation/view';
 import { parentRoute, parseRoute } from '../navigation/routes';
-import type { GeographicCollection, GeographicFeature } from '../geography/types';
+import { nameProperty, type GeographicCollection, type GeographicFeature } from '../geography/types';
 import { featureCode } from '../geography/psgc';
 import type { MapConfig } from '../config/schema';
 import { profileKeyForSelection } from '../profiles/catalog';
@@ -26,8 +26,9 @@ function MapApplication({ config, national, configUrl }: { config: MapConfig; na
   const { view, navigate } = navigation;
   const [drawerOpen, setDrawerOpen] = useState(() => !window.matchMedia?.('(pointer: coarse)').matches);
   const [selected, setSelected] = useState<{ view: MapView; code: string; details?: LocationDetails }>();
+  const showingBarangays = view?.level === 'barangay';
   useEffect(() => {
-    if (view?.route.level === 'municity') setDrawerOpen(true);
+    if (view?.route.level === 'municity') setDrawerOpen(view.level !== 'barangay');
     else if (view?.route.level === 'national') setDrawerOpen(!window.matchMedia?.('(pointer: coarse)').matches);
   }, [view]);
   const close = useCallback(() => {
@@ -43,6 +44,10 @@ function MapApplication({ config, national, configUrl }: { config: MapConfig; na
     if (!view) return;
     const route = selectionRoute(view, feature, config);
     const code = featureCode(feature, view.level);
+    if (view.level === 'barangay') {
+      setSelected({ view, code });
+      return;
+    }
     if (route) {
       setSelected({ view, code });
       navigate(route);
@@ -59,8 +64,11 @@ function MapApplication({ config, national, configUrl }: { config: MapConfig; na
     catch { navigate({ level: 'national' }); }
   };
   const error = navigation.status === 'error' ? navigation.message : undefined;
+  const selectedBarangay = showingBarangays && selected?.view === view
+    ? view.collection.features.find(feature => featureCode(feature, 'barangay') === selected?.code)?.properties[nameProperty.barangay]
+    : undefined;
   const selection = (selected?.view === view ? selected?.details : undefined) ?? view?.details;
-  const profileKey = navigation.status === 'ready' && view ? profileKeyForSelection(view.route, selection) : undefined;
+  const profileKey = navigation.status === 'ready' && view && (!showingBarangays || drawerOpen) ? profileKeyForSelection(view.route, selection) : undefined;
   const profileState = useGeographicProfile(profileKey);
   return <>
     {view && <MapCanvas view={view} config={config} onSelect={select} selected={selected} busy={navigation.status !== 'ready'} />}
@@ -73,7 +81,7 @@ function MapApplication({ config, national, configUrl }: { config: MapConfig; na
       profile={profileState.profile} sources={profileState.sources} profileLoading={profileState.loading}
       busy={navigation.status === 'loading'} navigationError={error}
       profileError={profileState.error} />
-    <MapStatus error={error} onRetry={navigation.retry} text={navigation.status === 'loading' ? 'Loading…' : view?.statusText ?? ''} warnings={navigation.status === 'ready' ? view?.warnings : undefined} />
+    <MapStatus error={error} onRetry={navigation.retry} text={navigation.status === 'loading' ? 'Loading…' : selectedBarangay ?? view?.statusText ?? ''} warnings={navigation.status === 'ready' ? view?.warnings : undefined} />
   </>;
 }
 

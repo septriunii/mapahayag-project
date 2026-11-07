@@ -46,7 +46,8 @@ export function canonicalSuluRoute(route: MapRoute): MapRoute {
 export function parseRoute(hash: string): MapRoute {
   const route = hash.replace(/^#/, '');
   if (route === '' || route === '/') return { level: 'national' };
-  const match = /^\/?region\/(\d{1,10})(?:\/province\/(\d{1,10}))?(?:\/municity\/(\d{1,10}))?$/.exec(route);
+  // Accept links from the initial pilot that ended with /barangays.
+  const match = /^\/?region\/(\d{1,10})(?:\/province\/(\d{1,10}))?(?:\/municity\/(\d{1,10})(?:\/barangays)?)?$/.exec(route);
   if (!match) throw new Error('Invalid map route');
   const region = normalizePsgc(match[1]);
   const province = match[2] ? normalizePsgc(match[2]) : undefined;
