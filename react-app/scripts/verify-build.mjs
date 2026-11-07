@@ -13,12 +13,13 @@ async function walk(directory) {
     if (entry.isDirectory()) { await walk(full); continue; }
     const relative = path.relative(dist, full);
     if (relative === 'index.html' || relative.startsWith('assets' + path.sep)) continue;
-    const [source, built] = await Promise.all([readFile(path.join(repo, relative)), readFile(full)]);
+    const sourcePath = relative === 'favicon.svg' ? path.join(app, 'public', relative) : path.join(repo, relative);
+    const [source, built] = await Promise.all([readFile(sourcePath), readFile(full)]);
     const hash = buffer => createHash('sha256').update(buffer).digest('hex');
     if (hash(source) !== hash(built)) throw new Error(`Changed asset: ${relative}`);
     copied++; bytes += built.length;
   }
 }
 await walk(dist);
-for (const required of ['data.json', 'huc-boundaries.json', 'geo-nir/country.0.001.json', 'philippines-json-maps/LICENSE', 'philippines-json-maps/2023/geojson/provdists/medres/municities-provdist-1303900000.0.01.json']) await readFile(path.join(dist, required));
+for (const required of ['favicon.svg', 'data.json', 'huc-boundaries.json', 'geo-nir/country.0.001.json', 'philippines-json-maps/LICENSE', 'philippines-json-maps/2023/geojson/provdists/medres/municities-provdist-1303900000.0.01.json']) await readFile(path.join(dist, required));
 console.log(`Verified ${copied} copied assets (${bytes} bytes) are byte-identical to repository sources.`);
