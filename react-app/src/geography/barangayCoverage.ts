@@ -1,5 +1,6 @@
 export interface BarangayCoverage {
   count: number;
+  asset?: string;
   expected?: number;
   high?: boolean;
   omit?: string[];

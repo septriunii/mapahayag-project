@@ -11,18 +11,14 @@ test('partial barangay coverage remains visible after selecting a name', async (
   await expect(page.locator('#status')).toHaveText(`${name} · 1 of 19 barangay boundaries unavailable`);
 });
 
-for (const [name, hash, code] of [
-  ['Manila', '#/region/1300000000/municity/1380600000', '1380600000'],
-  ['Calaca', '#/region/400000000/province/401000000/municity/401007000', '401007000'],
-] as const) {
-  test(`${name} stays at city level`, async ({ page }) => {
-    const requests: string[] = [];
-    page.on('request', request => { if (request.url().includes('bgysubmuns')) requests.push(request.url()); });
-    await page.goto('/' + hash);
-    await expect(page.locator('svg')).toHaveAttribute('data-view', hash);
-    await expect(page.locator('path[data-psgc]')).toHaveCount(1);
-    await expect(page.locator(`path[data-psgc="${code}"]`)).toBeVisible();
-    if (name === 'Calaca') await expect(page.locator('#status')).toContainText('Barangay boundaries unavailable');
-    expect(requests).toEqual([]);
-  });
-}
+test('Calaca stays at city level when barangay boundaries are unavailable', async ({ page }) => {
+  const hash = '#/region/400000000/province/401000000/municity/401007000';
+  const requests: string[] = [];
+  page.on('request', request => { if (request.url().includes('bgysubmuns')) requests.push(request.url()); });
+  await page.goto('/' + hash);
+  await expect(page.locator('svg')).toHaveAttribute('data-view', hash);
+  await expect(page.locator('path[data-psgc]')).toHaveCount(1);
+  await expect(page.locator('path[data-psgc="401007000"]')).toBeVisible();
+  await expect(page.locator('#status')).toContainText('Barangay boundaries unavailable');
+  expect(requests).toEqual([]);
+});

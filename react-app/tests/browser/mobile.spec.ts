@@ -151,18 +151,99 @@ async function settledMap(page: Page) {
 }
 async function tapPolygon(page: Page, code: string) {
   await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
-  // geoPath centroid can land outside concave/island polygons. Choose an actual
-  // hit-test point inside the path, then send a real touchscreen tap there.
+  // geoPath centroid can land outside concave/island polygons. Prefer a point
+  // clear of the edge so touch coordinate rounding cannot pick a neighbor.
   const point = await page.locator(`path[data-psgc="${code}"]`).evaluate(element => {
     const box = element.getBoundingClientRect();
-    for (let y = box.y + 2; y < box.bottom; y += Math.max(2, box.height / 20)) {
-      for (let x = box.x + 2; x < box.right; x += Math.max(2, box.width / 20)) {
-        if (document.elementFromPoint(x, y) === element) return { x, y };
+    let fallback: { x: number; y: number } | undefined;
+    for (let y = Math.ceil(box.y); y < box.bottom; y += Math.max(1, Math.floor(box.height / 20))) {
+      for (let x = Math.ceil(box.x); x < box.right; x += Math.max(1, Math.floor(box.width / 20))) {
+        if (document.elementFromPoint(x, y) !== element) continue;
+        fallback ??= { x, y };
+        if ([-2, 2].every(dx => [-2, 2].every(dy => document.elementFromPoint(x + dx, y + dy) === element))) {
+          return { x, y };
+        }
       }
     }
+    if (fallback) return fallback;
     throw new Error('No visible hit point for ' + element.getAttribute('data-psgc'));
   });
   await page.touchscreen.tap(point.x, point.y);
+}
+
+for (const [name, cityCode, count, barangayCode, barangayName] of [
+  ['Pateros', '1381701000', 10, '1381701007', 'Santa Ana'],
+  ['Quezon City', '1381300000', 142, '1381300022', 'Commonwealth'],
+] as const) {
+  test(`${name} barangays open from the NCR map and support touch selection`, async ({ page }, info) => {
+    const region = '#/region/1300000000';
+    const city = `${region}/municity/${cityCode}`;
+    const requests: string[] = [];
+    page.on('request', request => { if (request.url().includes('bgysubmuns')) requests.push(request.url()); });
+    await page.goto('/' + region);
+    await ready(page, region);
+    await settledMap(page);
+    expect(requests).toHaveLength(0);
+    await tapPolygon(page, cityCode);
+    await ready(page, city);
+    await expect(page.locator('path[data-psgc]')).toHaveCount(count);
+    await expect(page.locator('#status')).toHaveText(`${count} barangays`);
+    await settledMap(page);
+    await expect(page.locator('[data-label-name]').first()).toBeVisible();
+    await page.screenshot({ path: info.outputPath('barangay-mobile.png') });
+    await tapPolygon(page, barangayCode);
+    await expect(page.locator('#status')).toHaveText(barangayName);
+    await expect(page.locator(`path[data-psgc="${barangayCode}"]`)).toHaveAttribute('aria-pressed', 'true');
+    await page.locator('#back-btn').tap();
+    await ready(page, region);
+    expect(requests).toHaveLength(1);
+    expect(requests[0]).toContain(`bgysubmuns-municity-${cityCode}.`);
+  });
+}
+
+for (const [cityName, cityCode, count, barangayCode, barangayName] of [
+  ['Manila', '1380600000', 897, '1380605006', 'Barangay 302'],
+  ['Manila', '1380600000', 897, '1380606073', 'Barangay 467'],
+  ['Caloocan', '1380100000', 193, '1380100190', 'Barangay 176-B'],
+  ['Pasay', '1381100000', 201, '1381100154', 'Barangay 154'],
+] as const) {
+  test(`${cityName} dense-area mobile review pinches and selects ${barangayName}`, async ({ page }, info) => {
+    const region = '#/region/1300000000';
+    const city = `${region}/municity/${cityCode}`;
+    const requests: string[] = [];
+    page.on('request', request => { if (request.url().includes('bgysubmuns')) requests.push(request.url()); });
+    await page.goto('/' + region);
+    await ready(page, region);
+    await settledMap(page);
+    await tapPolygon(page, cityCode);
+    await ready(page, city);
+    await expect(page.locator('path[data-psgc]')).toHaveCount(count);
+    await expect(page.locator('#status')).toHaveText(`${count} barangays`);
+    await settledMap(page);
+
+    const labels = page.locator('text[data-label-psgc]');
+    const initialLabels = await labels.count();
+    expect(initialLabels).toBeGreaterThan(0);
+    expect(initialLabels).toBeLessThan(count);
+    const feature = page.locator(`path[data-psgc="${barangayCode}"]`);
+    const bounds = (await feature.boundingBox())!;
+    const x = bounds.x + bounds.width / 2, y = bounds.y + bounds.height / 2;
+    const touches = (distance: number) => [-distance, distance].map((offset, identifier) => ({
+      identifier, clientX: x + offset, pageX: x + offset, clientY: y, pageY: y,
+    }));
+    const svg = page.locator('svg');
+    await svg.dispatchEvent('touchstart', { touches: touches(18), changedTouches: touches(18) });
+    await svg.dispatchEvent('touchmove', { touches: touches(90), changedTouches: touches(90) });
+    await svg.dispatchEvent('touchend', { touches: [], changedTouches: touches(90) });
+    await expect.poll(() => labels.count()).toBeGreaterThan(initialLabels);
+    await tapPolygon(page, barangayCode);
+    await expect(page.locator('#status')).toHaveText(barangayName);
+    await expect(feature).toHaveAttribute('aria-pressed', 'true');
+    await page.screenshot({ path: info.outputPath('barangays-zoomed.png') });
+    await page.locator('#back-btn').tap();
+    await ready(page, region);
+    expect(requests).toHaveLength(1);
+  });
 }
 
 test('touch drilldown, city reload and parent navigation work on phones/tablets', async ({ page }, info) => {
@@ -224,7 +305,6 @@ test('orientation changes, touch panning and NCR city navigation keep the map us
   await expect(page.locator('svg > g')).not.toHaveAttribute('transform', 'translate(0,0) scale(1)');
   await tapPolygon(page, '1380600000');
   await ready(page, '#/region/1300000000/municity/1380600000');
-  await page.getByRole('button', { name: 'Close details menu' }).tap();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(svg).toHaveAttribute('viewBox', '0 0 390 844');
   await expect(page.locator('svg > g')).toHaveAttribute('transform', 'translate(0,0) scale(1)');

@@ -9,12 +9,12 @@ const repo = fileURLToPath(new URL('../../', import.meta.url));
 const geo = 'philippines-json-maps/2023/geojson';
 export const assetPaths = [
   'data.json', 'huc-boundaries.json', 'geo-nir',
-  'philippines-json-maps/LICENSE',
+  'philippines-json-maps/LICENSE', 'geo-supplemental/LICENSE',
   `${geo}/country/lowres`, `${geo}/regions/lowres`, `${geo}/provdists/lowres`,
   ...[1303900000, 1307400000, 1307500000, 1307600000].map(code => `${geo}/provdists/medres/municities-provdist-${code}.0.01.json`),
 ];
 const barangayPaths = new Set(Object.entries(barangayManifest as Record<string, BarangayCoverage | null>)
-  .flatMap(([code, coverage]) => coverage ? [`${geo}/${barangayBoundaryPath(code, coverage.high)}`] : []));
+  .flatMap(([code, coverage]) => coverage ? [coverage.asset ?? `${geo}/${barangayBoundaryPath(code, coverage.high)}`] : []));
 
 /** Read-only dev mount; production output copies existing files without rewriting them.
  * No symlinks or external runtime URL dependency: dist is self-contained.

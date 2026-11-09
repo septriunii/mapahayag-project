@@ -78,13 +78,13 @@ Baguio City, and Tacloban City remain excluded.
 
 ## Nationwide local review
 
-The map now opens barangay boundaries and names directly for 1,611 cities
-and municipalities. Cebu, Davao, Iloilo, Baguio, and Tacloban use the normal
-routes. The 17 intentional exclusions are the NCR localities.
+The map now opens barangay boundaries and names directly for 1,628 cities
+and municipalities. All 17 NCR localities are enabled with the 1,715 barangays
+listed in the [PSA PSGC summary](https://psa.gov.ph/classification/psgc/summary).
 Only the selected locality's polygon file is fetched. The coverage registry
 is loaded at the first city or municipality visit.
 
-The audit matched 40,114 renderable source polygons against the September
+The audit matched 41,829 renderable source polygons against the September
 30, 2026 PSGC workbook. Eleven localities show a visible notice with the
 number of missing boundaries. Fourteen are held: Calaca after the San Rafael
 merger, five localities without a selectable parent polygon, and eight Special
@@ -98,6 +98,33 @@ barangays in the workbook and the
 Tacloban City's medium-resolution file matched all 138 barangays in the
 workbook and the
 [PSA barangay listing](https://psa.gov.ph/classification/psgc/barangays/0831600000).
+Pateros uses the pinned medium-resolution file, which matched all 10
+barangays in the workbook and the
+[PSA barangay listing](https://psa.gov.ph/classification/psgc/barangays/1381701000).
+Quezon City uses the pinned high-resolution file, which matched all 142
+barangays in the workbook and the
+[PSA barangay listing](https://psa.gov.ph/classification/psgc/barangays/1381300000).
+
+The pinned 2023 Manila city file is empty. The supplemental Manila file
+uses [James Faeldon's MIT-licensed v1.1.0 release](https://github.com/faeldon/philippines-json-maps/releases/tag/v1.1.0)
+and its [medium-resolution GeoJSON](https://raw.githubusercontent.com/faeldon/philippines-json-maps/bf70605/latest/geojson/municities/medres/bgysubmuns-municity-1380600000.0.01.json).
+The downloaded file's SHA-256 is `cdc1222c9ade142e469af9cc9e57396a57c95781c3b5a656d9f0f43f6e9cd835`.
+The supplement retains the 897 records with `geo_level: Bgy` unchanged and
+omits the two non-barangay records, Manila North Cemetery and Tutuban Mall.
+All 897 names, PSGCs, and city assignments match the September 2026 workbook.
+The [PSA Manila listing](https://psa.gov.ph/classification/psgc/barangays/1380600000)
+confirms the city and barangay count.
+
+Caloocan uses the same release's [medium-resolution GeoJSON](https://raw.githubusercontent.com/faeldon/philippines-json-maps/bf70605/latest/geojson/municities/medres/bgysubmuns-municity-1380100000.0.01.json).
+The downloaded file's SHA-256 is `b0739e298e3ce1d7adbc3b935f77fa4e3f5f01951aadee06456f2e44404c355d`.
+The original map predates the [PSA-recorded split](https://psa.gov.ph/content/third-quarter-2024-psgc-updates-creation-two-barangays-division-one-barangay-six)
+of Barangay 176 into six. All 193 names, codes, and parent assignments match
+the workbook. The six successor polygons are derived from the survey bearings
+and distances in [Republic Act 11993](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97271).
+The upstream project fitted their placement to the existing map because the
+law omits survey monument coordinates. The underlying boundaries are by
+NAMRIA and PSA, distributed by [OCHA HDX](https://data.humdata.org/dataset/cod-ab-phl)
+under CC BY-IGO. The other 13 newly enabled NCR cities use the pinned files.
 
 The workbook was retrieved from the public
 [PSGC API repository mirror](https://github.com/rbillyjames0221/psgc-api/blob/main/seed/PSGC-3Q-2026-Publication-Datafile.xlsx)

@@ -66,7 +66,8 @@ export class GeographicRepository {
     const coverage = (manifest as Record<string, BarangayCoverage | null | undefined>)[city];
     if (coverage === null) return 'unavailable';
     if (!coverage) return;
-    return this.cache.load(this.geography(barangayBoundaryPath(city, coverage.high)), 'geography:barangay', input => {
+    const url = coverage.asset ? this.asset(coverage.asset) : this.geography(barangayBoundaryPath(city, coverage.high));
+    return this.cache.load(url, 'geography:barangay', input => {
       const source = barangaySource.parse(input);
       const omitted = new Set(coverage.omit);
       const kept = source.features.filter(feature => {

@@ -65,7 +65,7 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
     if (route.level === 'province') return regionView;
     const city = find(regional.collection, 'municity', route.municity);
     if (route.province && featureCode(city, 'province') !== route.province) throw new Error('City does not belong to this NCR district');
-    return isolatedCity(city, { level: 'municity', region: route.region, municity: route.municity }, regionDetails.name, config, regional.warnings);
+    return resolveCityView(city, { level: 'municity', region: route.region, municity: route.municity }, regionDetails.name, config, regional.warnings, repository);
   }
   if (!route.province) throw new Error('A province is required for this city / municipality');
   const province = find(regional.collection, 'province', route.province);
@@ -80,7 +80,15 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
   };
   if (route.level === 'province') return provinceView;
   const city = find(provincial.collection, 'municity', route.municity);
-  const cityView = isolatedCity(city, route, provinceDetails.name, config, warnings);
+  return resolveCityView(city, route, provinceDetails.name, config, warnings, repository);
+}
+
+async function resolveCityView(city: GeographicFeature, route: Extract<MapRoute, { level: 'municity' }>, parent: string, config: MapConfig, warnings: string[], repository: GeographicRepository): Promise<MapView> {
+  const details = locationDetails(city, 'municity', parent, config);
+  const cityView: MapView = {
+    route, level: 'municity', collection: { type: 'FeatureCollection', features: [city] },
+    warnings, details, backLabel: parent, statusText: details.name,
+  };
   const barangays = await repository.barangays(route.municity);
   if (barangays === 'unavailable') return { ...cityView, coverageNote: 'Barangay boundaries unavailable' };
   if (!barangays) return cityView;
@@ -90,11 +98,6 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
     ...cityView, ...barangays, statusText: `${count} barangays`,
     ...(missing > 0 ? { coverageNote: `${missing} of ${barangays.expected} barangay boundaries unavailable` } : {}),
   };
-}
-
-function isolatedCity(city: GeographicFeature, route: MapRoute, parent: string, config: MapConfig, warnings: string[]): MapView {
-  const details = locationDetails(city, 'municity', parent, config);
-  return { route, level: 'municity', collection: { type: 'FeatureCollection', features: [city] }, warnings, details, backLabel: parent, statusText: details.name };
 }
 
 export function selectionRoute(view: MapView, feature: GeographicFeature, config: MapConfig): MapRoute | undefined {

@@ -25,7 +25,7 @@ it('validates every published barangay file and its unique current PSGCs', async
   expect(seen.size).toBe(audit.totals.polygons);
 }, 30_000);
 
-it('loads one file on drilldown, covers enabled cities, and honors the exclusions', async () => {
+it('loads one file on drilldown and covers the reviewed cities outside NCR', async () => {
   const { repository, config, calls } = geographyFixture();
   const { collection } = await repository.national();
   const city = '#/region/900000000/province/907300000/municity/931700000';
@@ -45,7 +45,27 @@ it('loads one file on drilldown, covers enabled cities, and honors the exclusion
   expect((await resolveView(baguio, config, collection, repository)).collection.features).toHaveLength(129);
   const tacloban = parseRoute('#/region/800000000/province/803700000/municity/831600000');
   expect((await resolveView(tacloban, config, collection, repository)).collection.features).toHaveLength(138);
-  expect(await repository.barangays(1380600000)).toBeUndefined();
+});
+
+it('opens all 17 NCR localities with the PSA barangay counts', async () => {
+  const { repository, config } = geographyFixture();
+  const { collection } = await repository.national();
+  const ncr = '#/region/1300000000';
+  const counts = {
+    1380100000: 193, 1380200000: 20, 1380300000: 23, 1380400000: 21, 1380500000: 27,
+    1380600000: 897, 1380700000: 16, 1380800000: 9, 1380900000: 18, 1381000000: 16,
+    1381100000: 201, 1381200000: 30, 1381300000: 142, 1381400000: 21, 1381500000: 38,
+    1381600000: 33, 1381701000: 10,
+  };
+  const region = await resolveView(parseRoute(ncr), config, collection, repository);
+  expect(region.collection.features.map(feature => featureCode(feature, 'municity')).sort()).toEqual(Object.keys(counts));
+  for (const [code, count] of Object.entries(counts)) {
+    const view = await resolveView(parseRoute(`${ncr}/municity/${code}`), config, collection, repository);
+    expect(view.level, code).toBe('barangay');
+    expect(view.collection.features, code).toHaveLength(count);
+    expect(view.coverageNote, code).toBeUndefined();
+    expect(formatRoute(parentRoute(view.route))).toBe(ncr);
+  }
 });
 
 it('uses current names and codes and distinguishes partial from unavailable coverage', async () => {

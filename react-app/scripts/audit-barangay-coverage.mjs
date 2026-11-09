@@ -8,6 +8,10 @@ const facts = read(new URL('react-app/src/data/municipal-facts.json', root)).rec
 const index = read(new URL('psgc-index.json', root)).municities;
 const mapped = new Map(facts.map(row => [row.psgc, row]));
 const routes = new Set(index.map(row => String(row.psgc)));
+const supplemental = new Map([
+  ['1380100000', 'geo-supplemental/bgysubmuns-municity-1380100000.0.01.json'],
+  ['1380600000', 'geo-supplemental/bgysubmuns-municity-1380600000.0.01.json'],
+]);
 // These routes are indexed but the existing municipality view has no polygon.
 const missingMapGeometry = new Set(['403425000', '405807000', '806419000', '1204712000', '1705321000']);
 // PSA explicitly corrected the name after the source geometry vintage.
@@ -32,8 +36,8 @@ function validGeometry(geometry) {
     geometry.coordinates.every(polygon => polygon.length > 0 && polygon.every(validRing));
 }
 
-function inspect(parent, current, records, high) {
-  const url = new URL(`${high ? 'hires' : 'medres'}/bgysubmuns-municity-${parent}.${high ? '0.1' : '0.01'}.json`, sourceRoot);
+function inspect(parent, current, records, high, asset) {
+  const url = asset ? new URL(asset, root) : new URL(`${high ? 'hires' : 'medres'}/bgysubmuns-municity-${parent}.${high ? '0.1' : '0.01'}.json`, sourceRoot);
   if (!existsSync(url)) return;
   const features = read(url).features;
   if (!Array.isArray(features)) return;
@@ -73,12 +77,8 @@ function inspect(parent, current, records, high) {
 
 const enabled = {};
 const unavailable = new Set();
-const partial = [], held = [], intentional = [];
+const partial = [], held = [];
 for (const [current, city] of Object.entries(official).sort(([a], [b]) => a.localeCompare(b))) {
-  if (city.region === '1300000000') {
-    intentional.push([current, city.name, city.barangays.length]);
-    continue;
-  }
   const fact = mapped.get(current);
   const parent = fact && numeric(fact.mapPsgc);
   if (!parent || !routes.has(parent) || fact.region !== city.region) {
@@ -90,8 +90,9 @@ for (const [current, city] of Object.entries(official).sort(([a], [b]) => a.loca
     continue;
   }
   const records = new Map(city.barangays.map(row => [row[0], row]));
-  const medium = inspect(parent, current, records, false);
-  const high = !medium || medium.count < records.size || medium.unmatched.length ? inspect(parent, current, records, true) : undefined;
+  const asset = supplemental.get(parent);
+  const medium = inspect(parent, current, records, false, asset);
+  const high = !asset && (!medium || medium.count < records.size || medium.unmatched.length) ? inspect(parent, current, records, true) : undefined;
   const candidates = [medium, high].filter(result => result?.count > 0 && result.unmatched.length === 0);
   const best = candidates.sort((a, b) => b.count - a.count)[0];
   if (!best) {
@@ -101,6 +102,7 @@ for (const [current, city] of Object.entries(official).sort(([a], [b]) => a.loca
   }
   enabled[parent] = {
     count: best.count,
+    ...(asset ? { asset } : {}),
     ...(best.high ? { high: true } : {}),
     ...(best.expected !== best.count ? { expected: best.expected } : {}),
     ...(best.missing.length || best.retired.length ? { omit: [...best.missing, ...best.retired].map(numeric) } : {}),
@@ -111,8 +113,8 @@ for (const [current, city] of Object.entries(official).sort(([a], [b]) => a.loca
 const polygons = Object.values(enabled).reduce((sum, entry) => sum + entry.count, 0);
 const report = {
   snapshot: '2026-09-30',
-  totals: { enabled: Object.keys(enabled).length, polygons, partial: partial.length, held: held.length, excluded: intentional.length },
-  partial, held, excluded: intentional,
+  totals: { enabled: Object.keys(enabled).length, polygons, partial: partial.length, held: held.length, excluded: 0 },
+  partial, held, excluded: [],
 };
 console.log(JSON.stringify(report, null, 2));
 if (process.argv.includes('--write')) {

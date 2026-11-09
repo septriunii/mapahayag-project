@@ -1,11 +1,11 @@
 {
   "snapshot": "2026-09-30",
   "totals": {
-    "enabled": 1611,
-    "polygons": 40114,
+    "enabled": 1628,
+    "polygons": 41829,
     "partial": 11,
     "held": 14,
-    "excluded": 17
+    "excluded": 0
   },
   "partial": [
     [
@@ -233,91 +233,5 @@
       9
     ]
   ],
-  "excluded": [
-    [
-      "1380100000",
-      "City of Caloocan",
-      193
-    ],
-    [
-      "1380200000",
-      "City of Las Piñas",
-      20
-    ],
-    [
-      "1380300000",
-      "City of Makati",
-      23
-    ],
-    [
-      "1380400000",
-      "City of Malabon",
-      21
-    ],
-    [
-      "1380500000",
-      "City of Mandaluyong",
-      27
-    ],
-    [
-      "1380600000",
-      "City of Manila",
-      897
-    ],
-    [
-      "1380700000",
-      "City of Marikina",
-      16
-    ],
-    [
-      "1380800000",
-      "City of Muntinlupa",
-      9
-    ],
-    [
-      "1380900000",
-      "City of Navotas",
-      18
-    ],
-    [
-      "1381000000",
-      "City of Parañaque",
-      16
-    ],
-    [
-      "1381100000",
-      "Pasay City",
-      201
-    ],
-    [
-      "1381200000",
-      "City of Pasig",
-      30
-    ],
-    [
-      "1381300000",
-      "Quezon City",
-      142
-    ],
-    [
-      "1381400000",
-      "City of San Juan",
-      21
-    ],
-    [
-      "1381500000",
-      "City of Taguig",
-      38
-    ],
-    [
-      "1381600000",
-      "City of Valenzuela",
-      33
-    ],
-    [
-      "1381701000",
-      "Pateros",
-      10
-    ]
-  ]
+  "excluded": []
 }

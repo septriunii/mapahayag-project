@@ -87,6 +87,8 @@ test('NCR bypasses districts, retains seam background and restores old district 
   await expect(page.locator('path.region-bg')).toHaveCount(1);
   await activate(page, '1380600000');
   await ready(page, '#/region/1300000000/municity/1380600000');
+  await expect(page.locator('path[data-psgc]')).toHaveCount(897);
+  await page.getByRole('button', { name: 'Open details menu' }).click();
   await expect(page.locator('#detail-lgu-name')).toHaveText('City of Manila');
   await page.locator('#back-btn').click();
   await ready(page, '#/region/1300000000');
