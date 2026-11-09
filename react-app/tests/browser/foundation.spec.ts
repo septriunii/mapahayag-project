@@ -100,9 +100,9 @@ test('keeps the baseline welcome drawer shell with approved Segoe UI information
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);
   const baseline = await context.newPage();
   await baseline.setViewportSize({ width: 1440, height: 900 });
-  await baseline.route('**/baseline.html', route => route.fulfill({ contentType: 'text/html', body: readFileSync('../index.html', 'utf8') }));
+  await baseline.route('**/legacy/baseline.html', route => route.fulfill({ contentType: 'text/html', body: readFileSync('../legacy/index.html', 'utf8') }));
   await baseline.route('https://unpkg.com/d3@7/dist/d3.min.js', route => route.fulfill({ contentType: 'text/javascript', body: readFileSync('node_modules/d3/dist/d3.min.js', 'utf8') }));
-  await baseline.goto('/baseline.html');
+  await baseline.goto('/legacy/baseline.html');
   await expect(baseline.locator('path.region')).toHaveCount(18);
   await expect(baseline.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
   // The requested sidebar font intentionally changes glyph metrics and wrapping.

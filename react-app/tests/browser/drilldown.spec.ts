@@ -202,7 +202,7 @@ test('regional, provincial and NCR paths match legacy rendering', async ({ page,
   await page.setViewportSize({ width: 1440, height: 900 });
   const baseline = await context.newPage();
   await baseline.setViewportSize({ width: 1440, height: 900 });
-  await baseline.route('**/baseline.html', route => route.fulfill({ contentType: 'text/html', body: readFileSync('../index.html', 'utf8') }));
+  await baseline.route('**/legacy/baseline.html', route => route.fulfill({ contentType: 'text/html', body: readFileSync('../legacy/index.html', 'utf8') }));
   await baseline.route('https://unpkg.com/d3@7/dist/d3.min.js', route => route.fulfill({ contentType: 'text/javascript', body: readFileSync('node_modules/d3/dist/d3.min.js', 'utf8') }));
   const snapshot = () => ({
     paths: Array.from(document.querySelectorAll('svg path[data-psgc], svg path.province, svg path.municity, svg path.huc-city')).map(element => element.getAttribute('d')).sort(),
@@ -213,7 +213,7 @@ test('regional, provincial and NCR paths match legacy rendering', async ({ page,
   for (const hash of ['#/region/200000000', '#/region/900000000/province/907200000', '#/region/1300000000', '#/region/1800000000/province/604500000']) {
     await page.goto('/' + hash);
     await ready(page, hash);
-    await baseline.goto('/baseline.html' + hash);
+    await baseline.goto('/legacy/baseline.html' + hash);
     // A fresh boot avoids the legacy popstate handler treating externally
     // edited hashes as national when history.state lacks its custom payload.
     await baseline.reload();

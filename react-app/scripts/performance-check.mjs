@@ -20,19 +20,19 @@ const label = process.env.MAPAHAYAG_PERF_LABEL ?? 'current';
 assert.ok(Number.isInteger(samples) && samples >= 1 && samples <= 20);
 assert.match(label, /^[a-z0-9-]+$/);
 const requests = [], prepared = new Map();
+const legacyEntry = 'legacy/index.html';
 const server = createServer(async (req, res) => {
   try {
     const relative = decodeURIComponent(new URL(req.url, 'http://localhost').pathname).slice(1);
     let content = prepared.get(relative);
     if (!content) {
       let filename;
-      if (relative === 'legacy.html') filename = path.join(repo, 'index.html');
-      else if (relative === 'react.html') filename = path.join(app, 'dist/index.html');
+      if (relative === 'react.html') filename = path.join(app, 'dist/index.html');
       else if (relative === 'vendor/d3.min.js') filename = path.join(app, 'node_modules/d3/dist/d3.min.js');
       else filename = path.resolve(relative.startsWith('assets/') ? path.join(app, 'dist') : repo, relative);
       assert.ok(filename.startsWith(repo + path.sep));
       let body = await readFile(filename);
-      if (relative === 'legacy.html') body = Buffer.from(body.toString().replace('https://unpkg.com/d3@7/dist/d3.min.js', '/vendor/d3.min.js'));
+      if (relative === legacyEntry) body = Buffer.from(body.toString().replace('https://unpkg.com/d3@7/dist/d3.min.js', '/vendor/d3.min.js'));
       const type = relative.endsWith('.json') ? 'application/json' : relative.endsWith('.js') ? 'text/javascript' : relative.endsWith('.css') ? 'text/css' : 'text/html';
       content = { body, gzip: gzipSync(body), type, etag: '"' + createHash('sha256').update(body).digest('hex') + '"' };
       prepared.set(relative, content);
@@ -54,7 +54,7 @@ const profiles = [
 ];
 const report = {
   label, date: new Date().toISOString(), commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: repo, encoding: 'utf8' }).trim(),
-  baseline: execFileSync('git', ['rev-parse', 'main'], { cwd: repo, encoding: 'utf8' }).trim(),
+  baseline: 'e1ad7e6783956ca96d4158fdb44406d06dd16caf',
   workingTreeDirty: Boolean(execFileSync('git', ['status', '--porcelain'], { cwd: repo, encoding: 'utf8' }).trim()),
   appDiffSha256: createHash('sha256').update(execFileSync('git', ['diff', 'HEAD', '--', 'react-app/src'], { cwd: repo })).digest('hex'),
   environment: { platform: process.platform, node: process.version, cpu: os.cpus()[0].model, cores: os.cpus().length, headless: true },
@@ -142,7 +142,7 @@ try {
       await session.send('Emulation.setCPUThrottlingRate', { rate: profile.cpu });
       await session.send('Network.emulateNetworkConditions', { offline: false, latency: profile.latency, downloadThroughput: profile.download, uploadThroughput: profile.upload });
       const firstRequest = requests.length;
-      await page.goto(`${origin}/${kind}.html`, { waitUntil: 'domcontentloaded' });
+      await page.goto(`${origin}/${kind === 'legacy' ? legacyEntry : 'react.html'}`, { waitUntil: 'domcontentloaded' });
       await waitReady(page, kind, 'national', '#/');
       const domReadyMs = await page.evaluate(() => performance.now());
       await fullyVisible(page);

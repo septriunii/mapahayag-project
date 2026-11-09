@@ -7,7 +7,7 @@ import { chromium } from '@playwright/test';
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const server = createServer(async (req, res) => {
   try {
-    const relative = decodeURIComponent(new URL(req.url, 'http://localhost').pathname).slice(1) || 'index.html';
+    const relative = decodeURIComponent(new URL(req.url, 'http://localhost').pathname).slice(1) || 'legacy/index.html';
     const filename = path.resolve(root, relative);
     if (!filename.startsWith(root)) { res.writeHead(403).end(); return; }
     const data = await readFile(filename);
@@ -21,7 +21,7 @@ let browser;
 const summary = [];
 try {
   browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH } : {}) });
-  for (const entry of ['index.html', 'index-no-nir.html', 'legacy/index.html', 'legacy/index-no-nir.html']) {
+  for (const entry of ['legacy/index.html', 'legacy/index-no-nir.html']) {
     const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));

@@ -12,7 +12,7 @@ With continuous improvements in geographic accuracy, data integration, performan
 
 The project is envisioned as a reusable foundation for various applications, including:
 
-- **Geographic Exploration** — Explore regions, provinces, cities, municipalities, and eventually barangays.
+- **Geographic Exploration** — Explore regions, provinces, cities, municipalities, and barangays.
 - **Data Visualization** — Present population, demographics, economic indicators, and other geographic statistics.
 - **Disaster Risk Management** — Visualize flood-prone areas, hazard zones, evacuation centers, and disaster-related information.
 - **Infrastructure Mapping** — Locate schools, hospitals, roads, public facilities, and government services.
@@ -24,13 +24,7 @@ Ultimately, **MAPA-Hayag** aspires to become an open, extensible, and community-
 
 ## Technology Stack
 
-**Current:** HTML5, CSS3, Vanilla JavaScript, D3.js, GeoJSON/TopoJSON, JSON
-
-**Planned:** React.js, TypeScript, Tailwind CSS, Vite, D3.js, GeoJSON/TopoJSON
-
-An isolated React migration preview is available in [`react-app/`](react-app/README.md), including national → regional → provincial → city/municipality drilldown, validated configuration, cached geographic services, NIR/legacy alignment and browser navigation. The root HTML applications remain the production entry points, with runnable comparison copies in [`legacy/`](legacy/README.md). See the [baseline contract](docs/migration/BASELINE.md) and [verification results](docs/migration/RESULTS.md) for current validation and remaining acceptance gates.
-
-The [browser/mobile and performance report](docs/migration/RELEASE-CHECKS.md) records the expanded browser matrix, narrow-screen fixes and measured memory/startup tradeoffs. Production cutover remains a separate decision.
+The primary app on `main` is built with React, TypeScript, Tailwind CSS, Vite, D3.js, and GeoJSON. See [`react-app/`](react-app/README.md) for local setup and build instructions. The original HTML apps are archived as runnable references in [`legacy/`](legacy/README.md).
 
 ## Current Features
 
@@ -49,9 +43,9 @@ The [browser/mobile and performance report](docs/migration/RELEASE-CHECKS.md) re
 | Regions | Supported |
 | Provinces / Districts | Supported |
 | Cities / Municipalities | Supported |
-| Barangays | Not yet supported |
+| Barangays | Available nationwide where verified boundaries exist, including all 1,715 barangays in NCR |
 
-Certain geographic areas, including highly urbanized cities and NCR districts, require special handling.
+The [coverage audit](docs/migration/BARANGAY-PREFLIGHT.md#nationwide-local-review) records geographic exceptions and boundary sources.
 
 ## Contributing
 

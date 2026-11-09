@@ -1,6 +1,6 @@
-# MAPA-Hayag React foundation
+# MAPA-Hayag React app
 
-This is an isolated migration preview, not the production application. Root `index.html` and `index-no-nir.html` remain the deployed entry points; `legacy/` contains runnable reference copies. Baseline: `e1ad7e6`. See [baseline contract](../docs/migration/BASELINE.md) and [verification results](../docs/migration/RESULTS.md).
+This is the primary application on `main`. The original HTML apps are runnable reference copies under [`legacy/`](../legacy/README.md). See the [baseline contract](../docs/migration/BASELINE.md) and [migration results](../docs/migration/RESULTS.md) for the original comparison.
 
 ## Requirements and local use
 
@@ -12,17 +12,13 @@ pnpm --dir react-app install --frozen-lockfile
 pnpm --dir react-app dev
 ```
 
-The full geographic repository is large. For a smaller checkout use Git's sparse checkout for `2023/geojson/country/lowres`, `2023/geojson/regions/lowres`, `2023/geojson/provdists/lowres`, and `2023/geojson/provdists/medres`; keep the exact gitlink revision. This task initialized those directories without changing the pinned commit.
+The full geographic repository is large. The [GitHub Pages workflow](../.github/workflows/pages.yml) lists the directories needed for a sparse checkout at the pinned gitlink revision.
 
 Open the local URL printed by Vite. Default alignment is NIR. Use `/?alignment=legacy` for the 17-region alignment. The validated configuration also accepts `alignment: "nir" | "legacy"`; existing data.json without this field defaults to NIR. Invalid alignment values produce a visible error.
 
 Root data.json is mounted read-only in development. geoBasePath resolves relative to its configuration URL, preserving existing relative and HTTP asset bases. PSGCs accept numbers or digit strings; leading zeros are normalized only for matching. No current/old code conversion or new administrative classification is inferred. Duplicate records and malformed configuration fail validation rather than silently overwriting data. Display values and descriptions are React text, so supplied HTML is displayed literally.
 
 ## Checks
-
-The local regional expansion now covers all 18 displayed regions with the existing sidebar design. See [regional profile verification and local review](../docs/migration/REGIONAL-PROFILES.md). It is awaiting local review and has not been pushed or deployed.
-
-The local geographic-profile pilot adds source-attributed sidebar content for the Philippines and Region IX only. See the [profile data, verification notes and future-region template](../docs/migration/GEOGRAPHIC-PROFILES.md). Region IX statistics include Sulu, while its existing map geometry does not; the sidebar explains that difference. This pilot has not been pushed or deployed.
 
 ```sh
 pnpm --dir react-app check:resources
@@ -47,7 +43,7 @@ pnpm --dir react-app test:browser
 
 For the Chromium/Firefox/WebKit desktop and emulated Pixel/iPhone/iPad matrix, install all three Playwright browsers and set `MAPAHAYAG_CROSS_BROWSER=1` before running `test:browser --workers=1`. The default single-browser suite continues to support an installed Edge executable. `test:performance` compares the production bundle with unchanged original HTML on the same local gzip server, with five runs per app/profile; it writes ignored performance-results/. See the [release checks](../docs/migration/RELEASE-CHECKS.md) for results, reproduction commands and emulation limits.
 
-For manual legacy comparison, serve the repository root using any static HTTP server, then open `/legacy/index.html` or `/legacy/index-no-nir.html`. The root production pages work as before. Do not open via file:// because the applications fetch JSON.
+For manual legacy comparison, serve the repository root using a static HTTP server, then open `/legacy/index.html` or `/legacy/index-no-nir.html`. The applications fetch JSON over HTTP.
 
 ## Implemented in this increment
 
@@ -62,15 +58,11 @@ The React application supports full drilldown locally and on Vercel. Reference c
 
 The source includes GeoJSON only in its runtime paths; no TopoJSON decoder is introduced or needed for parity. No geometry is regenerated. Known null/malformed source geometry is reported; it is not repaired or invented.
 
-## Vercel React preview
+## Deployment
 
-[Open the verified React preview](https://mapahayag-5oiie6do2-septriuniis-projects.vercel.app/), or [the latest branch preview](https://mapahayag-ph-git-codex-react-migrat-3e280f-septriuniis-projects.vercel.app/). Sign in with your Vercel account if prompted. Production remains at the original domain.
+[Production](https://mapahayag-ph.vercel.app/) builds from `main`. The Vercel build guard accepts `main` and allows `codex/react-migration-drilldown` for previews. Vercel builds from the repository root so Vite can access the adjacent geographic datasets.
 
-The build emits self-contained static files in react-app/dist. The asset plugin copies the existing configuration, geographic overrides, runtime geographic files and dataset license into dist and fails if required files are absent. It includes all low-resolution province files and the four medium-resolution NCR district files, avoiding the unused medium-resolution provinces and all higher-resolution/barangay datasets.
-
-The migration branch contains root `vercel.json` for the existing `mapahayag-ph` project's Preview environment. The repository root stays the build root so Vite can copy the adjacent geographic datasets. Installation uses pinned pnpm 11.25.0 and the frozen lockfile; the build runs TypeScript/Vite and verifies copied asset hashes. Output is `react-app/dist`. The existing Vercel project uses Node 24. The public HTTPS geographic submodule must be available at its recorded gitlink revision; missing assets fail the build. Do not point the root directory at react-app, because that would exclude the adjacent data.
-
-`scripts/check-preview-target.mjs` scopes Vercel cloud builds to the reviewed `codex/react-migration-drilldown` branch. The guard runs before installation and before building. The production domain now serves this reviewed React release; `main` remains available as the original reference branch.
+Vercel and GitHub Pages both publish `react-app/dist`. Installation uses Node 24, pinned pnpm 11.25.0, and the frozen lockfile. The build copies the configuration, pinned geography, supplemental assets, and licenses into the output and verifies copied asset hashes. GitHub Pages uses a relative base for the project URL.
 
 To run the browser suite against a deployed preview, set `MAPAHAYAG_TEST_URL` to its HTTPS origin and run `test:browser`. Protected previews can use a temporary deployment share token supplied through `MAPAHAYAG_PREVIEW_BYPASS` in the process environment. The runner exchanges its `_vercel_share` URL parameter for cookies in memory, including for the mobile browser context; it never saves the token or adds it to third-party requests. Do not commit share tokens. Use `test:deployment` for the deployment-target guards, and `check:preview` to compare all deployed geographic JSON values, license text and JS/CSS bundles with the local build. These checks use Node 24. Cloud deployment and browser-test results are recorded in docs/migration/RESULTS.md.
 

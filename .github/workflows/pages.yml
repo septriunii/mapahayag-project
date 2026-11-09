@@ -25,9 +25,7 @@ jobs:
         with:
           submodules: false   # handled manually below for sparse checkout
 
-      # Sparse-checkout only the ~10 MB the map actually uses.
-      # The full philippines-json-maps repo is ~1.7 GB; this avoids pulling
-      # hires files, older datasets, and everything else the map never loads.
+      # Fetch the pinned datasets the React build copies into its output.
       - name: Sparse-checkout geo data
         run: |
           SUBMODULE_URL=$(git config --file .gitmodules submodule.philippines-json-maps.url)
@@ -45,16 +43,29 @@ jobs:
             2023/geojson/country/lowres \
             2023/geojson/regions/lowres \
             2023/geojson/provdists/lowres \
-            2023/geojson/provdists/medres
+            2023/geojson/provdists/medres \
+            2023/geojson/municities/medres \
+            2023/geojson/municities/hires
 
           git -C philippines-json-maps fetch --depth=1 origin "$SUBMODULE_SHA"
           git -C philippines-json-maps checkout "$SUBMODULE_SHA"
 
       - uses: actions/configure-pages@v5
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build React for GitHub Pages
+        working-directory: react-app
+        run: |
+          npx --yes pnpm@11.25.0 install --frozen-lockfile
+          npx --yes pnpm@11.25.0 run build --base ./
+          npx --yes pnpm@11.25.0 run check:build
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: react-app/dist
 
       - uses: actions/deploy-pages@v4
         id: deployment
