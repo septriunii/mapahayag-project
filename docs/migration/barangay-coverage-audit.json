@@ -1,11 +1,11 @@
 {
   "snapshot": "2026-09-30",
   "totals": {
-    "enabled": 1608,
-    "polygons": 39667,
+    "enabled": 1611,
+    "polygons": 40114,
     "partial": 11,
     "held": 14,
-    "excluded": 20
+    "excluded": 17
   },
   "partial": [
     [
@@ -235,16 +235,6 @@
   ],
   "excluded": [
     [
-      "0631000000",
-      "City of Iloilo",
-      180
-    ],
-    [
-      "0831600000",
-      "City of Tacloban",
-      138
-    ],
-    [
       "1380100000",
       "City of Caloocan",
       193
@@ -328,11 +318,6 @@
       "1381701000",
       "Pateros",
       10
-    ],
-    [
-      "1430300000",
-      "City of Baguio",
-      129
     ]
   ]
 }

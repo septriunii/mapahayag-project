@@ -13,9 +13,6 @@ test('partial barangay coverage remains visible after selecting a name', async (
 
 for (const [name, hash, code] of [
   ['Manila', '#/region/1300000000/municity/1380600000', '1380600000'],
-  ['Iloilo City', '#/region/600000000/province/603000000/municity/631000000', '631000000'],
-  ['Baguio City', '#/region/1400000000/province/1401100000/municity/1430300000', '1430300000'],
-  ['Tacloban City', '#/region/800000000/province/803700000/municity/831600000', '831600000'],
   ['Calaca', '#/region/400000000/province/401000000/municity/401007000', '401007000'],
 ] as const) {
   test(`${name} stays at city level`, async ({ page }) => {

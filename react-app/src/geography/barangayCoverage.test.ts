@@ -25,7 +25,7 @@ it('validates every published barangay file and its unique current PSGCs', async
   expect(seen.size).toBe(audit.totals.polygons);
 }, 30_000);
 
-it('loads one file on drilldown, includes Cebu and Davao, and honors the exclusions', async () => {
+it('loads one file on drilldown, covers enabled cities, and honors the exclusions', async () => {
   const { repository, config, calls } = geographyFixture();
   const { collection } = await repository.national();
   const city = '#/region/900000000/province/907300000/municity/931700000';
@@ -39,9 +39,13 @@ it('loads one file on drilldown, includes Cebu and Davao, and honors the exclusi
   expect((await resolveView(cebu, config, collection, repository)).collection.features).toHaveLength(80);
   const davao = parseRoute('#/region/1100000000/province/1102400000/municity/1130700000');
   expect((await resolveView(davao, config, collection, repository)).collection.features).toHaveLength(182);
-  for (const id of [1380600000, 631000000, 1430300000, 831600000]) {
-    expect(await repository.barangays(id)).toBeUndefined();
-  }
+  const iloilo = parseRoute('#/region/600000000/province/603000000/municity/631000000');
+  expect((await resolveView(iloilo, config, collection, repository)).collection.features).toHaveLength(180);
+  const baguio = parseRoute('#/region/1400000000/province/1401100000/municity/1430300000');
+  expect((await resolveView(baguio, config, collection, repository)).collection.features).toHaveLength(129);
+  const tacloban = parseRoute('#/region/800000000/province/803700000/municity/831600000');
+  expect((await resolveView(tacloban, config, collection, repository)).collection.features).toHaveLength(138);
+  expect(await repository.barangays(1380600000)).toBeUndefined();
 });
 
 it('uses current names and codes and distinguishes partial from unavailable coverage', async () => {

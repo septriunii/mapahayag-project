@@ -8,7 +8,6 @@ const facts = read(new URL('react-app/src/data/municipal-facts.json', root)).rec
 const index = read(new URL('psgc-index.json', root)).municities;
 const mapped = new Map(facts.map(row => [row.psgc, row]));
 const routes = new Set(index.map(row => String(row.psgc)));
-const excluded = new Set(['0631000000', '1430300000', '0831600000']);
 // These routes are indexed but the existing municipality view has no polygon.
 const missingMapGeometry = new Set(['403425000', '405807000', '806419000', '1204712000', '1705321000']);
 // PSA explicitly corrected the name after the source geometry vintage.
@@ -76,7 +75,7 @@ const enabled = {};
 const unavailable = new Set();
 const partial = [], held = [], intentional = [];
 for (const [current, city] of Object.entries(official).sort(([a], [b]) => a.localeCompare(b))) {
-  if (city.region === '1300000000' || excluded.has(current)) {
+  if (city.region === '1300000000') {
     intentional.push([current, city.name, city.barangays.length]);
     continue;
   }

@@ -78,18 +78,26 @@ Baguio City, and Tacloban City remain excluded.
 
 ## Nationwide local review
 
-The map now opens barangay boundaries and names directly for 1,608 cities
-and municipalities. Cebu and Davao use the normal routes. The 20 intentional
-exclusions are the 17 NCR localities and Iloilo, Baguio, and Tacloban cities.
+The map now opens barangay boundaries and names directly for 1,611 cities
+and municipalities. Cebu, Davao, Iloilo, Baguio, and Tacloban use the normal
+routes. The 17 intentional exclusions are the NCR localities.
 Only the selected locality's polygon file is fetched. The coverage registry
 is loaded at the first city or municipality visit.
 
-The audit matched 39,667 renderable source polygons against the September
+The audit matched 40,114 renderable source polygons against the September
 30, 2026 PSGC workbook. Eleven localities show a visible notice with the
 number of missing boundaries. Fourteen are held: Calaca after the San Rafael
 merger, five localities without a selectable parent polygon, and eight Special
 Geographic Area municipalities without a verified parent in the existing map.
 The [coverage audit](barangay-coverage-audit.json) lists each exception.
+All 180 Iloilo City polygons matched the workbook and the
+[PSA barangay listing](https://psa.gov.ph/classification/psgc/barangays/0631000000).
+Baguio City uses the pinned high-resolution file, which matched all 129
+barangays in the workbook and the
+[PSA barangay listing](https://psa.gov.ph/classification/psgc/barangays/1430300000).
+Tacloban City's medium-resolution file matched all 138 barangays in the
+workbook and the
+[PSA barangay listing](https://psa.gov.ph/classification/psgc/barangays/0831600000).
 
 The workbook was retrieved from the public
 [PSGC API repository mirror](https://github.com/rbillyjames0221/psgc-api/blob/main/seed/PSGC-3Q-2026-Publication-Datafile.xlsx)
