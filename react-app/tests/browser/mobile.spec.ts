@@ -303,7 +303,7 @@ test('orientation changes, touch panning and NCR city navigation keep the map us
   await svg.dispatchEvent('touchmove', { touches: [{ identifier: 1, clientX: 540, clientY: 220, pageX: 540, pageY: 220 }], changedTouches: [{ identifier: 1, clientX: 540, clientY: 220, pageX: 540, pageY: 220 }] });
   await svg.dispatchEvent('touchend', { touches: [], changedTouches: [{ identifier: 1, clientX: 540, clientY: 220, pageX: 540, pageY: 220 }] });
   await expect(page.locator('svg > g')).not.toHaveAttribute('transform', 'translate(0,0) scale(1)');
-  await tapPolygon(page, '1380600000');
+  await selectSvgLabel(page, 'text[data-label-psgc="1380600000"]', true);
   await ready(page, '#/region/1300000000/municity/1380600000');
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(svg).toHaveAttribute('viewBox', '0 0 390 844');
