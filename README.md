@@ -1,6 +1,6 @@
 # MAPA-Hayag Project
 
-**MAPA-Hayag** is an open-source interactive geographic mapping platform designed to explore and visualize the Philippines' administrative boundaries and geographic information.
+**MAPA-Hayag** is a public interactive map for exploring the Philippines' administrative boundaries and geographic information. Community contributions are welcome.
 
 The name combines two words: **Mapa**, meaning *map*, and **Hayag**, a word used in Visayan languages such as Cebuano, meaning *clear, visible, or revealed*. It also plays on the Tagalog word **mapahayag**, meaning *to express, communicate, or make something known*. Together, these meanings reflect the project's vision of revealing, communicating, and making Philippine geographic information more accessible and understandable to everyone.
 
@@ -49,32 +49,24 @@ The [coverage audit](docs/migration/BARANGAY-PREFLIGHT.md#nationwide-local-revie
 
 ## Contributing
 
-**Contributions are welcome!** 🇵🇭
+Spot a wrong name, boundary, or administrative assignment? Anyone can suggest a correction, with or without writing code. [Open a GitHub issue](https://github.com/septriunii/mapahayag-project/issues/new) and include:
 
-MAPA-Hayag is an open-source project, and everyone interested in Philippine geography, mapping, and web development is encouraged to contribute.
+- The affected place and its PSGC code, if you know it.
+- A link to the map view or a screenshot showing the problem.
+- What should change and an official source, if you have one.
 
-Whether you're a developer, designer, GIS enthusiast, researcher, or student, you can help improve the project by:
-
-- Reporting bugs and suggesting new features through GitHub Issues.
-- Submitting pull requests for improvements and bug fixes.
-- Improving the user interface, accessibility, and performance.
-- Validating geographic boundaries and updating geographic datasets.
-- Enhancing documentation and sharing ideas for future applications.
-
-Every contribution, big or small, helps make Philippine geographic information more accessible.
-
-**Let's build a more accessible, accurate, and interactive geographic platform for the Philippines, together!**
+You can also use Issues to report bugs or suggest improvements. Pull requests for data, documentation, accessibility, and code fixes are welcome.
 
 ## Credits & Acknowledgments
 
-This project is based on the original **[ph-drilldown-map by tordecilla](https://github.com/tordecilla/ph-drilldown-map)**.
+**Application.** MAPA-Hayag began as a fork of `tordecilla/ph-drilldown-map`. Thanks to tordecilla and the original contributors for the interactive map, administrative drilldown, and configurable choropleth. MAPA-Hayag builds on that foundation with a React interface, geographic profiles, and barangay drilldown. [Original project README](https://github.com/tordecilla/ph-drilldown-map#readme)
 
-Full credit goes to the original developer and contributors for the foundational map implementation, geographic data integration, and interactive drilldown functionality.
-
-For detailed explanations of how the map works, its geographic data sources, configuration, and original implementation, please refer to the **[original repository's README](https://github.com/tordecilla/ph-drilldown-map#readme)**.
-
-This project aims to build upon that foundation through React modernization, improved user experience, and future geographic features.
+**Geographic data.** Most administrative boundaries come from James Faeldon's `philippines-json-maps`, which the original project included as a Git submodule. MAPA-Hayag keeps that submodule pinned at `8eeead5` and uses supplemental boundary files for Manila and Caloocan from Faeldon's `v1.1.0` release. The coverage audit documents those files and credits the underlying NAMRIA and PSA boundary data. PSA's Philippine Standard Geographic Code is our reference for official names, codes, and administrative assignments. [Pinned boundary source](https://github.com/faeldon/philippines-json-maps/tree/8eeead560246863c8c820c31ca6fbca81a279477) · [Supplemental release](https://github.com/faeldon/philippines-json-maps/releases/tag/v1.1.0) · [Coverage audit](docs/migration/BARANGAY-PREFLIGHT.md#nationwide-local-review) · [PSA PSGC](https://psa.gov.ph/classification/psgc)
 
 The React sea and ocean labels use naming references from NAMRIA and PAGASA
 publications. Geographic references and implementation details are recorded in
 [the maritime layer notes](docs/migration/MARITIME-CONTEXT.md).
+
+## Licensing
+
+MAPA-Hayag is public and welcomes contributions. This repository currently has no repository-wide license for the application code. James Faeldon's MIT notices apply to his project and are retained with the geographic files we use. The coverage audit records attribution and licensing for the underlying data. [Upstream MIT notice](https://github.com/faeldon/philippines-json-maps/blob/8eeead560246863c8c820c31ca6fbca81a279477/LICENSE) · [Supplemental MIT notice](geo-supplemental/LICENSE)
