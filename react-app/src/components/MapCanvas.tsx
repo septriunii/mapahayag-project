@@ -9,6 +9,7 @@ import type { MapConfig } from '../config/schema';
 import { createColorLookup } from '../config/colors';
 import { makePath, paddedBounds } from '../geography/projection';
 import { administrativeBoundaries } from '../geography/boundaries';
+import { BASILAN } from '../geography/alignment';
 import { featureCode } from '../geography/psgc';
 import { nameProperty, type GeographicFeature } from '../geography/types';
 import type { MapView } from '../navigation/view';
@@ -18,7 +19,8 @@ import { useViewport } from '../hooks/useViewport';
 interface Props { view: MapView; config: MapConfig; onSelect: (feature: GeographicFeature) => void; busy: boolean; selected?: { view: MapView; code: string } }
 
 function viewPath(view: MapView, width: number, height: number) {
-  return makePath(width, height, view.route.level === 'national' ? MARITIME_BOUNDS : paddedBounds(view.collection.features, view.route.level === 'municity' && view.level !== 'barangay'));
+  const features = view.context ? [...view.collection.features, view.context] : view.collection.features;
+  return makePath(width, height, view.route.level === 'national' ? MARITIME_BOUNDS : paddedBounds(features, !view.context && view.route.level === 'municity' && view.level !== 'barangay'));
 }
 
 export function MapCanvas({ view, config, onSelect, busy, selected }: Props) {
@@ -53,7 +55,9 @@ export function MapCanvas({ view, config, onSelect, busy, selected }: Props) {
     const start = currentTransform.current;
     let end = start;
     if (forward) {
-      const [[x0, y0], [x1, y1]] = viewPath(displayed, width, height).bounds(target);
+      const [[x0, y0], [x1, y1]] = viewPath(displayed, width, height).bounds(
+        view.context && view.route.level !== 'region' ? { type: 'FeatureCollection', features: [target, view.context] } : target,
+      );
       const scale = Math.min(1e4, 0.85 * Math.min(width / Math.max(x1 - x0, 0.00001), height / Math.max(y1 - y0, 0.00001)));
       end = zoomIdentity.translate(width / 2 - scale * (x0 + x1) / 2, height / 2 - scale * (y0 + y1) / 2).scale(scale);
     }
@@ -104,6 +108,8 @@ const GeographicLayer = memo(function GeographicLayer({ view, config, onSelect, 
   }), [view, path, color]);
   const lineworkClass = view.level === 'region' ? 'map-linework-region' : view.level === 'province' ? 'map-linework-province' : 'map-linework-municipality';
   return <>
+    {view.context && <path data-map-context={featureCode(view.context, 'province') === BASILAN ? 'basilan' : 'isabela-city'} className="pointer-events-none" aria-hidden="true"
+      d={path(view.context) ?? ''} fill="var(--color-context-land)" />}
     {view.background?.features.map((feature, index) => <path key={index} className="region-bg pointer-events-none" d={path(feature) ?? ''} fill="var(--color-land)" stroke="none" />)}
     {shapes.map(({ feature, code, d, fill }) => <path key={code} data-psgc={code} d={d} data-choropleth={fill !== 'var(--color-land)' || undefined}
       fill={fill} vectorEffect="non-scaling-stroke" role="button" tabIndex={disabled ? -1 : 0} aria-label={feature.properties[nameProperty[view.level]] ?? code}

@@ -1,5 +1,5 @@
 import type { MapConfig, DataRecord } from '../config/schema';
-import { BARMM, NCR, NCR_DISTRICTS } from '../geography/alignment';
+import { BARMM, BASILAN, ISABELA_GROUP, NCR, NCR_DISTRICTS, REGION_IX } from '../geography/alignment';
 import { featureCode } from '../geography/psgc';
 import type { GeographicRepository } from '../geography/repository';
 import type { GeographicCollection, GeographicFeature, GeographicLevel, GeographicView, Psgc } from '../geography/types';
@@ -72,15 +72,19 @@ export async function resolveView(route: MapRoute, config: MapConfig, national: 
   const provinceDetails = locationDetails(province, 'province', regionDetails.name, config);
   if (config.maxDepth === 'province') return { ...regionView, details: provinceDetails };
   const provincial = await repository.province(route.province);
+  const isIsabelaView = route.region === REGION_IX && route.province === ISABELA_GROUP;
+  const isBasilanView = route.region === BARMM && route.province === BASILAN;
+  const context = isIsabelaView || isBasilanView ? regional.context : undefined;
   const warnings = [...regional.warnings, ...provincial.warnings];
   const provinceView: MapView = {
-    ...provincial, warnings, route: { level: 'province', region: route.region, province: route.province },
+    ...provincial, context, warnings, route: { level: 'province', region: route.region, province: route.province },
     details: provinceDetails, backLabel: regionDetails.name,
     statusText: `${provinceDetails.name} — ${provincial.collection.features.length} municipalities/cities`,
   };
   if (route.level === 'province') return provinceView;
   const city = find(provincial.collection, 'municity', route.municity);
-  return resolveCityView(city, route, provinceDetails.name, config, warnings, repository);
+  const cityView = await resolveCityView(city, route, provinceDetails.name, config, warnings, repository);
+  return isIsabelaView ? { ...cityView, context } : cityView;
 }
 
 async function resolveCityView(city: GeographicFeature, route: Extract<MapRoute, { level: 'municity' }>, parent: string, config: MapConfig, warnings: string[], repository: GeographicRepository): Promise<MapView> {

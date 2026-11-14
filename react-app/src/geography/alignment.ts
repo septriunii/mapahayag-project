@@ -6,6 +6,8 @@ export const NCR = normalizePsgc(1300000000);
 export const REGION_IX = normalizePsgc(900000000);
 export const BARMM = normalizePsgc(1900000000);
 export const SULU = normalizePsgc(1906600000);
+export const BASILAN = normalizePsgc(1900700000);
+export const ISABELA_GROUP = normalizePsgc(990100000);
 export const NCR_DISTRICTS = [1303900000, 1307400000, 1307500000, 1307600000].map(normalizePsgc);
 const legacyRegions = new Map([[normalizePsgc(604500000), normalizePsgc(600000000)], [normalizePsgc(704600000), normalizePsgc(700000000)], [normalizePsgc(706100000), normalizePsgc(700000000)]]);
 

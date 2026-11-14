@@ -1,6 +1,25 @@
 import { expect, test } from '@playwright/test';
 import { selectSvgLabel } from './svgInput';
 
+test('BARMM and Basilan show Isabela City as gray context', async ({ page }) => {
+  const region = '#/region/1900000000';
+  const basilan = region + '/province/1900700000';
+  await page.goto('/' + region);
+  const context = page.locator('[data-map-context="isabela-city"]');
+  await expect(context).toBeVisible();
+  await page.locator('path[data-psgc="1900700000"]').press('Enter');
+  await expect(page.locator('svg')).toHaveAttribute('data-view', basilan);
+  await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
+  await expect(context).toHaveCSS('fill', 'rgb(75, 79, 82)');
+  await expect(context).toHaveCSS('pointer-events', 'none');
+  await expect(page.locator('path[data-psgc="990101000"], path[data-psgc="990100000"]')).toHaveCount(0);
+  expect(await context.evaluate(element => {
+    const box = element.getBoundingClientRect();
+    return box.width > 0 && box.height > 0 && box.left >= 0 && box.top >= 0
+      && box.right <= innerWidth && box.bottom <= innerHeight;
+  })).toBe(true);
+});
+
 for (const [name, province, city, count] of [
   ['Zamboanga City', '907300000', '931700000', 98],
   ['Titay', '908300000', '908315000', 30],
@@ -23,6 +42,17 @@ for (const [name, province, city, count] of [
     await expect(page.locator('svg')).toHaveAttribute('data-view', cityRoute);
     await expect(page.locator('path[data-psgc]')).toHaveCount(count);
     await expect(page.locator('#status')).toHaveText(`${count} barangays`);
+    if (city === '990101000') {
+      const context = page.locator('[data-map-context="basilan"]');
+      await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
+      await expect(context).toHaveCSS('fill', 'rgb(75, 79, 82)');
+      await expect(context).toHaveCSS('pointer-events', 'none');
+      expect(await context.evaluate(element => {
+        const box = element.getBoundingClientRect();
+        return box.width > 0 && box.height > 0 && box.left >= 0 && box.top >= 0
+          && box.right <= innerWidth && box.bottom <= innerHeight;
+      })).toBe(true);
+    }
     await expect(page.locator('#detail')).toHaveCSS('visibility', 'hidden');
     await expect(page.locator('[data-label-name]').first()).toBeVisible();
     const shape = page.locator('path[data-psgc]').first();

@@ -29,6 +29,7 @@ export interface GeographicView {
   level: MapGeographicLevel;
   collection: GeographicCollection;
   background?: GeographicCollection;
+  context?: GeographicFeature;
   warnings: string[];
 }
 

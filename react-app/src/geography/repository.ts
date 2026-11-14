@@ -1,7 +1,8 @@
 import type { MapConfig } from '../config/schema';
 import { z } from 'zod';
+import { geoPath } from 'd3';
 import { ResourceCache } from './cache';
-import { BARMM, REGION_IX, SULU, NCR, NCR_DISTRICTS, NIR, usesNirOverride } from './alignment';
+import { BARMM, BASILAN, ISABELA_GROUP, REGION_IX, SULU, NCR, NCR_DISTRICTS, NIR, usesNirOverride } from './alignment';
 import { currentSuluNational } from './sulu';
 import { withCurrentNames } from './currentNames';
 import { featureCode, normalizePsgc } from './psgc';
@@ -54,10 +55,26 @@ export class GeographicRepository {
       ]);
       const sulu = former.collection.features.find(feature => featureCode(feature, 'province') === SULU);
       if (!sulu) throw new Error('Sulu province is missing from the pinned geographic source');
-      return { level: 'province', collection: { ...data.collection, features: [...data.collection.features, sulu] }, warnings: resourceWarnings(data) };
+      const basilan = former.collection.features.find(feature => featureCode(feature, 'province') === BASILAN);
+      // The largest polygon is Basilan's main island. Leave the outlying
+      // BARMM islands out of the context for the Isabela City view.
+      const area = geoPath().area;
+      const mainland = basilan?.geometry.type === 'MultiPolygon'
+        ? basilan.geometry.coordinates.reduce((largest, polygon) =>
+          area({ type: 'Polygon', coordinates: polygon }) > area({ type: 'Polygon', coordinates: largest }) ? polygon : largest)
+        : undefined;
+      const context = basilan && mainland ? { ...basilan, geometry: { type: 'Polygon' as const, coordinates: mainland } } : basilan;
+      return { level: 'province', collection: { ...data.collection, features: [...data.collection.features, sulu] }, context, warnings: resourceWarnings(data) };
+    }
+    if (region === BARMM) {
+      const [data, regionIX] = await Promise.all([
+        this.load(url, 'province'),
+        this.load(this.geography(`regions/lowres/provdists-region-${REGION_IX}.0.001.json`), 'province'),
+      ]);
+      const context = regionIX.collection.features.find(feature => featureCode(feature, 'province') === ISABELA_GROUP);
+      return { level: 'province', collection: { ...data.collection, features: data.collection.features.filter(feature => featureCode(feature, 'province') !== SULU) }, context, warnings: resourceWarnings(data) };
     }
     const data = await this.load(url, 'province');
-    if (region === BARMM) return { level: 'province', collection: { ...data.collection, features: data.collection.features.filter(feature => featureCode(feature, 'province') !== SULU) }, warnings: resourceWarnings(data) };
     return { level: 'province', collection: data.collection, warnings: resourceWarnings(data) };
   }
   async barangays(parent: SourcePsgc): Promise<(GeographicView & { expected: number }) | 'unavailable' | undefined> {
