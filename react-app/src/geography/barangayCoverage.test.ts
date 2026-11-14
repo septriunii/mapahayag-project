@@ -77,7 +77,6 @@ it('uses current names and codes and distinguishes partial from unavailable cove
   const payao = await repository.barangays('908311000');
   if (!payao || payao === 'unavailable') throw new Error('Missing Payao barangays');
   expect(payao.collection.features.some(feature => feature.properties.adm4_en === 'Guintolan')).toBe(false);
-  expect(await repository.barangays('401007000')).toBe('unavailable');
   const dauin = await repository.barangays('704609000');
   if (!dauin || dauin === 'unavailable') throw new Error('Missing Dauin barangays');
   expect(dauin.collection.features.find(feature => featureCode(feature, 'barangay') === '1804609001')?.properties.adm4_en).toBe('Anhawan');

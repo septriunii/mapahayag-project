@@ -78,18 +78,23 @@ Baguio City, and Tacloban City remain excluded.
 
 ## Nationwide local review
 
-The map now opens barangay boundaries and names directly for 1,628 cities
+The map now opens barangay boundaries and names directly for 1,629 cities
 and municipalities. All 17 NCR localities are enabled with the 1,715 barangays
 listed in the [PSA PSGC summary](https://psa.gov.ph/classification/psgc/summary).
 Only the selected locality's polygon file is fetched. The coverage registry
 is loaded at the first city or municipality visit.
 
-The audit matched 41,829 renderable source polygons against the September
+The audit matched 41,868 renderable source polygons against the September
 30, 2026 PSGC workbook. Eleven localities show a visible notice with the
-number of missing boundaries. Fourteen are held: Calaca after the San Rafael
-merger, five localities without a selectable parent polygon, and eight Special
+number of missing boundaries. Thirteen are held: five localities without a
+selectable parent polygon and eight Special
 Geographic Area municipalities without a verified parent in the existing map.
 The [coverage audit](barangay-coverage-audit.json) lists each exception.
+
+Calaca uses the [v1.1.0 boundary file](https://raw.githubusercontent.com/faeldon/philippines-json-maps/bf70605/latest/geojson/municities/medres/bgysubmuns-municity-401007000.0.01.json).
+All 39 names, codes, and parent assignments match the September 2026 workbook.
+The file dissolves San Rafael into Dacanlao in line with the [PSA merger notice](https://psa.gov.ph/content/first-quarter-2026-psgc-updates-merging-two-barangays-and-correction-names-one-municipality).
+The upstream file's SHA-256 is `95ad93ea4b8d3f47024da70210dfb75e9ffbe86a01d40c27a59ebd3e71952659`.
 All 180 Iloilo City polygons matched the workbook and the
 [PSA barangay listing](https://psa.gov.ph/classification/psgc/barangays/0631000000).
 Baguio City uses the pinned high-resolution file, which matched all 129

@@ -353,7 +353,7 @@
   "401004000": {"count":13,"high":true},
   "401005000": {"count":105},
   "401006000": {"count":40},
-  "401007000": null,
+  "401007000": {"count":39,"asset":"geo-supplemental/bgysubmuns-municity-401007000.0.01.json"},
   "401008000": {"count":25},
   "401009000": {"count":21},
   "401010000": {"count":26},

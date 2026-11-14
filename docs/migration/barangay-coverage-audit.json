@@ -1,10 +1,10 @@
 {
   "snapshot": "2026-09-30",
   "totals": {
-    "enabled": 1628,
-    "polygons": 41829,
+    "enabled": 1629,
+    "polygons": 41868,
     "partial": 11,
-    "held": 14,
+    "held": 13,
     "excluded": 0
   },
   "partial": [
@@ -141,19 +141,6 @@
     ]
   ],
   "held": [
-    [
-      "0401007000",
-      "City of Calaca",
-      "Unmatched source barangays",
-      39,
-      [
-        [
-          "0401007038",
-          "San Rafael",
-          null
-        ]
-      ]
-    ],
     [
       "0403425000",
       "City of San Pedro",

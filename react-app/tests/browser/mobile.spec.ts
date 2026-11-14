@@ -81,6 +81,7 @@ for (const [name, hash, count] of [
   ['Iloilo City', '#/region/600000000/province/603000000/municity/631000000', 180],
   ['Baguio City', '#/region/1400000000/province/1401100000/municity/1430300000', 129],
   ['Tacloban City', '#/region/800000000/province/803700000/municity/831600000', 138],
+  ['Calaca', '#/region/400000000/province/401000000/municity/401007000', 39],
 ] as const) {
   test(`${name} barangay mobile review loads one file and supports touch selection`, async ({ page }, info) => {
     const requests: string[] = [], errors: string[] = [];

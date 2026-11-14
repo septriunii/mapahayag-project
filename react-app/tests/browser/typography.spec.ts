@@ -8,9 +8,9 @@ async function ready(page: Page, hash: string) {
   await expect(page.locator('svg')).toHaveAttribute('data-view', hash);
   await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');
   await expect(page.locator('[data-map-labels]')).toHaveAttribute('data-font-ready', 'true');
-  // The existing navigation effect opens the drawer on national/city arrival.
+  // The existing navigation effect opens the drawer on national arrival.
   // Wait for that state before capturing/closing it, not just SVG readiness.
-  if (hash === '#/' || hash.includes('/municity/')) await expect(page.getByRole('button', { name: 'Close details menu' })).toBeVisible();
+  if (hash === '#/') await expect(page.getByRole('button', { name: 'Close details menu' })).toBeVisible();
 }
 
 async function overlaps(page: Page) {
@@ -33,7 +33,6 @@ test('geographic typography preserves every source name and avoids label collisi
     ['national', '#/', 18], ['region', '#/region/900000000', 5],
     ['province', '#/region/900000000/province/907200000', 27],
     ['ncr', '#/region/1300000000', 17],
-    ['city', '#/region/400000000/province/401000000/municity/401007000', 1],
   ] as const;
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 });

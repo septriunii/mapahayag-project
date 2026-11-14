@@ -9,6 +9,7 @@ const index = read(new URL('psgc-index.json', root)).municities;
 const mapped = new Map(facts.map(row => [row.psgc, row]));
 const routes = new Set(index.map(row => String(row.psgc)));
 const supplemental = new Map([
+  ['401007000', 'geo-supplemental/bgysubmuns-municity-401007000.0.01.json'],
   ['1380100000', 'geo-supplemental/bgysubmuns-municity-1380100000.0.01.json'],
   ['1380600000', 'geo-supplemental/bgysubmuns-municity-1380600000.0.01.json'],
 ]);
